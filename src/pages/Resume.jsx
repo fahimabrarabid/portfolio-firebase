@@ -1,7 +1,7 @@
 import React from 'react'
 import './resume.css'
 import useDocumentTitle from '../assets/js/useDocumentTitle'
-import Info from '../data'
+import Info from '../configs/data'
 import ProfilePicture from '../components/cards/profile/ProfilePicture'
 import Profile from '../components/cards/profile/Profile'
 import Contact from '../components/cards/contacts/Contacts'
