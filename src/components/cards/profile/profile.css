@@ -9,7 +9,7 @@
 
 .profile h2 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-3xl font-medium flex justify-center md:justify-start lg:justify-start;
+  @apply text-3xl border-b-0 font-medium flex justify-center md:justify-start lg:justify-start;
 }
 
 .profile p {
