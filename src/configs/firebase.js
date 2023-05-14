@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app'
+import { GoogleAuthProvider } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -11,3 +12,6 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
+const googleProvider = new GoogleAuthProvider(app)
+
+export { googleProvider }
