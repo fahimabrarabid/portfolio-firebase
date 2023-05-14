@@ -1,0 +1,7 @@
+.skills ul {
+  @apply flex flex-wrap justify-between flex-row text-justify;
+}
+
+.skills li {
+  @apply text-lg text-gray-700 list-disc mx-3;
+}

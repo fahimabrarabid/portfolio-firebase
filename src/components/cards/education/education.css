@@ -1,0 +1,19 @@
+.education {
+  @apply flex flex-col gap-2;
+}
+
+.institute {
+  @apply flex flex-col;
+}
+
+.institute h3 {
+  @apply text-lg text-gray-700 font-bold;
+}
+
+.institute p {
+  @apply text-sm text-gray-700;
+}
+
+.institute h4 {
+  @apply text-sm text-gray-600 font-bold;
+}

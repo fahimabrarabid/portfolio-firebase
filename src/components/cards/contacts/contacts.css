@@ -1,0 +1,7 @@
+.contact a {
+  @apply flex gap-2 font-semibold text-gray-600;
+}
+
+.svg-icon {
+  @apply mb-2 w-8 h-8;
+}

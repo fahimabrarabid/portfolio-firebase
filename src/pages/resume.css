@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Signika+Negative:wght@300;400;500&display=swap');
+
+.container {
+  @apply min-w-full;
+}
+
+.top-header {
+  @apply flex items-center flex-col w-full bg-white px-5;
+  @apply md:flex-row md:items-start lg:flex-row lg:items-start gap-5;
+}
+
+.left-side,
+.right-side {
+  @apply flex flex-col gap-5 mt-6 px-5 w-full text-justify;
+}
+
+.left-side {
+  @apply md:w-2/5 lg:w-2/5;
+}
+
+.bottom {
+  @apply flex flex-col;
+  @apply md:flex-row lg:flex-row;
+}
+
+.bottom a {
+  @apply text-gray-600;
+}
+
+.hr {
+  @apply border-b-2 border-gray-700 hidden lg:block;
+}
+
+h2 {
+  font-family: 'DynaPuff', cursive;
+  @apply text-2xl font-bold text-red-500/80 uppercase;
+}

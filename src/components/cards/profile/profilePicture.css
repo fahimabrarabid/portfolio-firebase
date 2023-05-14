@@ -1,0 +1,8 @@
+.profile-picture-container {
+  @apply w-3/5 ring-8 ring-red-200 object-bottom object-cover flex flex-col items-center justify-end bg-red-400 rounded-b-full;
+  @apply md:w-2/5 lg:w-1/4 lg:h-64;
+}
+
+.profile-picture {
+  @apply rounded-b-full;
+}
