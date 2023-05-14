@@ -6,8 +6,8 @@ const Skills = (Info) => {
     <div className="skills">
       <h2>Skills</h2>
       <ul>
-        {Info.skills.map((skill) => (
-          <li>{skill}</li>
+        {Info.skills.map((skill, index) => (
+          <li key={index}>{skill}</li>
         ))}
       </ul>
     </div>
