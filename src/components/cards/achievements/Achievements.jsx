@@ -5,8 +5,8 @@ const Achievements = (Info) => {
   return (
     <div className="achievements">
       <h2>Achievements</h2>
-      {Info.achievements.map((achievement) => (
-        <div className="achievement">
+      {Info.achievements.map((achievement, index) => (
+        <div key={index} className="achievement">
           <div>
             <h3>{achievement.title}</h3>
             <p>{achievement.description}</p>
