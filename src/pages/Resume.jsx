@@ -11,6 +11,7 @@ import Projects from '../components/cards/projects/Projects'
 import Experience from '../components/cards/experience/Experience'
 import Achievements from '../components/cards/achievements/Achievements'
 import { Login } from '../components/googleAuth/Login'
+import Calendar from '../components/googleCalendar/Calendar'
 
 const Resume = () => {
   useDocumentTitle(Info.profile.name + "'s Profile")
@@ -34,6 +35,7 @@ const Resume = () => {
           <Experience experience={Info.experience} />
         </div>
       </div>
+      <Calendar id={Info.calendarID} />
     </div>
   )
 }
