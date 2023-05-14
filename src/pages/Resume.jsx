@@ -1,7 +1,7 @@
 import React from 'react'
 import './resume.css'
 import useDocumentTitle from '../assets/js/useDocumentTitle'
-import Info from '../data'
+import Info from '../configs/data'
 import ProfilePicture from '../components/cards/profile/ProfilePicture'
 import Profile from '../components/cards/profile/Profile'
 import Contact from '../components/cards/contacts/Contacts'
@@ -10,6 +10,7 @@ import Skills from '../components/cards/skills/Skills'
 import Projects from '../components/cards/projects/Projects'
 import Experience from '../components/cards/experience/Experience'
 import Achievements from '../components/cards/achievements/Achievements'
+import { Login } from '../components/googleAuth/Login'
 
 const Resume = () => {
   useDocumentTitle(Info.profile.name + "'s Profile")
@@ -22,6 +23,7 @@ const Resume = () => {
       </div>
       <div className="bottom">
         <div className="left-side">
+          <Login />
           <Contact contact={Info.contact} />
           <Education education={Info.education} />
           <Achievements achievements={Info.achievements} />
