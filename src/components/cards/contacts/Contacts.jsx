@@ -44,7 +44,8 @@ const Contact = (Info) => {
 
       {Info.contact.address ? (
         <p>
-          <Location className="svg-icon inline-block" /> {Info.contact.address}
+          <Location className="svg-icon" />
+          {Info.contact.address}
         </p>
       ) : (
         ''
