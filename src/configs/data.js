@@ -32,7 +32,7 @@ const Info = {
       link: 'https://github.com/ehsan18t/course-assistant', // optional
     },
   ],
-  skills: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'React', 'Svelte', 'C/C++', 'Java', 'Python', 'Django', 'SQL', 'PHP', 'C#', 'Git', 'GitHub', 'Github Action', 'Docker', 'Vim', 'Bash', 'Batch', 'Markdown', 'Figma', 'Jira', 'Scrum', 'Googling'],
+  skills: ['Multi Tasking Ability', 'Analytical Skill', 'Critical Thinking', 'Problem-Solving', 'Leadership', 'Team Work', 'Communication', 'Networking', 'Academic Writing', 'MS Office', 'Editing', 'Research'],
   experience: [
     {
       company: 'MagicX Mod',
