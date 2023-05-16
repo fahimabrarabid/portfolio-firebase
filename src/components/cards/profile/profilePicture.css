@@ -1,5 +1,5 @@
 .profile-picture-container {
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center mb-3 mt-1;
 }
 
 .profile-picture {
