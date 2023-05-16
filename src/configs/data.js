@@ -10,7 +10,8 @@ const Info = {
   },
   contact: {
     email: 'fahim.abrar.abid@g.bracu.ac.bd',
-    phone: '+8801913343717',
+    // phone: '+8801913343717',
+    facebook: '100013737401718',
     // github: 'ehsan18t',
     linkedin: 'fahimabrarabid',
     address: 'House-12, Road-09, Dhanmondi R/A, Dhaka-1209, Bangladesh',

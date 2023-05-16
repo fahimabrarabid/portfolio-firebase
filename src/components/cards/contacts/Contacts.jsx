@@ -5,47 +5,57 @@ import Email from '../../icons/Email'
 import Github from '../../icons/Github'
 import Telephone from '../../icons/Telephone'
 import Location from '../../icons/Location'
+import Facebook from '../../icons/Facebook'
+import Info from '../../../configs/data'
 
-const Contact = (Info) => {
+const Contact = (props) => {
   return (
     <div className="contact">
-      {Info.showTitle ? <h2>Contact</h2> : ''}
-      {Info.contact.email ? (
-        <a target="_blank" href={'mailto:' + Info.contact.email}>
-          <Email className="svg-icon" /> {Info.contact.email}
+      {props.showTitle ? <h2>Contact</h2> : ''}
+      {props.contact.email ? (
+        <a target="_blank" href={'mailto:' + props.contact.email}>
+          <Email className="svg-icon" /> {props.contact.email}
         </a>
       ) : (
         ''
       )}
 
-      {Info.contact.phone ? (
-        <a target="_blank" href={'tel:' + Info.contact.phone}>
-          <Telephone className="svg-icon" /> {Info.contact.phone}
+      {props.contact.phone ? (
+        <a target="_blank" href={'tel:' + props.contact.phone}>
+          <Telephone className="svg-icon" /> {props.contact.phone}
         </a>
       ) : (
         ''
       )}
 
-      {Info.contact.github ? (
-        <a target="_blank" href={'https://github.com/' + Info.contact.github}>
-          <Github className="svg-icon" /> @{Info.contact.github}
+      {props.contact.facebook ? (
+        <a target="_blank" href={'https://facebook.com/' + props.contact.facebook}>
+          <Facebook className="svg-icon" /> {Info.profile.name}
         </a>
       ) : (
         ''
       )}
 
-      {Info.contact.linkedin ? (
-        <a target="_blank" href={'https://www.linkedin.com/in/' + Info.contact.linkedin}>
-          <Linkedin className="svg-icon" /> @{Info.contact.linkedin}
+      {props.contact.github ? (
+        <a target="_blank" href={'https://github.com/' + props.contact.github}>
+          <Github className="svg-icon" /> @{props.contact.github}
         </a>
       ) : (
         ''
       )}
 
-      {Info.contact.address ? (
+      {props.contact.linkedin ? (
+        <a target="_blank" href={'https://www.linkedin.com/in/' + props.contact.linkedin}>
+          <Linkedin className="svg-icon" /> @{props.contact.linkedin}
+        </a>
+      ) : (
+        ''
+      )}
+
+      {props.contact.address ? (
         <p>
           <Location className="svg-icon" />
-          {Info.contact.address}
+          {props.contact.address}
         </p>
       ) : (
         ''
