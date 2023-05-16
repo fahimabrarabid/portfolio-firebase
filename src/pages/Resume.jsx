@@ -35,7 +35,7 @@ const Resume = () => {
           <Experience experience={Info.experience} /> */}
         </div>
       </div>
-      {/* <Calendar id={Info.calendarID} /> */}
+      {/* <Calendar id={Info.calendarID } /> */}
     </div>
   )
 }
