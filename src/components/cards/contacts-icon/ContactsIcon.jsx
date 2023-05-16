@@ -1,9 +1,15 @@
 import React from 'react'
+import './contactsicon.css'
 
-const ContactsIcon = () => {
+import Linkedin from '../../icons/Linkedin'
+import Email from '../../icons/Email'
+import Github from '../../icons/Github'
+import Telephone from '../../icons/Telephone'
+import Facebook from '../../icons/Facebook'
+
+const ContactsIcon = (props) => {
   return (
     <div className="contact-icon">
-      {props.showTitle ? <h2>Contact</h2> : ''}
       {props.contact.email ? (
         <a target="_blank" href={'mailto:' + props.contact.email}>
           <Email className="svg-icon" />
