@@ -8,10 +8,6 @@ const Profile = (props) => {
       {/* If exist render */}
       {props.info.title ? <h2>{props.info.title}</h2> : ''}
       <p>{props.info.about} </p>
-      <div className="hr">
-        <br />
-        <br />
-      </div>
     </div>
   )
 }
