@@ -7,7 +7,7 @@
 }
 
 .institute h3 {
-  @apply text-lg text-gray-700 font-bold;
+  @apply text-gray-700 font-bold;
 }
 
 .institute p {
@@ -15,5 +15,13 @@
 }
 
 .institute h4 {
-  @apply text-sm text-gray-600 font-bold;
+  @apply text-sm text-gray-500 font-bold;
+}
+
+.institute h5 {
+  @apply text-xs text-gray-600;
+}
+
+.gpa {
+  @apply font-semibold text-sm text-gray-500;
 }

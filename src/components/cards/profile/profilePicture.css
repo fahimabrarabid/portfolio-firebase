@@ -1,8 +1,12 @@
 .profile-picture-container {
-  @apply w-3/5 ring-8 ring-red-200 object-bottom object-cover flex flex-col items-center justify-end bg-red-400 rounded-b-full;
-  @apply md:w-2/5 lg:w-1/4 lg:h-64;
+  @apply flex justify-center items-center m-6;
 }
 
 .profile-picture {
-  @apply rounded-b-full;
+  @apply rounded-full overflow-hidden ring-8 ring-gray-200 bg-gray-400;
+  @apply w-48 h-48;
+}
+
+.picture {
+  @apply rounded-full object-cover overflow-hidden w-full h-full;
 }
