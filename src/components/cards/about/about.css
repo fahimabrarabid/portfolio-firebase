@@ -1,0 +1,28 @@
+.about {
+  @apply flex gap-8;
+}
+
+.right,
+.left {
+  @apply w-1/2;
+}
+
+.left {
+  @apply flex flex-col gap-3;
+}
+
+.right {
+  @apply bg-orange-300;
+}
+
+.about p {
+  @apply text-base text-justify font-semibold text-gray-700;
+}
+
+.about span {
+  @apply flex items-center justify-center h-full;
+}
+
+.left li {
+  @apply text-lg text-gray-700 border-2 px-2 my-1 border-b-2 border-dashed;
+}
