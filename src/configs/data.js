@@ -10,7 +10,7 @@ const Info = {
   contact: {
     email: 'fahim.abrar.abid@g.bracu.ac.bd',
     phone: '+8801913343717',
-    github: 'ehsan18t',
+    // github: 'ehsan18t',
     linkedin: 'fahimabrarabid',
   },
   education: [
