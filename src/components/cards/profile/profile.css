@@ -4,7 +4,7 @@
 
 .profile h1 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-4xl text-center font-bold;
+  @apply text-3xl text-center font-bold;
 }
 
 .profile h2 {

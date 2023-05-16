@@ -10,7 +10,7 @@
 }
 
 .left {
-  @apply flex flex-col gap-5;
+  @apply flex flex-col gap-3;
 }
 
 .right {
