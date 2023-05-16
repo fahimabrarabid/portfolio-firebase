@@ -14,7 +14,7 @@ const Education = (Info) => {
             {edu.duration ? <h5>{edu.duration}</h5> : ''}
           </div>
           {edu.status ? <p>{edu.status}</p> : ''}
-          {edu.cgpa ? <div className="gpa">CGPA: {edu.cgpa}</div> : ''}
+          {edu.gpa ? <div className="gpa">{edu.gpa}</div> : ''}
         </div>
       ))}
     </div>

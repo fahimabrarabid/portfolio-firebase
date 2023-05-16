@@ -21,7 +21,7 @@ const Info = {
       degree: 'Bachelor of Laws LL.B. (Hons.)', // optional
       duration: 'Jan 2020- Present',
       status: '10th Semester, Completed 108 out of 135 credits',
-      cgpa: '3.69 out of 4.00', // optional
+      gpa: 'CGPA-3.69 out of 4.00', // optional
     },
   ],
   achievements: [
