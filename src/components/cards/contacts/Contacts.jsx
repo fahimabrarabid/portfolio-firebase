@@ -9,7 +9,7 @@ import Location from '../../icons/Location'
 const Contact = (Info) => {
   return (
     <div className="contact">
-      {/* <h2>Contact</h2> */}
+      {Info.showTitle ? <h2>Contact</h2> : ''}
       {Info.contact.email ? (
         <a target="_blank" href={'mailto:' + Info.contact.email}>
           <Email className="svg-icon" /> {Info.contact.email}
