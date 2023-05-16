@@ -32,6 +32,6 @@
 }
 
 h2 {
-  @apply text-2xl font-bold text-red-500/80 uppercase;
+  @apply text-2xl font-bold text-gray-700 uppercase;
   @apply border-b-[3px] pb-[2px] border-gray-500 mb-3;
 }
