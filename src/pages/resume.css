@@ -6,7 +6,6 @@
 
 .top-header {
   @apply flex items-center flex-col w-full bg-white px-5;
-  /* @apply md:flex-row md:items-start lg:flex-row lg:items-start gap-5; */
 }
 
 .left-side,

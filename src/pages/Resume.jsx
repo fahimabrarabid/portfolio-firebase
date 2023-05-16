@@ -12,6 +12,7 @@ import Experience from '../components/cards/experience/Experience'
 import Achievements from '../components/cards/achievements/Achievements'
 import { Login } from '../components/googleAuth/Login'
 import Calendar from '../components/googleCalendar/Calendar'
+import About from '../components/cards/about/About'
 
 const Resume = () => {
   useDocumentTitle(Info.profile.name + "'s Profile")
@@ -21,6 +22,7 @@ const Resume = () => {
       <div className="top-header">
         <ProfilePicture picture={Info.profile.picture} />
         <Profile info={Info.profile} />
+        <About info={Info.profile} />
       </div>
       <div className="bottom">
         <div className="left-side">
