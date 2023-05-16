@@ -1,37 +1,34 @@
 const Info = {
   calendarID: 'bm9ib2R5LmFoc2FuQGdtYWlsLmNvbQ',
   profile: {
-    name: 'Ehsan Khan',
-    title: 'Software Developer',
-    about: 'A passionate developer, competitive programer and quick learner. Typical introvert. Love to code and learn new things.',
+    name: 'Fahim Abrar Abid',
+    title: 'Software Developer', // optional
+    about:
+      'A hard-working and highly motivated senior law student with a keen research interest in Human Rights, Civic Engagement and Environmental Protection. With a quick learning ability and a visionary mindset, I always look forward to welcoming new challenges and responsibilities. Having diverse experience on national and international levels, I aim to ensure peace and justice in my community and on the global stage.',
     picture: 'me.png',
   },
   contact: {
-    email: 'ehsan18t@gmail.com',
-    phone: '+8801641723411',
+    email: 'fahim.abrar.abid@g.bracu.ac.bd',
+    phone: '+8801913343717',
     github: 'ehsan18t',
-    linkedin: 'ehsan18t',
+    linkedin: 'fahimabrarabid',
   },
   education: [
     {
-      institute: 'United International University',
-      degree: 'B.Sc. in Computer Science and Engineering',
-      duration: '2020 - Present',
+      institute: 'BRAC UNIVERSITY School of Law',
+      location: 'Dhaka, Bangladesh',
+      degree: 'Bachelor of Laws LL.B. (Hons.)', // optional
+      duration: 'Jan 2020- Present',
+      status: '10th Semester, Completed 108 out of 135 credits',
+      cgpa: '3.69 out of 4.00', // optional
     },
   ],
   achievements: [
     {
       title: 'UIU Project Show Fall 2021 Champion',
-      description:
-        'It\'s a project competition where we have to make a project in a team of 3-4 members. We made a project named "Course Assistant" which is a web application to manage everything related course/education of a student. We won the competition by beating 20+ teams. Additionally got proposal from our instructor to open a startup with it.',
-      year: '2021',
-      link: 'https://github.com/ehsan18t/course-assistant',
-    },
-    {
-      title: 'CCNA: Introduction to Networks',
-      description: 'Completed CISCO Certified Network Associate: Introduction to Networks with 90% score.',
-      year: '2023',
-      link: 'https://www.credly.com/badges/1e4aea44-5d2e-4244-9295-1fdcd949ddbd/public_url',
+      description: "It's a project competition where we have to make a project in a team of 3-4 members.",
+      year: '2021', // optional
+      link: 'https://github.com/ehsan18t/course-assistant', // optional
     },
   ],
   skills: ['HTML', 'CSS', 'JavaScript', 'TailwindCSS', 'React', 'Svelte', 'C/C++', 'Java', 'Python', 'Django', 'SQL', 'PHP', 'C#', 'Git', 'GitHub', 'Github Action', 'Docker', 'Vim', 'Bash', 'Batch', 'Markdown', 'Figma', 'Jira', 'Scrum', 'Googling'],
@@ -39,12 +36,21 @@ const Info = {
     {
       company: 'MagicX Mod',
       position: 'OS Modder',
+      location: 'Dhaka', // optional
       duration: '2018 - Present',
+      details: ['test 1', 'test 2', 'test 3'],
     },
+  ],
+  language: [
     {
-      company: 'MIUI Infinity',
-      position: 'Android ROM Developer',
-      duration: '2018 - 2019',
+      name: 'English',
+      details: '', // optional
+    },
+  ],
+  hobby: [
+    {
+      name: 'English',
+      details: '', // optional
     },
   ],
   projects: [
