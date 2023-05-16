@@ -1,14 +1,12 @@
 .about {
-  @apply flex gap-8;
+  @apply flex items-center flex-col w-full h-full;
+  @apply md:flex-row lg:flex-row gap-3;
 }
 
 .right,
 .left {
-  @apply w-1/2;
-}
-
-.left {
-  @apply flex flex-col gap-3;
+  @apply w-full h-full;
+  @apply md:w-1/2 lg:w-1/2;
 }
 
 .right {
@@ -20,7 +18,7 @@
 }
 
 .about span {
-  @apply flex items-center justify-center h-full;
+  @apply flex items-center justify-center;
 }
 
 .left li {
