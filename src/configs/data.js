@@ -17,11 +17,37 @@ const Info = {
   education: [
     {
       institute: 'BRAC UNIVERSITY School of Law',
-      location: 'Dhaka, Bangladesh',
+      location: 'Dhaka, Bangladesh', // optional
       degree: 'Bachelor of Laws LL.B. (Hons.)', // optional
-      duration: 'Jan 2020- Present',
-      status: '10th Semester, Completed 108 out of 135 credits',
-      cgpa: '3.69 out of 4.00', // optional
+      duration: 'Jan 2020- Present', // optional
+      status: '10th Semester, Completed 108 out of 135 credits', // optional
+      gpa: 'CGPA-3.69 out of 4.00', // optional
+    },
+    {
+      institute: 'CENTRAL EUROPEAN UNIVERSITY',
+      location: 'Vienna, Austria',
+      duration: 'Jan 2023- March 2023',
+      status: 'OSUN Undergraduate Exchange Program (8 US and 16 ECTS credits)',
+    },
+    {
+      institute: 'AMERICAN UNIVERSITY OF CENTRAL ASIA (OSUN Online Course)',
+      location: 'Bishkek, Kyrgyzstan',
+      duration: 'Jun 2022- Dec 2022',
+      status: 'Public International Law (6 US credits)',
+    },
+    {
+      institute: 'DHAKA CITY COLLEGE',
+      degree: 'Science',
+      duration: '2017-2019',
+      status: 'Higher Secondary School Certificate',
+      gpa: 'GPA-4.33 out of 5.00',
+    },
+    {
+      institute: 'GOVT. MOHAMMADPUR MODEL SCHOOL AND COLLEGE',
+      degree: 'Science',
+      duration: '2015-2017',
+      status: 'Secondary School Certificate',
+      gpa: 'GPA-5.00 out of 5.00',
     },
   ],
   achievements: [
