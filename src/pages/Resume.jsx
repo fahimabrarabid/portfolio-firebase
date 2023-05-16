@@ -27,7 +27,7 @@ const Resume = () => {
       <div className="bottom">
         <div className="left-side">
           {/* <Login /> */}
-          <Contact contact={Info.contact} />
+          {/* <Contact contact={Info.contact} /> */}
           <Education education={Info.education} />
           {/* <Achievements achievements={Info.achievements} /> */}
         </div>

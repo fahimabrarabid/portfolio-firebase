@@ -1,5 +1,23 @@
 .profile-picture-container {
-  @apply flex justify-center items-center m-6;
+  @apply flex flex-col w-full gap-5 m-6 justify-center items-center;
+  @apply lg:justify-between md:justify-between;
+  @apply md:flex-row lg:flex-row;
+}
+
+.profile-picture-container .contact {
+  @apply md:block lg:block;
+}
+
+.contact-section {
+  @apply w-1/4;
+}
+
+.contact-section ul {
+  @apply flex flex-col;
+}
+
+.contact-section li {
+  @apply text-lg text-gray-700 list-disc mx-3;
 }
 
 .profile-picture {
