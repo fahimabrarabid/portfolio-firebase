@@ -4,7 +4,7 @@
   @apply md:flex-row lg:flex-row;
 }
 
-.profile-picture-container .contact {
+.profile-picture-container .contact-section {
   @apply md:block lg:block;
 }
 
