@@ -1,9 +1,9 @@
 .contact a {
-  @apply flex font-semibold text-gray-600;
+  @apply flex text-gray-600;
 }
 
 .contact p {
-  @apply font-semibold text-gray-600;
+  @apply text-gray-600;
 }
 
 .svg-icon {
