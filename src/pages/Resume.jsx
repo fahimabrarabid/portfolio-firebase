@@ -27,7 +27,9 @@ const Resume = () => {
       <div className="bottom">
         <div className="left-side">
           {/* <Login /> */}
-          <Contact contact={Info.contact} showTitle="true" />
+          <div className="hideWhenBigger">
+            <Contact contact={Info.contact} showTitle="true" />
+          </div>
           <Education education={Info.education} />
           {/* <Achievements achievements={Info.achievements} /> */}
         </div>

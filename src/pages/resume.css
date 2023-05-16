@@ -17,6 +17,10 @@
   @apply md:w-2/5 lg:w-2/5;
 }
 
+.hideWhenBigger {
+  @apply block md:hidden lg:hidden;
+}
+
 .bottom {
   @apply flex flex-col;
   @apply md:flex-row lg:flex-row;
