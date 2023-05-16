@@ -9,6 +9,10 @@
   @apply md:w-1/2 lg:w-1/2;
 }
 
+.left {
+  @apply flex flex-col gap-5;
+}
+
 .right {
   @apply bg-orange-300;
 }
