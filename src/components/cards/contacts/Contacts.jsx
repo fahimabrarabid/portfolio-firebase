@@ -4,6 +4,7 @@ import Linkedin from '../../icons/Linkedin'
 import Email from '../../icons/Email'
 import Github from '../../icons/Github'
 import Telephone from '../../icons/Telephone'
+import Location from '../../icons/Location'
 
 const Contact = (Info) => {
   return (
@@ -37,6 +38,14 @@ const Contact = (Info) => {
         <a target="_blank" href={'https://www.linkedin.com/in/' + Info.contact.linkedin}>
           <Linkedin className="svg-icon" /> @{Info.contact.linkedin}
         </a>
+      ) : (
+        ''
+      )}
+
+      {Info.contact.address ? (
+        <p>
+          <Location className="svg-icon inline-block" /> {Info.contact.address}
+        </p>
       ) : (
         ''
       )}

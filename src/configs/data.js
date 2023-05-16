@@ -12,6 +12,7 @@ const Info = {
     phone: '+8801913343717',
     // github: 'ehsan18t',
     linkedin: 'fahimabrarabid',
+    address: 'House-12, Road-09, Dhanmondi R/A, Dhaka-1209, Bangladesh',
   },
   education: [
     {
