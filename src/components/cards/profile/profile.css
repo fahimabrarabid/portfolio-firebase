@@ -11,7 +11,3 @@
   font-family: 'Signika Negative', sans-serif;
   @apply text-xl text-center border-b-0 font-medium;
 }
-
-.profile p {
-  @apply text-base text-justify font-semibold text-gray-700;
-}
