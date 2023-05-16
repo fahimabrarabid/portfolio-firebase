@@ -1,24 +1,5 @@
 .profile-picture-container {
-  @apply flex flex-col w-full gap-5 mt-4 m-1 justify-center items-center;
-  @apply lg:justify-between md:justify-between;
-  @apply md:flex-row lg:flex-row;
-}
-
-.profile-picture-container .contact-section {
-  @apply md:block lg:block;
-}
-
-.contact-section {
-  @apply w-1/4;
-  @apply hidden md:block lg:block;
-}
-
-.contact-section ul {
-  @apply flex flex-col;
-}
-
-.contact-section li {
-  @apply text-lg text-gray-700 list-disc mx-3;
+  @apply flex justify-center items-center;
 }
 
 .profile-picture {
