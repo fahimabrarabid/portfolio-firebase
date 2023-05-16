@@ -1,15 +1,15 @@
 .profile {
-  @apply w-full flex flex-col gap-3 md:p-7 lg:p-9 justify-center;
+  @apply w-full flex flex-col items-center justify-center;
 }
 
 .profile h1 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-6xl font-bold flex justify-center md:justify-start lg:justify-start;
+  @apply text-4xl font-bold flex justify-center md:justify-start lg:justify-start;
 }
 
 .profile h2 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-3xl border-b-0 font-medium flex justify-center md:justify-start lg:justify-start;
+  @apply text-xl border-b-0 font-medium flex justify-center md:justify-start lg:justify-start;
 }
 
 .profile p {

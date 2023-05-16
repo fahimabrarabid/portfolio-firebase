@@ -2,7 +2,7 @@ const Info = {
   calendarID: 'bm9ib2R5LmFoc2FuQGdtYWlsLmNvbQ',
   profile: {
     name: 'Fahim Abrar Abid',
-    // title: 'Software Developer', // optional
+    title: 'Law Student, OSUN Scholar, Legal Researcher', // optional
     about:
       'A hard-working and highly motivated senior law student with a keen research interest in Human Rights, Civic Engagement and Environmental Protection. With a quick learning ability and a visionary mindset, I always look forward to welcoming new challenges and responsibilities. Having diverse experience on national and international levels, I aim to ensure peace and justice in my community and on the global stage.',
     picture: 'me.jpg',
