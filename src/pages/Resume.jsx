@@ -24,18 +24,18 @@ const Resume = () => {
       </div>
       <div className="bottom">
         <div className="left-side">
-          <Login />
+          {/* <Login /> */}
           <Contact contact={Info.contact} />
           <Education education={Info.education} />
-          <Achievements achievements={Info.achievements} />
+          {/* <Achievements achievements={Info.achievements} /> */}
         </div>
         <div className="right-side">
           <Skills skills={Info.skills} />
-          <Projects projects={Info.projects} />
-          <Experience experience={Info.experience} />
+          {/* <Projects projects={Info.projects} />
+          <Experience experience={Info.experience} /> */}
         </div>
       </div>
-      <Calendar id={Info.calendarID} />
+      {/* <Calendar id={Info.calendarID} /> */}
     </div>
   )
 }
