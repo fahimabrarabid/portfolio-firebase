@@ -6,11 +6,10 @@ import ContactsIcon from '../cards/contacts-icon/ContactsIcon'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
-  let toggleState = open ? '9' : '-100'
+  let toggleState = open ? '12' : '-100'
 
   function handleClick() {
     setOpen((open) => !open)
-    console.log(open)
   }
 
   return (
