@@ -53,11 +53,7 @@ const Navbar = () => {
             </li>
             <li>
               <a className="hover:text-gray-500 text-gray-700 font-semibold" href="#">
-                <li>
-                  <a className="hover:text-gray-500 text-gray-700 font-semibold" href="#">
-                    Hobby
-                  </a>
-                </li>
+                Hobby
               </a>
             </li>
           </ul>
