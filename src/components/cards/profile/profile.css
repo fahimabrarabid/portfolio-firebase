@@ -4,12 +4,12 @@
 
 .profile h1 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-4xl font-bold flex justify-center md:justify-start lg:justify-start;
+  @apply text-4xl text-center font-bold;
 }
 
 .profile h2 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-xl border-b-0 font-medium flex justify-center md:justify-start lg:justify-start;
+  @apply text-xl text-center border-b-0 font-medium;
 }
 
 .profile p {
