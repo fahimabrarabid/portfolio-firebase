@@ -3,5 +3,5 @@
 }
 
 .skills li {
-  @apply text-lg text-gray-700 list-disc mx-3;
+  @apply text-lg text-gray-700 border-2 px-2 my-1 rounded-xl border-gray-300;
 }
