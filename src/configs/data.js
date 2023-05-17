@@ -76,6 +76,24 @@ const Info = {
       duration: 'Oct 2022 - Jan 2023',
       details: ['Researching fund eligibility of small NGOs from European Union', 'Handling the legal needs of the project.', 'Drafting and reviewing contracts and agreements.'],
     },
+    {
+      company: 'BRAC JAMES P. GRANT SCHOOL OF PUBLIC HEALTH',
+      position: 'Field Research Assistant',
+      location: 'BRAC University', // optional
+      duration: 'Oct 2022- Nov 2023',
+      details: [
+        'Assisted the Empowering Readymade Garments Worker (ERMG) project launched by BRAC Urban Development Program (UDP).',
+        'Interviewed and collected data for the quantitative and qualitative research survey.',
+        'Contributed to ensuring easy access to the legal, economic and social assistance for deprived garment workers.',
+      ],
+    },
+    {
+      company: 'BANDHU SOCIAL WELFARE SOCIETY',
+      position: 'Dhaka, Bangladesh',
+      location: 'Research Fellow', // optional
+      duration: 'Sep 2021- Dec 2021',
+      details: ['Interviewed and facilitated a research titled “A Critical Analysis of Gender-Based Violence on Gender Diverse Population” in  Bangladesh context.', 'Prepared reports for the gender-diverse working group of Rohingya refugees.'],
+    },
   ],
   volExperience: [
     {
@@ -84,6 +102,20 @@ const Info = {
       location: 'Vienna, Austria', // optional
       duration: 'Mar 2023 - Present',
       details: ['Coordinated the course instructor with reading materials and technical support.', 'Corresponded with international students to facilitate their studies.', 'Supported expanding access to higher education for underserved communities.'],
+    },
+    {
+      company: 'Map of Justice',
+      position: 'Legal Researcher',
+      location: 'Dhaka, Bangladesh', // optional
+      duration: 'March 2023- Present',
+      details: ['Facilitating research on various legal aspects including laws on forest protection and police detention.'],
+    },
+    {
+      company: 'NETWORK FOR INTERNATIONAL LAW STUDENTS (NILS) BANGLADESH',
+      position: 'Editorial Intern',
+      location: 'Dhaka, Bangladesh', // optional
+      duration: 'Jan 2022- Apr 2022',
+      details: ['Edited and proofread articles that were published on the NILS website.', 'Wrote social media post captions.'],
     },
   ],
   language: [
