@@ -12,6 +12,9 @@ const Navbar = () => {
   function handleClick() {
     setOpen((open) => !open)
   }
+  function closeMenu() {
+    setOpen(false)
+  }
 
   return (
     <header className="w-full">
@@ -21,12 +24,12 @@ const Navbar = () => {
         </div>
         <div className={`${toggleState} duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 md:w-auto  w-full flex items-center px-5`}>
           <ul className="flex md:flex-row flex-col md:items-center md:gap-7 gap-5">
-            <NavItem onClick={handleClick} to="/" text="Home" />
-            <NavItem onClick={handleClick} to="/academic" text="Academic" />
-            <NavItem onClick={handleClick} to="/experiences" text="Experience" />
-            <NavItem onClick={handleClick} to="/achievements" text="Achievements" />
-            <NavItem onClick={handleClick} to="/5" text="Research & Publications" />
-            <NavItem onClick={handleClick} to="/6" text="Certification & Participation" />
+            <NavItem onClick={closeMenu} to="/" text="Home" />
+            <NavItem onClick={closeMenu} to="/academic" text="Academic" />
+            <NavItem onClick={closeMenu} to="/experiences" text="Experience" />
+            <NavItem onClick={closeMenu} to="/achievements" text="Achievements" />
+            <NavItem onClick={closeMenu} to="/5" text="Research & Publications" />
+            <NavItem onClick={closeMenu} to="/6" text="Certification & Participation" />
           </ul>
         </div>
         <div className="flex items-center mt-4 relative z-10 mr-4">
