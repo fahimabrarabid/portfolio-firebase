@@ -18,7 +18,7 @@
 }
 
 .about p {
-  @apply text-base text-justify font-semibold text-gray-700;
+  @apply text-sm text-justify font-semibold text-gray-700;
 }
 
 .about span {
@@ -26,5 +26,5 @@
 }
 
 .left li {
-  @apply text-lg text-gray-700 border-2 px-2 my-1 border-b-2 border-dashed;
+  @apply text-gray-700 border-2 px-2 my-1 border-b-2 border-dashed list-disc list-inside;
 }
