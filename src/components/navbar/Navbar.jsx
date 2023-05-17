@@ -28,8 +28,8 @@ const Navbar = () => {
             <NavItem onClick={closeMenu} to="/academic" text="Academic" />
             <NavItem onClick={closeMenu} to="/experiences" text="Experience" />
             <NavItem onClick={closeMenu} to="/achievements" text="Achievements" />
-            <NavItem onClick={closeMenu} to="/5" text="Research & Publications" />
-            <NavItem onClick={closeMenu} to="/6" text="Certification & Participation" />
+            <NavItem onClick={closeMenu} to="/research" text="Research & Publications" />
+            <NavItem onClick={closeMenu} to="/certification" text="Certification & Participation" />
           </ul>
         </div>
         <div className="flex items-center mt-4 relative z-10 mr-4">

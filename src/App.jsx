@@ -4,6 +4,8 @@ import Achievements from './pages/achievements/Achievements'
 import Experiences from './pages/experiences/Experiences'
 import Home from './pages/home/Home'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import Research from './pages/research/Research'
+import Certification from './pages/certification/Certification'
 
 function App() {
   return (
@@ -36,6 +38,22 @@ function App() {
             element={
               <div className="w-3/4 mx-auto">
                 <Achievements />
+              </div>
+            }
+          />
+          <Route
+            path="research"
+            element={
+              <div className="w-3/4 mx-auto">
+                <Research />
+              </div>
+            }
+          />
+          <Route
+            path="certification"
+            element={
+              <div className="w-3/4 mx-auto">
+                <Certification />
               </div>
             }
           />
