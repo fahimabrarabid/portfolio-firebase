@@ -1,5 +1,5 @@
 import React from 'react'
-import './simple-square-card.css'
+import './simnple-square-card.css'
 
 const SimpleSquareCard = (props) => {
   return (
