@@ -62,6 +62,7 @@ const Info = {
   achievements: [
     {
       title: 'Study Abroad Fully-Funded Scholarship',
+      // titleLink: 'https://www.osun.org/',
       description: 'Open Society University Network.',
       // year: '2021', // optional
       // link: 'https://github.com/ehsan18t/course-assistant', // optional

@@ -9,7 +9,13 @@ const Achievement = (Info) => {
         {Info.achievements.map((achievement, index) => (
           <div key={index} className="achievement">
             <div>
-              <h3>{achievement.title}</h3>
+              {achievement.titleLink ? (
+                <a href={achievement.titleLink} target="_blank">
+                  <h3>{achievement.title}</h3>
+                </a>
+              ) : (
+                <h3>{achievement.title}</h3>
+              )}
               <p>{achievement.description}</p>
             </div>
             <div className="achievement-bottom">
