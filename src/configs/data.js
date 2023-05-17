@@ -65,6 +65,7 @@ const Info = {
       description: "It's a project competition where we have to make a project in a team of 3-4 members.",
       year: '2021', // optional
       link: 'https://github.com/ehsan18t/course-assistant', // optional
+      linkText: 'Link', // optional
     },
   ],
   skills: ['Multi Tasking Ability', 'Analytical Skill', 'Critical Thinking', 'Problem-Solving', 'Leadership', 'Team Work', 'Communication', 'Networking', 'Academic Writing', 'MS Office', 'Editing', 'Research'],
