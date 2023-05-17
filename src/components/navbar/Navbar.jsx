@@ -7,7 +7,7 @@ import NavItem from './NavItem'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
-  let toggleState = open ? 'top-[12%]' : 'top-[-100%]'
+  let toggleState = open ? 'top-[7%]' : 'top-[-100%]'
 
   function handleClick() {
     setOpen((open) => !open)
