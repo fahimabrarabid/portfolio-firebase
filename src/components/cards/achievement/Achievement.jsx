@@ -13,10 +13,14 @@ const Achievement = (Info) => {
               <p>{achievement.description}</p>
             </div>
             <div className="achievement-bottom">
-              <h4>{achievement.year}</h4>
-              <a target="_blank" href={achievement.link}>
-                Link
-              </a>
+              {achievement.year ? <h4>{achievement.year}</h4> : ''}
+              {achievement.link ? (
+                <a target="_blank" href={achievement.link}>
+                  {achievement.linkText ? achievement.linkText : 'Link'}
+                </a>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         ))}
