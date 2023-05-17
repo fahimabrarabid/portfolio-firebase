@@ -61,10 +61,31 @@ const Info = {
   ],
   achievements: [
     {
-      title: 'UIU Project Show Fall 2021 Champion',
-      description: "It's a project competition where we have to make a project in a team of 3-4 members.",
-      year: '2021', // optional
-      link: 'https://github.com/ehsan18t/course-assistant', // optional
+      title: 'Study Abroad Fully-Funded Scholarship',
+      description: 'Open Society University Network.',
+      // year: '2021', // optional
+      // link: 'https://github.com/ehsan18t/course-assistant', // optional
+      // linkText: 'Link', // optional
+    },
+    {
+      title: 'BRAC Scholarship',
+      description: 'BRAC University.',
+    },
+    {
+      title: 'Top 15 Manifesto',
+      description: 'Shadow Youth Parliament organized by UNYSAB and ActionAid.',
+    },
+    {
+      title: 'Semi-Finalist',
+      description: '3rd Intra BULS Moot Court Competition',
+    },
+    {
+      title: 'Quarter Finalist',
+      description: '13th Henry Dunant Memorial Moot Court Competition.',
+    },
+    {
+      title: 'Honourable Mention in Content Creating on ‘Digital Security vs Privacy’',
+      description: '‘Freedom Fellow’ boot camp powered by PrenureLab and FNF Bangladesh.',
     },
   ],
   skills: ['Multi Tasking Ability', 'Analytical Skill', 'Critical Thinking', 'Problem-Solving', 'Leadership', 'Team Work', 'Communication', 'Networking', 'Academic Writing', 'MS Office', 'Editing', 'Research'],

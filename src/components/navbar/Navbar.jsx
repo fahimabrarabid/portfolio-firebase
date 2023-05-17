@@ -24,7 +24,7 @@ const Navbar = () => {
             <NavItem to="/" text="Home" />
             <NavItem to="/academic" text="Academic" />
             <NavItem to="/experiences" text="Experience" />
-            <NavItem to="/4" text="Achievements" />
+            <NavItem to="/achievements" text="Achievements" />
             <NavItem to="/5" text="Research & Publications" />
             <NavItem to="/6" text="Certification & Participation" />
           </ul>

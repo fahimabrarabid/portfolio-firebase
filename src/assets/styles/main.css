@@ -6,3 +6,8 @@ html,
 body {
   @apply overflow-x-hidden;
 }
+
+h2 {
+  @apply text-xl font-bold text-gray-700 uppercase;
+  @apply border-b-[3px] pb-[2px] border-gray-500 mb-3;
+}
