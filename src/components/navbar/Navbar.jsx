@@ -21,12 +21,12 @@ const Navbar = () => {
         </div>
         <div className={`${toggleState} duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 md:w-auto  w-full flex items-center px-5`}>
           <ul className="flex md:flex-row flex-col md:items-center md:gap-7 gap-5">
-            <NavItem to="/" text="Home" />
-            <NavItem to="/academic" text="Academic" />
-            <NavItem to="/experiences" text="Experience" />
-            <NavItem to="/achievements" text="Achievements" />
-            <NavItem to="/5" text="Research & Publications" />
-            <NavItem to="/6" text="Certification & Participation" />
+            <NavItem onClick={handleClick} to="/" text="Home" />
+            <NavItem onClick={handleClick} to="/academic" text="Academic" />
+            <NavItem onClick={handleClick} to="/experiences" text="Experience" />
+            <NavItem onClick={handleClick} to="/achievements" text="Achievements" />
+            <NavItem onClick={handleClick} to="/5" text="Research & Publications" />
+            <NavItem onClick={handleClick} to="/6" text="Certification & Participation" />
           </ul>
         </div>
         <div className="flex items-center mt-4">
