@@ -1,5 +1,6 @@
 import Navbar from './components/navbar/Navbar'
-import Resume from './pages/Resume'
+import Academics from './pages/academics/Academics'
+import Home from './pages/home/Home'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
 
         {/* Routes */}
         <Routes>
-          <Route path="/" element={<Resume />} />
+          <Route path="/" element={<Home />} />
+          <Route path="academic" element={<Academics />} />
         </Routes>
       </BrowserRouter>
     </>

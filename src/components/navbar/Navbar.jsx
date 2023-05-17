@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className={`${toggleState} duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 md:w-auto  w-full flex items-center px-5`}>
           <ul className="flex md:flex-row flex-col md:items-center md:gap-7 gap-5">
             <NavItem to="/" text="Home" />
-            <NavItem to="/1" text="Academic" />
+            <NavItem to="/academic" text="Academic" />
             <NavItem to="/2" text="Experience" />
             <NavItem to="/4" text="Achievements" />
             <NavItem to="/5" text="Research & Publications" />
