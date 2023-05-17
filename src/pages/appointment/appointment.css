@@ -7,9 +7,13 @@
 }
 
 .appointment-content {
-  @apply flex justify-center;
+  @apply flex flex-col gap-8 items-center justify-center;
 }
 
 Calendar {
   @apply flex justify-center;
+}
+
+.appointment-request {
+  @apply flex justify-center gap-4;
 }
