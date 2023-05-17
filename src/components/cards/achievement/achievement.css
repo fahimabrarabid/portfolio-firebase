@@ -1,17 +1,17 @@
-.achievements {
+.achievement-container {
   @apply flex flex-wrap gap-2;
 }
 
 .achievement {
-  @apply w-full md:w-1/2 lg:w-1/3 ring-1 ring-slate-500 p-3 rounded-lg shadow-md;
+  @apply w-full md:w-1/2 lg:w-1/3 ring-1 ring-slate-400 p-3 m-2 rounded-lg shadow-md;
 }
 
 .achievement h3 {
-  @apply text-gray-700 font-medium;
+  @apply text-gray-700 font-semibold;
 }
 
 .achievement p {
-  @apply text-sm text-gray-700;
+  @apply text-justify text-sm text-gray-700 py-2 mb-1;
 }
 
 .achievement-bottom {
@@ -19,9 +19,9 @@
 }
 
 .achievement-bottom h4 {
-  @apply text-sm text-gray-600 bg-emerald-200 ring-1 ring-emerald-400 p-1 rounded-md;
+  @apply text-sm text-gray-600 ring-1 ring-emerald-400 p-1 rounded-md;
 }
 
 .achievement-bottom a {
-  @apply bg-blue-200 ring-1 ring-blue-600 p-1 rounded-md;
+  @apply ring-1 ring-blue-600 p-1 rounded-md;
 }
