@@ -1,5 +1,5 @@
-.container {
-  @apply mt-8;
+.experiences-container {
+  @apply mt-8 flex flex-col gap-10;
 }
 
 h2 {
