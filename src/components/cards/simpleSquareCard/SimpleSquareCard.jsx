@@ -11,10 +11,12 @@ const SimpleSquareCard = (props) => {
             <div>
               {d.titleLink ? (
                 <a href={d.titleLink} target="_blank">
-                  <h3>{d.title}</h3>
+                  {d.title ? <h3>{d.title}</h3> : ''}
                 </a>
-              ) : (
+              ) : d.title ? (
                 <h3>{d.title}</h3>
+              ) : (
+                ''
               )}
               <p>{d.description}</p>
             </div>
