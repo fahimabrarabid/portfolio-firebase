@@ -1,11 +1,19 @@
 import Navbar from './components/navbar/Navbar'
 import Resume from './pages/Resume'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Resume />
+      <BrowserRouter>
+        {/* NAV */}
+        <Navbar />
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<Resume />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
