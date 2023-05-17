@@ -10,7 +10,7 @@ const About = (props) => {
           <p>{props.info.about} </p>
         </div>
         <div className="sec-2">
-          <h2>Pro-bono Services I Provide</h2>
+          <h2>Pro-bono Service</h2>
           <ul>
             {props.info.services.map((service, index) => (
               <li key={index}>{service}</li>
