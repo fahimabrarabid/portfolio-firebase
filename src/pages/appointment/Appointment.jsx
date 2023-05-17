@@ -2,12 +2,14 @@ import React from 'react'
 import './appointment.css'
 import Calendar from '../../components/googleCalendar/Calendar'
 import Info from '../../configs/data'
+import useDocumentTitle from '../../assets/js/useDocumentTitle'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker'
 import dayjs from 'dayjs'
 
 const Appointment = () => {
+  useDocumentTitle('Book an Appointment')
   const [today, setToday] = React.useState(new Date())
 
   return (
