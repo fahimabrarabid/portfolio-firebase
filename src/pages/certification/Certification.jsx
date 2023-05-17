@@ -8,6 +8,7 @@ import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import PropTypes from 'prop-types'
+import AnimatedPage from '../../AnimatedPage'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -45,23 +46,29 @@ const Certification = () => {
   }
 
   return (
-    <div className="certification-container">
-      <h2>Certification & Participation</h2>
-      <Box sx={{ width: '100%' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs className="relative z-0" value={value} onChange={handleChange} aria-label="Certification & Participation">
-            <Tab label="Certification" {...a11yProps(0)} />
-            <Tab label="Participation" {...a11yProps(1)} />
-          </Tabs>
+    <AnimatedPage>
+      <div className="certification-container">
+        <h2>Certification & Participation</h2>
+        <Box sx={{ width: '100%' }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs className="relative z-0" value={value} onChange={handleChange} aria-label="Certification & Participation">
+              <Tab label="Certification" {...a11yProps(0)} />
+              <Tab label="Participation" {...a11yProps(1)} />
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
+            <AnimatedPage>
+              <SimpleSquareCard data={Info.certification} />
+            </AnimatedPage>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <AnimatedPage>
+              <SimpleSquareCard data={Info.participation} />
+            </AnimatedPage>
+          </TabPanel>
         </Box>
-        <TabPanel value={value} index={0}>
-          <SimpleSquareCard data={Info.certification} />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <SimpleSquareCard data={Info.participation} />
-        </TabPanel>
-      </Box>
-    </div>
+      </div>
+    </AnimatedPage>
   )
 }
 

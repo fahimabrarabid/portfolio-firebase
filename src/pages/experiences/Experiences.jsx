@@ -8,6 +8,7 @@ import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import PropTypes from 'prop-types'
+import AnimatedPage from '../../AnimatedPage'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -45,23 +46,29 @@ const Experiences = () => {
   }
 
   return (
-    <div className="experiences-container">
-      <h2>Experience</h2>
-      <Box sx={{ width: '100%' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs className="relative z-0" value={value} onChange={handleChange} aria-label="Experiences">
-            <Tab label="Professional" {...a11yProps(0)} />
-            <Tab label="Volunteering" {...a11yProps(1)} />
-          </Tabs>
+    <AnimatedPage>
+      <div className="experiences-container">
+        <h2>Experience</h2>
+        <Box sx={{ width: '100%' }}>
+          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs className="relative z-0" value={value} onChange={handleChange} aria-label="Experiences">
+              <Tab label="Professional" {...a11yProps(0)} />
+              <Tab label="Volunteering" {...a11yProps(1)} />
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
+            <AnimatedPage>
+              <Experience experience={Info.proExperience} />
+            </AnimatedPage>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <AnimatedPage>
+              <Experience experience={Info.volExperience} />
+            </AnimatedPage>
+          </TabPanel>
         </Box>
-        <TabPanel value={value} index={0}>
-          <Experience experience={Info.proExperience} />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Experience experience={Info.volExperience} />
-        </TabPanel>
-      </Box>
-    </div>
+      </div>
+    </AnimatedPage>
   )
 }
 
