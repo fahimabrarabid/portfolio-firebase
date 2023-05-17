@@ -5,7 +5,12 @@ import useDocumentTitle from '../../assets/js/useDocumentTitle'
 import Info from '../../configs/data'
 
 const Achievements = () => {
-  return <div>Achievements</div>
+  useDocumentTitle('Achievements')
+  return (
+    <div className="achievements-container">
+      <Achievement achievements={Info.achievements} />
+    </div>
+  )
 }
 
 export default Achievements
