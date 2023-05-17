@@ -7,7 +7,7 @@ import NavItem from './NavItem'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
-  let toggleState = open ? 'top-[7%]' : 'top-[-100%]'
+  let toggleState = open ? 'top-[-50%]' : 'top-[-1000%]'
 
   function handleClick() {
     setOpen((open) => !open)
@@ -15,8 +15,8 @@ const Navbar = () => {
 
   return (
     <header className="w-full">
-      <nav className="flex justify-between items-center w-[92%]  mx-auto">
-        <div className="flex items-center mt-4">
+      <nav className="flex justify-between items-center w-full mx-auto relative z-[1]">
+        <div className="flex items-center mt-4 relative z-10 ml-4">
           <RiMenu4Line className="text-3xl cursor-pointer md:hidden text-slate-600" onClick={handleClick} size={30} />
         </div>
         <div className={`${toggleState} duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 md:w-auto  w-full flex items-center px-5`}>
@@ -29,7 +29,7 @@ const Navbar = () => {
             <NavItem onClick={handleClick} to="/6" text="Certification & Participation" />
           </ul>
         </div>
-        <div className="flex items-center mt-4">
+        <div className="flex items-center mt-4 relative z-10 mr-4">
           <ContactsIcon contact={Info.contact} />
         </div>
       </nav>
