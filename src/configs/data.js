@@ -65,7 +65,7 @@ const Info = {
       // titleLink: 'https://www.osun.org/',
       description: 'Open Society University Network.',
       // year: '2021', // optional
-      // link: 'https://github.com/ehsan18t/course-assistant', // optional
+      // link: 'https://www.osun.org/', // optional
       // linkText: 'Link', // optional
     },
     {
