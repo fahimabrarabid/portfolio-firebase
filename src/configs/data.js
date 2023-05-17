@@ -96,7 +96,7 @@ const Info = {
       position: 'Cyber Law Course Assistant of BRAC University',
       location: 'USA', // optional
       duration: 'Oct 2022 - Jan 2023',
-      details: ['Researching fund eligibility of small NGOs from European Union', 'Handling the legal needs of the project.', 'Drafting and reviewing contracts and agreements.'],
+      details: ['Coordinated the course instructor with reading materials and technical support.', 'Corresponded with international students to facilitate their studies.', 'Supported expanding access to higher education for underserved communities.'],
     },
     {
       company: 'BRAC JAMES P. GRANT SCHOOL OF PUBLIC HEALTH',
@@ -123,7 +123,7 @@ const Info = {
       position: 'Writer for CEU Think Tank Project',
       location: 'Vienna, Austria', // optional
       duration: 'Mar 2023 - Present',
-      details: ['Coordinated the course instructor with reading materials and technical support.', 'Corresponded with international students to facilitate their studies.', 'Supported expanding access to higher education for underserved communities.'],
+      details: ['Researching fund eligibility of small NGOs from European Union', 'Handling the legal needs of the project.', 'Drafting and reviewing contracts and agreements.'],
     },
     {
       company: 'Map of Justice',
