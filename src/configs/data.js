@@ -185,6 +185,25 @@ const Info = {
       description: 'Denning Law Institute.',
     },
   ],
+  participation: [
+    {
+      // title: 'Legal Research Methodology', // optional
+      // titleLink: 'https://www.osun.org/',
+      description: 'Selected for CEU Summer University to be held at Budapest in July with fully-funded scholarship.',
+      // year: '2021', // optional
+      // link: 'https://www.osun.org/', // optional
+      // linkText: 'Link', // optional
+    },
+    {
+      description: 'Shadow Youth Parliament organized by UNYSAB and ActionAid.',
+    },
+    {
+      description: '‘Freedom Fellow’ Bootcamp by PrenureLab and FNF Bangladesh.',
+    },
+    {
+      description: '"Leadership for Young Leaders: Coping with a Changing World" organised by the International Academy for Leadership (IAF) Friedrich Naumann Foundation for Freedom.',
+    },
+  ],
 }
 
 export default Info
