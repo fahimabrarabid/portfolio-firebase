@@ -155,7 +155,7 @@ const Info = {
   research: [
     {
       title: 'Test Research title',
-      // titleLink: 'https://www.osun.org/',
+      titleLink: 'https://www.ieee.org/',
       description: 'Test Test Test Test.',
       // year: '2021', // optional
       // link: 'https://www.osun.org/', // optional
