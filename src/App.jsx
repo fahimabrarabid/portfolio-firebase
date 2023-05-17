@@ -13,7 +13,14 @@ function App() {
         {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="academic" element={<Academics />} />
+          <Route
+            path="academic"
+            element={
+              <div className="w-3/4 mx-auto">
+                <Academics />
+              </div>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>
