@@ -23,7 +23,7 @@ const Navbar = () => {
           <ul className="flex md:flex-row flex-col md:items-center md:gap-7 gap-5">
             <NavItem to="/" text="Home" />
             <NavItem to="/academic" text="Academic" />
-            <NavItem to="/2" text="Experience" />
+            <NavItem to="/experiences" text="Experience" />
             <NavItem to="/4" text="Achievements" />
             <NavItem to="/5" text="Research & Publications" />
             <NavItem to="/6" text="Certification & Participation" />
