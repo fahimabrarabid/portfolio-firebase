@@ -1,7 +1,7 @@
 import React from 'react'
-import './achievements.css'
+import './achievement.css'
 
-const Achievements = (Info) => {
+const Achievement = (Info) => {
   return (
     <div className="achievements">
       <h2>Achievements</h2>
@@ -23,4 +23,4 @@ const Achievements = (Info) => {
   )
 }
 
-export default Achievements
+export default Achievement
