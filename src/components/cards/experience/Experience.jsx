@@ -4,7 +4,7 @@ import './experience.css'
 const Experience = (Info) => {
   return (
     <div className="experience">
-      <h2>Experience</h2>
+      {Info.title ? <h1>{Info.title}</h1> : <h2>Experience</h2>}
       {Info.experience.map((exp, index) => (
         <div key={index} className="job">
           <div>
