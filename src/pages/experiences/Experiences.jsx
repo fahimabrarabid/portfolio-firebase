@@ -9,8 +9,8 @@ const Experiences = () => {
 
   return (
     <div className="experiences-container">
-      <Experience experience={Info.experience} title="Professional Experiences" />
-      <Experience experience={Info.experience} title="Volunteering Experiences" />
+      <Experience experience={Info.proExperience} title="Professional Experiences" />
+      <Experience experience={Info.volExperience} title="Volunteering Experiences" />
     </div>
   )
 }

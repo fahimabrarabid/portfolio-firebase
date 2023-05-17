@@ -68,13 +68,22 @@ const Info = {
     },
   ],
   skills: ['Multi Tasking Ability', 'Analytical Skill', 'Critical Thinking', 'Problem-Solving', 'Leadership', 'Team Work', 'Communication', 'Networking', 'Academic Writing', 'MS Office', 'Editing', 'Research'],
-  experience: [
+  proExperience: [
     {
-      company: 'MagicX Mod',
-      position: 'OS Modder',
-      location: 'Dhaka', // optional
-      duration: '2018 - Present',
-      details: ['test 1', 'test 2', 'test 3'],
+      company: 'OPEN SOCIETY UNIVERSITY NETWORK (OSUN)',
+      position: 'Cyber Law Course Assistant of BRAC University',
+      location: 'USA', // optional
+      duration: 'Oct 2022 - Jan 2023',
+      details: ['Researching fund eligibility of small NGOs from European Union', 'Handling the legal needs of the project.', 'Drafting and reviewing contracts and agreements.'],
+    },
+  ],
+  volExperience: [
+    {
+      company: 'HAND- Hungarian Association of NGOs for Development and Humanitarian Aid',
+      position: 'Writer for CEU Think Tank Project',
+      location: 'Vienna, Austria', // optional
+      duration: 'Mar 2023 - Present',
+      details: ['Coordinated the course instructor with reading materials and technical support.', 'Corresponded with international students to facilitate their studies.', 'Supported expanding access to higher education for underserved communities.'],
     },
   ],
   language: [
