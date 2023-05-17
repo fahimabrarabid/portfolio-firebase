@@ -152,44 +152,36 @@ const Info = {
       details: '', // optional
     },
   ],
-  projects: [
+  research: [
     {
-      name: 'Contest Reminder',
-      link: 'https://github.com/ehsan18t/contest-reminder',
-      description:
-        "An amazing automation tool to remind you about upcoming contests from various judge like CodeForces, CodeChef, Atcoder (user selected judges) etc. It doesn't require any API key or login or any computer. It uses web scraping to get the data. Just setup and forget. Initially created with java, currently recreating with python.",
-      techs: ['Java', 'Python'],
+      title: 'Test Research title',
+      // titleLink: 'https://www.osun.org/',
+      description: 'Test Test Test Test.',
+      // year: '2021', // optional
+      // link: 'https://www.osun.org/', // optional
+      // linkText: 'Link', // optional
+    },
+  ],
+  certification: [
+    {
+      title: 'Legal Research Methodology',
+      // titleLink: 'https://www.osun.org/',
+      description: 'South Asian Institution for Social Transformation.',
+      // year: '2021', // optional
+      // link: 'https://www.osun.org/', // optional
+      // linkText: 'Link', // optional
     },
     {
-      name: 'Course Assistant',
-      link: 'https://github.com/ehsan18t/CourseAssistant',
-      description:
-        'An allrounder helper for undergraduate student which solves real-life problems. It helps to manage course, assignments, exams, attendance, grades, etc. It also has a built-in timetable generator, attendance tracker, grade calculator, etc. Initially created with php, recently recreated with django.',
-      techs: ['HTML', 'CSS', 'TailwindCSS', 'JavaScript', 'PHP', 'Django', 'SQL'],
+      title: 'Introduction to Human Rights',
+      description: 'Amnesty International.',
     },
     {
-      name: 'Win10 Ultimate System Tweaks',
-      link: 'https://github.com/ehsan18t/Win10-Ultimate-System-Tweaks',
-      description: 'A script/tool to make windows 10 better by adding useful features & tools, disabling useless services, turning off logging and sending data to third-party and removing garbage.',
-      techs: ['Batch', 'Powershell', 'VBS', 'Registry'],
+      title: 'International Refugee Law',
+      description: 'South Asian Institute for Social Transformation.',
     },
     {
-      name: 'MagicX Toolbox',
-      link: 'https://github.com/ehsan18t/MagicX-Toolbox',
-      description: 'A script based ultimate tool to control almost everything in windows.',
-      techs: ['Batch', 'Powershell', 'VBS', 'Registry'],
-    },
-    {
-      name: 'Currency Converter',
-      link: 'https://github.com/ehsan18t/Currency-Converter',
-      description: 'An advanced realtime Currency Converter with minimal size and command-line interface. Written in Pure C.',
-      techs: ['C', 'C++'],
-    },
-    {
-      name: 'Duplicate Line Finder',
-      link: 'https://github.com/ehsan18t/duplicate-line-finder',
-      description: 'A small java based tool to find duplicate lines in text files.',
-      techs: ['Java', 'JavaFX', 'Maven'],
+      title: 'Corporate and Commercial Contract',
+      description: 'Denning Law Institute.',
     },
   ],
 }
