@@ -154,9 +154,10 @@ const Info = {
   ],
   research: [
     {
-      title: 'Test Research title',
-      titleLink: 'https://www.ieee.org/',
-      description: 'Test Test Test Test.',
+      title: 'A Critical Analysis of Gender-Based Violence on Gender Diverse Population',
+      // titleLink: 'https://www.ieee.org/',
+      description:
+        'Co-authored this research paper portrays the types and reasons behind violence against GDP communities with a comparative study of other countries through a legal analysis and in-depth interviews. for Foundation for a Just Society (FJS) project under the supervision of Bandhu Social Welfare Society.',
       // year: '2021', // optional
       // link: 'https://www.osun.org/', // optional
       // linkText: 'Link', // optional
