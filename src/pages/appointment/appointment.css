@@ -1,0 +1,15 @@
+.appointment-container {
+  @apply mt-8;
+}
+
+.appointment-header {
+  @apply m-auto px-16;
+}
+
+.appointment-content {
+  @apply flex justify-center;
+}
+
+Calendar {
+  @apply flex justify-center;
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './about.css'
+import { Link } from 'react-router-dom'
 
 const About = (props) => {
   return (
@@ -19,6 +20,7 @@ const About = (props) => {
         </div>
       </div>
       <div className="right">
+        <Link to="/appointment">Book an Appointment</Link>
         <span>Pie Chart Here</span>
       </div>
     </div>

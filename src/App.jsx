@@ -6,6 +6,7 @@ import Home from './pages/home/Home'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Research from './pages/research/Research'
 import Certification from './pages/certification/Certification'
+import Appointment from './pages/appointment/Appointment'
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
               </div>
             }
           />
+          <Route path="appointment" element={<Appointment />} />
         </Routes>
       </BrowserRouter>
     </>
