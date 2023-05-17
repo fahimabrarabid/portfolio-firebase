@@ -3,20 +3,22 @@ import Academics from './pages/academics/Academics'
 import Achievements from './pages/achievements/Achievements'
 import Experiences from './pages/experiences/Experiences'
 import Home from './pages/home/Home'
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Research from './pages/research/Research'
 import Certification from './pages/certification/Certification'
 import Appointment from './pages/appointment/Appointment'
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
+  let location = useLocation()
   return (
     <>
-      <BrowserRouter>
-        {/* NAV */}
-        <Navbar />
+      {/* NAV */}
+      <Navbar />
 
-        {/* Routes */}
-        <Routes>
+      {/* Routes */}
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.key}>
           <Route path="/" element={<Home />} />
           <Route
             path="academic"
@@ -60,7 +62,7 @@ function App() {
           />
           <Route path="appointment" element={<Appointment />} />
         </Routes>
-      </BrowserRouter>
+      </AnimatePresence>
     </>
   )
 }
