@@ -1,8 +1,3 @@
 .experiences-container {
   @apply mt-8 flex flex-col gap-10;
 }
-
-h2 {
-  @apply text-xl font-bold text-gray-700 uppercase;
-  @apply border-b-[3px] pb-[2px] border-gray-500 mb-3;
-}
