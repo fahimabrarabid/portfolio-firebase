@@ -4,7 +4,7 @@ import './simnple-square-card.css'
 const SimpleSquareCard = (props) => {
   return (
     <div className="sscs">
-      <h2>{props.title ? props.title : 'No Title'}</h2>
+      {props.title ? <h2>props.title</h2> : ''}
       <div className="ssc-container">
         {props.data.map((d, index) => (
           <div key={index} className="ssc">
