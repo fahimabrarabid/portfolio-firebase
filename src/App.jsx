@@ -11,10 +11,16 @@ import { AnimatePresence } from 'framer-motion'
 import Loading from './components/loading/Loading'
 import { useEffect, useState } from 'react'
 import Admin from './pages/admin/Admin'
+import isAdmin from './configs/isAdmin'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [admin, setAdmin] = useState(false)
+  const adminCheck = async () => {
+    const res = await isAdmin()
+    setAdmin(res)
+  }
 
+  const [isLoading, setIsLoading] = useState(true) // Fetch admin list
   useEffect(() => {
     // Simulate an asynchronous operation
     setTimeout(() => {
@@ -77,7 +83,7 @@ function App() {
                 }
               />
               <Route path="appointment" element={<Appointment />} />
-              <Route path="admin" element={<Admin />} />
+              <Route path="admin" element={admin ? <Admin /> : <h1 className="flex justify-center text-center text-3xl m-10">Hi, Hacker!</h1>} />
             </Routes>
           </AnimatePresence>
         </>

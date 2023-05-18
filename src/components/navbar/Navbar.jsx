@@ -4,8 +4,15 @@ import { RiMenu4Line } from 'react-icons/ri'
 import Info from '../../configs/data'
 import ContactsIcon from '../cards/contacts-icon/ContactsIcon'
 import NavItem from './NavItem'
+import isAdmin from '../../configs/isAdmin'
 
 const Navbar = () => {
+  const [isAdmin, setAdmin] = useState(false)
+  const adminCheck = async () => {
+    const res = await isAdmin()
+    setAdmin(res)
+  }
+
   const [open, setOpen] = useState(false)
   let toggleState = open ? 'top-[-50%]' : 'top-[-1000%]'
 
@@ -31,6 +38,7 @@ const Navbar = () => {
               <NavItem onClick={closeMenu} to="/achievements" text="Achievements" />
               <NavItem onClick={closeMenu} to="/research" text="Research & Publications" />
               <NavItem onClick={closeMenu} to="/certification" text="Certification & Participation" />
+              {isAdmin && <NavItem onClick={closeMenu} to="/admin" text="Admin Panel" />}
             </ul>
           </div>
         </div>
