@@ -10,30 +10,21 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker'
 import dayjs from 'dayjs'
 import AnimatedPage from '../../AnimatedPage'
+import fetchData from '../../configs/fetchData'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
   const [today, setToday] = React.useState(new Date())
   const [serviceList, setServiceList] = useState([])
-  const serviceRef = collection(db, 'services')
 
-  // Services
-  const getServiceList = async () => {
-    try {
-      const data = await getDocs(serviceRef)
-      const filteredData = data.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-      // filter empty data
-      setServiceList(filteredData.filter((data) => data.name !== ''))
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
+  // Fetch Service list
   useEffect(() => {
-    getServiceList()
+    const fetchService = async () => {
+      const data = await fetchData('services')
+      setServiceList(data)
+    }
+
+    fetchService()
   }, [])
 
   return (
