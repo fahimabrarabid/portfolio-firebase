@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, googleProvider, db } from '../../configs/firebase'
 import { collection, getDocs, addDoc } from 'firebase/firestore'
+import AddService from '../../pages/admin/AddService'
 
 export const Login = () => {
   const [adminList, setAdminList] = useState([])
@@ -83,6 +84,7 @@ export const Login = () => {
           {/* If user is admin greet */}
           {adminList.find((admin) => admin.uid === user.uid) && <p>You are an admin</p>}
           <button onClick={logOut}>Sign Out</button>
+          <AddService />
         </div>
       ) : (
         <div>
