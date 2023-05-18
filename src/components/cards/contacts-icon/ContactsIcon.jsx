@@ -1,18 +1,14 @@
 import React from 'react'
 import './contactsicon.css'
-
-import Linkedin from '../../icons/Linkedin'
-import Email from '../../icons/Email'
-import Github from '../../icons/Github'
-import Telephone from '../../icons/Telephone'
-import Facebook from '../../icons/Facebook'
+import { CiLinkedin, CiFacebook, CiMail, CiPhone } from 'react-icons/ci'
+import { VscGithub } from 'react-icons/vsc'
 
 const ContactsIcon = (props) => {
   return (
     <div className="contact-icon">
       {props.contact.email ? (
         <a target="_blank" href={'mailto:' + props.contact.email}>
-          <Email className="svg-icon" />
+          <CiMail className="svg" size="2em" />
         </a>
       ) : (
         ''
@@ -20,7 +16,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.phone ? (
         <a target="_blank" href={'tel:' + props.contact.phone}>
-          <Telephone className="svg-icon" />
+          <CiPhone className="svg" size="2em" />
         </a>
       ) : (
         ''
@@ -28,7 +24,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.facebook ? (
         <a target="_blank" href={'https://facebook.com/' + props.contact.facebook}>
-          <Facebook className="svg-icon" />
+          <CiFacebook className="svg" size="2em" />
         </a>
       ) : (
         ''
@@ -36,7 +32,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.github ? (
         <a target="_blank" href={'https://github.com/' + props.contact.github}>
-          <Github className="svg-icon" />
+          <VscGithub className="svg" size="1.8em" />
         </a>
       ) : (
         ''
@@ -44,7 +40,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.linkedin ? (
         <a target="_blank" href={'https://www.linkedin.com/in/' + props.contact.linkedin}>
-          <Linkedin className="svg-icon" />
+          <CiLinkedin className="svg" size="2em" />
         </a>
       ) : (
         ''
