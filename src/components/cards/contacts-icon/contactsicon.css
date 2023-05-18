@@ -1,7 +1,12 @@
 .contact-icon {
-  @apply flex gap-2;
+  @apply flex items-center;
 }
 
-.svg-icon {
-  @apply inline-block mb-2 w-8 h-8 pr-2;
+.contact-icon a {
+  @apply hover:bg-slate-700 rounded-full p-1;
+  @apply cursor-pointer hover:transform hover:scale-110 hover:transition hover:duration-300 hover:ease-in-out;
+}
+
+.svg {
+  @apply text-slate-700 hover:text-gray-200;
 }
