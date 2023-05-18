@@ -44,7 +44,15 @@ const PieChart = () => {
 
     const purposes = Object.keys(countMap)
     const backgroundColors = colors.slice(0, purposes.length)
-    const borderColor = colors.slice(0, purposes.length)
+
+    // Automatically Calculate the lighter shade of the background color
+    const borderColors = colors.map((color) => {
+      const colorValue = color.substring(1) // Remove the "#" character
+      const parsedColor = parseInt(colorValue, 16) // Parse the color value to integer
+      const lighterColor = (parsedColor & 0xfefefe) >> 1 // Calculate the lighter shade
+      const borderColor = `#${lighterColor.toString(16).padStart(6, '0')}` // Convert the lighter shade to hexadecimal
+      return borderColor
+    })
 
     const pieChartData = {
       labels: purposes,
@@ -53,7 +61,7 @@ const PieChart = () => {
           label: 'Counselling Purpose',
           data: purposes.map((purpose) => countMap[purpose]),
           backgroundColor: backgroundColors,
-          borderColor: borderColor,
+          borderColor: borderColors,
           borderWidth: 1,
         },
       ],
@@ -63,11 +71,27 @@ const PieChart = () => {
   }, [counsellingList])
 
   const colors = ['#1C2331', '#324556', '#475D6F', '#5E7384', '#748D9A', '#8AA7B1', '#A0C1C8', '#D6E2E9', '#E8F1F4']
-
   const options = {
     responsive: true,
-    maintainAspectRatio: true,
-    // Add any additional chart options here
+    maintainAspectRatio: false,
+    layout: {
+      padding: 0,
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right',
+      },
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            const dataset = context.chart.data.datasets[context.datasetIndex]
+            const value = dataset.data[context.dataIndex]
+            return `Counselled: ${value}/${counsellingList.length} (${((value / counsellingList.length) * 100).toFixed(2)}%)`
+          },
+        },
+      },
+    },
   }
 
   if (pieChartData === null) {
@@ -80,9 +104,11 @@ const PieChart = () => {
   }
 
   return (
-    <div className="flex gap-2 content-center items-center">
-      <Pie className="w-52 h-52" data={pieChartData} options={options} />
-      <p className="text-center text-lg font-bold mt-4">Total: {pieChartData.datasets[0].data.reduce((sum, value) => sum + value, 0)}</p>
+    <div className="w-full flex flex-col items-center justify-between">
+      <div className="w-full h-72">
+        <Pie data={pieChartData} options={options} />
+      </div>
+      <p className="text-lg text-center font-semibold mt-4">Total: {counsellingList.length}</p>
     </div>
   )
 }
