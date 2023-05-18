@@ -7,12 +7,16 @@ const NavItem = (props) => {
     return props.to === window.location.pathname
   }
 
+  let border = ''
+
+  if (isActiveLink()) border = 'border-b-4 border-slate-700 md:border-b-0'
+
   return (
     <li>
       <NavLink onClick={props.onClick} to={props.to}>
-        <span className="hover:text-gray-500 text-gray-700 md:hover:text-gray-400 md:text-gray-100 text-center font-semibold">{props.text}</span>
+        <span className={`${border} text-gray-700 md:text-gray-200 hover:text-gray-500 md:hover:text-gray-400  text-center font-semibold`}>{props.text}</span>
+        {isActiveLink() && <motion.div className="h-1 hidden md:block md:bg-slate-300" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}></motion.div>}
       </NavLink>
-      {isActiveLink() && <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, type: 'spring', stiffness: 100 }} className="h-1 w-full bg-white"></motion.div>}
     </li>
   )
 }
