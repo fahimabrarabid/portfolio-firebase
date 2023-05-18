@@ -7,26 +7,32 @@ import { Pie } from 'react-chartjs-2'
 Chart.register(ArcElement, Tooltip, Legend)
 
 const PieChart = () => {
-  // fetch counselling
   const [counsellingList, setCounsellingList] = useState([])
+  const [pieChartData, setPieChartData] = useState([])
+  const counsellingRef = collection(db, 'counselling')
 
-  // Counselling
   const getCounsellingList = async () => {
     try {
-      const data = await getDocs(collection(db, 'counselling'))
+      const data = await getDocs(counsellingRef)
       const filteredData = data.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }))
-      // filter empty data
-      setCounsellingList(filteredData.filter((data) => data.name !== ''))
+      filteredData.filter((data) => data.purpose !== '')
+      setCounsellingList(filteredData)
+      console.log('Counselling List: ')
+      console.log(counsellingList)
     } catch (error) {
+      console.log('error in getCounsellingList: ')
       console.log(error)
     }
   }
 
-  // create count map based on counselling purpose
-  const createCountMap = () => {
+  useEffect(() => {
+    getCounsellingList()
+  }, [])
+
+  useEffect(() => {
     const countMap = {}
     counsellingList.forEach((counselling) => {
       if (countMap[counselling.purpose]) {
@@ -35,34 +41,48 @@ const PieChart = () => {
         countMap[counselling.purpose] = 1
       }
     })
-    // Transform the map into an array of objects for pie chart data
-    const pieChartData = Object.keys(countMap).map((purpose) => ({
-      label: purpose,
-      value: countMap[purpose],
-      backgroundColor: colors[index % backgroundColor.length],
-      hoverBackgroundColor: colors[index % hoverBackgroundColor.length],
-      borderWidth: 1,
-    }))
+
+    console.log('Count Map: ')
+    console.log(countMap)
+
+    const pieChartData = {
+      labels: Object.keys(countMap),
+      datasets: [
+        {
+          label: 'Counselling Purpose',
+          data: Object.values(countMap),
+          backgroundColor: colors,
+          borderColor: colors,
+          borderWidth: 1,
+        },
+      ],
+    }
+
     setPieChartData(pieChartData)
+    console.log('Pie Chart: ')
+    console.log(pieChartData)
+  }, [counsellingList])
+
+  const colors = ['#1C2331', '#324556', '#475D6F', '#5E7384', '#748D9A', '#8AA7B1', '#A0C1C8', '#D6E2E9', '#E8F1F4']
+  const data = {
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    datasets: [
+      {
+        label: 'Weekly Sales',
+        data: [18, 12, 6, 9, 12, 3, 9],
+        backgroundColor: ['rgba(255, 26, 104, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(0, 0, 0, 0.2)'],
+        borderColor: ['rgba(255, 26, 104, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(0, 0, 0, 1)'],
+        borderWidth: 1,
+      },
+    ],
   }
-
-  useEffect(() => {
-    getCounsellingList()
-    createCountMap()
-  }, [])
-
-  // setup
-  const [pieChartData, setPieChartData] = useState([])
-  const backgroundColor = ['#1C2331', '#324556', '#475D6F', '#5E7384', '#748D9A', '#8AA7B1', '#A0C1C8', '#D6E2E9', '#ECEFF4']
-  const hoverBackgroundColor = ['#1C2331', '#324556', '#475D6F', '#5E7384', '#748D9A', '#8AA7B1', '#A0C1C8', '#D6E2E9', '#ECEFF4']
-
   const options = {
     responsive: true,
     maintainAspectRatio: true,
     // Add any additional chart options here
   }
 
-  const totalCount = pieChartData.reduce((total, data) => total + data.value, 0)
+  const totalCount = counsellingList.length
 
   return (
     <div className="flex gap-2 content-center items-center">
