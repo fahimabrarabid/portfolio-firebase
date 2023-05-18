@@ -1,25 +1,17 @@
 import React, { useState } from 'react'
-import { db } from '../../configs/firebase'
-import { collection, addDoc } from 'firebase/firestore'
+import fetchData from '../../configs/fetchData'
 
 const AddService = () => {
   const [service, setService] = useState('')
-  const serviceRef = collection(db, 'services')
-
-  const addService = async () => {
-    try {
-      if (service !== '') {
-        await addDoc(serviceRef, {
-          name: service,
-        })
-        setService('')
-      } else {
-        console.log('Service name is empty')
-      }
-    } catch (error) {
-      console.error('Error adding document: ', error)
+  // Fetch Service list
+  useEffect(() => {
+    const fetchService = async () => {
+      const data = await fetchData('services')
+      setService(data)
     }
-  }
+
+    fetchService()
+  }, [])
 
   return (
     <div className="flex flex-col gap-2 items-center justify-center m-2">

@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { signInWithPopup, signOut } from 'firebase/auth'
-import { auth, googleProvider, db } from '../../configs/firebase'
-import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { auth, googleProvider } from '../../configs/firebase'
 import AddService from '../../pages/admin/AddService'
+import fetchData from '../../configs/fetchData'
 
 export const Login = () => {
+  // Fetch admin list
   const [adminList, setAdminList] = useState([])
-  const adminRef = collection(db, 'admin')
+  useEffect(() => {
+    const fetchAdmin = async () => {
+      const data = await fetchData('admin')
+      setAdminList(data)
+    }
+
+    fetchAdmin()
+  }, [])
+
   // Login
   const [user, setUser] = useState(null)
 
@@ -44,22 +53,6 @@ export const Login = () => {
     }
   }
 
-  // Admin
-  const getAdminList = async () => {
-    try {
-      const data = await getDocs(adminRef)
-      console.log(data)
-
-      const filteredData = data.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-      setAdminList(filteredData)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   const addAdmin = async (u) => {
     try {
       const docRef = await addDoc(adminRef, {
@@ -70,10 +63,6 @@ export const Login = () => {
       console.error('Error adding document: ', error)
     }
   }
-
-  useEffect(() => {
-    getAdminList()
-  }, [])
 
   // RENDER
   return (
