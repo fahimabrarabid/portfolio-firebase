@@ -82,9 +82,11 @@ export const Login = () => {
         <div>
           <p>Hello {user.displayName}</p>
           {/* If user is admin greet */}
-          {adminList.find((admin) => admin.uid === user.uid) && <p>You are an admin</p>}
+          {adminList.find((admin) => admin.uid === user.uid) && (
+            // Admin area
+            <AddService />
+          )}
           <button onClick={logOut}>Sign Out</button>
-          <AddService />
         </div>
       ) : (
         <div>
