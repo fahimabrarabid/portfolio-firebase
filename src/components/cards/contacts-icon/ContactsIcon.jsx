@@ -8,7 +8,7 @@ const ContactsIcon = (props) => {
     <div className="contact-icon">
       {props.contact.email ? (
         <a target="_blank" href={'mailto:' + props.contact.email}>
-          <CiMail className="svg" size="2em" />
+          <CiMail size="2em" />
         </a>
       ) : (
         ''
@@ -16,7 +16,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.phone ? (
         <a target="_blank" href={'tel:' + props.contact.phone}>
-          <CiPhone className="svg" size="2em" />
+          <CiPhone size="2em" />
         </a>
       ) : (
         ''
@@ -24,7 +24,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.facebook ? (
         <a target="_blank" href={'https://facebook.com/' + props.contact.facebook}>
-          <CiFacebook className="svg" size="2em" />
+          <CiFacebook size="2em" />
         </a>
       ) : (
         ''
@@ -32,7 +32,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.github ? (
         <a target="_blank" href={'https://github.com/' + props.contact.github}>
-          <VscGithub className="svg" size="1.8em" />
+          <VscGithub size="1.8em" />
         </a>
       ) : (
         ''
@@ -40,7 +40,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.linkedin ? (
         <a target="_blank" href={'https://www.linkedin.com/in/' + props.contact.linkedin}>
-          <CiLinkedin className="svg" size="2em" />
+          <CiLinkedin size="2em" />
         </a>
       ) : (
         ''
