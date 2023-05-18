@@ -70,10 +70,10 @@ const About = (props) => {
       </div>
       <div className="right">
         <div className="flex gap-2 content-center items-center">
-          <Pie className="w-80 h-80" data={data} options={options} />
+          <Pie className="w-52 h-52" data={data} options={options} />
           <p className="text-center text-lg font-bold mt-4">Total: {totalCount}</p>
         </div>
-        <Link className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full shadow-lg" to="/appointment">
+        <Link className="mr-10 mb-1 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full shadow-lg" to="/appointment">
           Book an Appointment
         </Link>
       </div>
