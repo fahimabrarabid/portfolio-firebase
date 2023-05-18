@@ -1,17 +1,11 @@
 import React, { useState } from 'react'
-import fetchData from '../../configs/fetchData'
+import addData from '../../configs/addData'
 
 const AddService = () => {
   const [service, setService] = useState('')
-  // Fetch Service list
-  useEffect(() => {
-    const fetchService = async () => {
-      const data = await fetchData('services')
-      setService(data)
-    }
-
-    fetchService()
-  }, [])
+  const addService = async () => {
+    await addData('services', { name: service })
+  }
 
   return (
     <div className="flex flex-col gap-2 items-center justify-center m-2">
