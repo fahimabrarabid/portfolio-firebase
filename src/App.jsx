@@ -10,6 +10,7 @@ import Appointment from './pages/appointment/Appointment'
 import { AnimatePresence } from 'framer-motion'
 import Loading from './components/loading/Loading'
 import { useEffect, useState } from 'react'
+import Admin from './pages/admin/Admin'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -76,6 +77,7 @@ function App() {
                 }
               />
               <Route path="appointment" element={<Appointment />} />
+              <Route path="admin" element={<Admin />} />
             </Routes>
           </AnimatePresence>
         </>
