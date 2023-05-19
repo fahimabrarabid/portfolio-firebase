@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import fetchData from './fetchData'
 import { auth } from './firebase'
 
@@ -29,12 +29,11 @@ const IsAdmin = () => {
   }, [])
 
   useEffect(() => {
-    adminList.forEach((admin) => {
-      if (admin.uid === user?.uid) {
-        setIsAdmin(true)
-        return
-      }
-    })
+    const checkIsAdmin = () => {
+      setIsAdmin(adminList.some((admin) => admin.uid === user?.uid))
+    }
+
+    checkIsAdmin()
   }, [adminList, user])
 
   return isAdmin
