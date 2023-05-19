@@ -67,11 +67,9 @@ export const Login = () => {
 
   // RENDER
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col mt-5 items-center justify-center">
       {user && (
         <div className="text-center">
-          <p className="text-2xl mb-4 mt-4">Hello, {user.displayName}</p>
-          {/* If user is admin greet */}
           {adminList.find((admin) => admin.uid === user.uid) && (
             // Admin area
             <AddService />
