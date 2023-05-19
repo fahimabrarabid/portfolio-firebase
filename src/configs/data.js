@@ -4,7 +4,7 @@ const Info = {
     name: 'Fahim Abrar Abid',
     title: 'Law Student, OSUN Scholar, Legal Researcher', // optional
     about:
-      'A hard-working and highly motivated senior law student with a keen research interest in Human Rights, Civic Engagement and Environmental Protection. With a quick learning ability and a visionary mindset, I always look forward to welcoming new challenges and responsibilities. Having diverse experience on national and international levels, I aim to ensure peace and justice in my community and on the global stage.',
+      'Mr Abrar is a hard-working and highly motivated Senior Undergraduate Law student and an Early Career Legal Researcher from BRAC University. He is an OSUN Scholar and also studied as an Exchange Student at the Central European University, Vienna, Austria. His research interests include a wide range of variety, from Human Rights and Civic Engagement to Environmental Protection, Arbitration and Artificial Intelligence. With a quick learning ability and a visionary mindset, he always looks forward to welcoming new challenges and responsibilities. His aim is to ensure peace and justice in his community and on the global stage with the diverse experience he gained on national and international levels. Having received 4 overseas scholarships within a span of 6 months, actively engaged in various ECAs for 3 years and maintained academic excellence, his primary goal using this platform is to mentor and assist students through 1-to-1 consultancy in these respective fields voluntarily.',
     picture: 'me.jpg',
     services: [
       'Overseas Admission Application Guideline and Review.',
