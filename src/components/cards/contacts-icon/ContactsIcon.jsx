@@ -1,9 +1,22 @@
 import React from 'react'
 import './contactsicon.css'
-import { CiLinkedin, CiFacebook, CiMail, CiPhone } from 'react-icons/ci'
+import { CiLinkedin, CiFacebook, CiMail, CiPhone, CiLogout } from 'react-icons/ci'
 import { VscGithub } from 'react-icons/vsc'
+import IsLogged from '../../../configs/IsLogged'
+import { RiLogoutCircleRLine } from 'react-icons/ri'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../../configs/firebase'
 
 const ContactsIcon = (props) => {
+  const isLogged = IsLogged()
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   return (
     <div className="contact-icon">
       {props.contact.email ? (
@@ -45,6 +58,8 @@ const ContactsIcon = (props) => {
       ) : (
         ''
       )}
+
+      {isLogged && <RiLogoutCircleRLine onClick={handleSignOut} className="icon" size="2em" />}
     </div>
   )
 }
