@@ -59,11 +59,9 @@ export const GoogleAuth = () => {
         {!user && (
           <div>
             {/* If admin list doesn't have any data */}
-            {adminList.length === 1 && (
-              <div>
-                <p className="text-lg mb-4">There are no admins in the database. Sign to register as admin.</p>
-              </div>
-            )}
+            <div>
+              <p className="text-lg mb-4">{adminList.length === 1 ? 'There are no admins in the database. Sign to register as admin.' : 'Please Sign In to Make an Appointment'}</p>
+            </div>
             <div className="flex justify-center">
               <button onClick={signInWithGoogle} className="rounded-xl border-2 border-blue-400 bg-blue-100 hover:bg-blue-300 text-slate-700 font-semibold py-2 px-4 flex items-center text-3xl">
                 <FcGoogle className="mr-2" />
