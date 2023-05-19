@@ -10,7 +10,7 @@
 }
 
 .left {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col gap-2;
 }
 
 .right {
@@ -26,5 +26,5 @@
 }
 
 .left li {
-  @apply text-sm text-gray-700 border-2 px-2 my-1 border-b-2 border-dashed list-disc list-inside;
+  @apply text-sm text-gray-700 px-2 pb-1 my-1 border-b-2 border-dashed list-disc list-inside;
 }

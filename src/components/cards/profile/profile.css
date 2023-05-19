@@ -4,10 +4,10 @@
 
 .profile h1 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-2xl text-center font-bold;
+  @apply text-2xl text-center pt-1 font-bold;
 }
 
 .profile h2 {
   font-family: 'Signika Negative', sans-serif;
-  @apply text-sm text-center border-b-0 font-medium;
+  @apply text-sm text-center border-b-0 mb-0 pb-0 font-medium;
 }

@@ -1,7 +1,5 @@
 import React from 'react'
 import './profilePicture.css'
-import Info from '../../../configs/data'
-import Contact from '../contacts/Contacts'
 
 const ProfilePicture = (props) => {
   return (
