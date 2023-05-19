@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './appointment.css'
-import Calendar from '../../components/googleCalendar/Calendar'
 import Info from '../../configs/data'
 import useDocumentTitle from '../../assets/js/useDocumentTitle'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
@@ -11,6 +10,7 @@ import AnimatedPage from '../../AnimatedPage'
 import fetchData from '../../configs/fetchData'
 import { GoogleAuth } from '../../components/googleAuth/GoogleAuth'
 import IsLogged from '../../configs/IsLogged'
+import Calendar from '../../components/calendar/Calendar'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
@@ -41,7 +41,7 @@ const Appointment = () => {
           <h2>My Schedules</h2>
         </div>
         <div className="appointment-content">
-          <Calendar id={Info.calendarID} />
+          <Calendar />
 
           {/* date picker */}
           <div className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl">
