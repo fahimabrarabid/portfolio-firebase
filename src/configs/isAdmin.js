@@ -1,20 +1,43 @@
+import React, { useEffect, useState } from 'react'
 import fetchData from './fetchData'
 import { auth } from './firebase'
 
-const isAdmin = async () => {
-  const adminList = await fetchData('admin')
+const IsAdmin = () => {
+  const [adminList, setAdminList] = useState([])
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [user, setUser] = useState(null)
 
-  auth.onAuthStateChanged((user) => {
-    if (user) {
-      // loop through adminList and match uid
-      adminList.forEach((admin) => {
-        if (admin.uid === user.uid) {
-          return true
-        }
-      })
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user)
+      } else {
+        setUser(null)
+      }
+    })
+
+    return unsubscribe // Unsubscribe when the component is unmounted
+  }, [])
+
+  useEffect(() => {
+    const fetchAdmin = async () => {
+      const data = await fetchData('admin')
+      setAdminList(data)
     }
-  })
-  return false
+
+    fetchAdmin()
+  }, [])
+
+  useEffect(() => {
+    adminList.forEach((admin) => {
+      if (admin.uid === user?.uid) {
+        setIsAdmin(true)
+        return
+      }
+    })
+  }, [adminList, user])
+
+  return isAdmin
 }
 
-export default isAdmin
+export default IsAdmin
