@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@date-io/dayjs": "^2.16.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@mui/lab": "^5.0.0-alpha.130",
     "@mui/material": "^5.13.1",
-    "@mui/x-date-pickers": "^6.4.0",
+    "@mui/x-date-pickers": "^6.5.0",
     "chart.js": "^4.3.0",
     "dayjs": "^1.11.7",
     "firebase": "^9.22.0",
