@@ -21,7 +21,7 @@ const ContactsIcon = (props) => {
     <div className="contact-icon">
       {props.contact.email ? (
         <a target="_blank" href={'mailto:' + props.contact.email}>
-          <CiMail size="2em" />
+          <CiMail size="1.8em" />
         </a>
       ) : (
         ''
@@ -29,7 +29,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.phone ? (
         <a target="_blank" href={'tel:' + props.contact.phone}>
-          <CiPhone size="2em" />
+          <CiPhone size="1.8em" />
         </a>
       ) : (
         ''
@@ -37,7 +37,7 @@ const ContactsIcon = (props) => {
 
       {props.contact.facebook ? (
         <a target="_blank" href={'https://facebook.com/' + props.contact.facebook}>
-          <CiFacebook size="2em" />
+          <CiFacebook size="1.8em" />
         </a>
       ) : (
         ''
@@ -53,13 +53,13 @@ const ContactsIcon = (props) => {
 
       {props.contact.linkedin ? (
         <a target="_blank" href={'https://www.linkedin.com/in/' + props.contact.linkedin}>
-          <CiLinkedin size="2em" />
+          <CiLinkedin size="1.8em" />
         </a>
       ) : (
         ''
       )}
 
-      {isLogged && <RiLogoutCircleRLine onClick={handleSignOut} className="icon" size="2em" />}
+      {isLogged && <RiLogoutCircleRLine onClick={handleSignOut} className="icon" size="1.65em" />}
     </div>
   )
 }
