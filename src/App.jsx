@@ -11,15 +11,10 @@ import { AnimatePresence } from 'framer-motion'
 import Loading from './components/loading/Loading'
 import { useEffect, useState } from 'react'
 import Admin from './pages/admin/Admin'
-import isAdmin from './configs/isAdmin'
+import IsAdmin from './configs/IsAdmin'
 
 function App() {
-  const [admin, setAdmin] = useState(false)
-  const adminCheck = async () => {
-    const res = await isAdmin()
-    setAdmin(res)
-  }
-
+  const admin = IsAdmin()
   const [isLoading, setIsLoading] = useState(true) // Fetch admin list
   useEffect(() => {
     // Simulate an asynchronous operation

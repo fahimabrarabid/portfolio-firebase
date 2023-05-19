@@ -4,14 +4,10 @@ import { RiMenu4Line } from 'react-icons/ri'
 import Info from '../../configs/data'
 import ContactsIcon from '../cards/contacts-icon/ContactsIcon'
 import NavItem from './NavItem'
-import isAdmin from '../../configs/isAdmin'
+import IsAdmin from '../../configs/IsAdmin'
 
 const Navbar = () => {
-  const [isAdmin, setAdmin] = useState(false)
-  const adminCheck = async () => {
-    const res = await isAdmin()
-    setAdmin(res)
-  }
+  const isAdmin = IsAdmin()
 
   const [open, setOpen] = useState(false)
   let toggleState = open ? 'top-[-50%]' : 'top-[-1000%]'
