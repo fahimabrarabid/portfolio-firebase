@@ -134,7 +134,7 @@ const PieChart = () => {
       </div>
       <div className="flex items-center gap-5 justify-around text-center text-slate-800 font-semibold mt-4">
         <div className="text-lg">Total: {counsellingList.length} </div>
-        <div className="text-3xl font-semibold border-l-4 pl-5 border-slate-600">{counsellingList.length * 15} Minutes of Volunteer Work </div>
+        <div className="text-xl md:text-2xl lg:text-3xl font-semibold border-l-4 pl-5 border-slate-600">{counsellingList.length * 15} Minutes of Volunteer Work </div>
       </div>
     </div>
   )
