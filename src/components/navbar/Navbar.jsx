@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <header className="w-full">
       <nav className="flex justify-between items-center w-full mx-auto relative z-[1]">
-        <div className="flex items-center mt-4 relative z-10 ml-4 w-1/12">
+        <div className="flex items-center md:hidden mt-4 relative z-10 ml-4 w-1/12">
           <RiMenu4Line className="text-3xl cursor-pointer md:hidden text-slate-600" onClick={handleClick} size={30} />
         </div>
         <div className="w-full flex justify-center">
@@ -36,9 +36,12 @@ const Navbar = () => {
               <NavItem onClick={closeMenu} to="/certification" text="Certification & Participation" />
               {isAdmin && <NavItem onClick={closeMenu} to="/admin" text="Admin Panel" />}
             </ul>
+            <div className="hidden md:flex ml-4">
+              <ContactsIcon contact={Info.contact} />
+            </div>
           </div>
         </div>
-        <div className="flex items-center mt-4 relative z-10 mr-4">
+        <div className="flex md:hidden items-start mt-4 relative z-10 mr-4">
           <ContactsIcon contact={Info.contact} />
         </div>
       </nav>
