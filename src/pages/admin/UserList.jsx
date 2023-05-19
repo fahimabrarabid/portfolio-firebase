@@ -32,6 +32,7 @@ const UserList = () => {
 
   const handleMakeAdmin = async (uid) => {
     await addData('admin', { uid: uid })
+    setAdminList((prevAdminList) => [...prevAdminList, { uid: uid }])
   }
 
   const handleRemoveUserAdmin = async (uid) => {
@@ -45,6 +46,7 @@ const UserList = () => {
         await deleteDoc(adminDocRef)
       })
       console.log(`Admin with UID ${uid} deleted successfully.`)
+      setAdminList((prevAdminList) => prevAdminList.filter((admin) => admin.uid !== uid))
     } catch (error) {
       console.error(`Error deleting admin with UID ${uid}:`, error)
     }
