@@ -34,8 +34,6 @@ const Appointment = () => {
     setSelectedService(value)
   }
 
-  console.log('isLogged', isLogged)
-
   return (
     <AnimatedPage>
       <div className="appointment-container">
