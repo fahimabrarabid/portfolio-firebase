@@ -9,6 +9,7 @@ Chart.register(ArcElement, Tooltip, Legend)
 const PieChart = () => {
   const [counsellingList, setCounsellingList] = useState([])
   const [pieChartData, setPieChartData] = useState(null)
+  const [legendPosition, setLegendPosition] = useState('right')
 
   const getCounsellingList = async () => {
     try {
@@ -80,7 +81,8 @@ const PieChart = () => {
     plugins: {
       legend: {
         display: true,
-        position: 'right',
+        position: legendPosition,
+        align: 'start',
       },
       tooltip: {
         callbacks: {
@@ -93,6 +95,28 @@ const PieChart = () => {
       },
     },
   }
+
+  // Update the legend position to bottom on mobile devices
+  const updateLegendPosition = () => {
+    if (window.innerWidth < 768) {
+      setLegendPosition('bottom')
+    } else {
+      setLegendPosition('right')
+    }
+  }
+
+  useEffect(() => {
+    // Set initial legend position
+    updateLegendPosition()
+
+    // Add window resize event listener
+    window.addEventListener('resize', updateLegendPosition)
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateLegendPosition)
+    }
+  }, [])
 
   if (pieChartData === null) {
     // Render loading state or placeholder when pieChartData is null
