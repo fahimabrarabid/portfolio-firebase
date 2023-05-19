@@ -4,12 +4,12 @@
 
 .icon {
   @apply text-white rounded-full p-1 ml-1 bg-red-500 cursor-pointer;
-  @apply hover:bg-slate-700 md:hover:bg-slate-100 md:hover:text-gray-700;
+  @apply hover:bg-slate-700 lg:hover:bg-slate-100 lg:hover:text-gray-700;
   @apply hover:transform hover:scale-110 hover:transition hover:duration-300 hover:ease-in-out;
 }
 
 .contact-icon a {
-  @apply text-slate-700 md:text-slate-200 hover:text-gray-200 md:hover:text-gray-700;
-  @apply hover:bg-slate-700 md:hover:bg-slate-100 rounded-full p-1;
+  @apply text-slate-700 lg:text-slate-200 hover:text-gray-200 lg:hover:text-gray-700;
+  @apply hover:bg-slate-700 lg:hover:bg-slate-100 rounded-full p-1;
   @apply cursor-pointer hover:transform hover:scale-110 hover:transition hover:duration-300 hover:ease-in-out;
 }
