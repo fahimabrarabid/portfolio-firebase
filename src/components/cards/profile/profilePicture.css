@@ -1,10 +1,10 @@
 .profile-picture-container {
-  @apply flex justify-center items-center mb-3 mt-1;
+  @apply flex justify-center items-center mb-2;
 }
 
 .profile-picture {
   @apply rounded-full overflow-hidden ring-8 ring-gray-200 bg-gray-400;
-  @apply w-40 h-40;
+  @apply w-32 h-32;
 }
 
 .picture {
