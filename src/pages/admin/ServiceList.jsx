@@ -4,7 +4,7 @@ import Service from './Service'
 
 const ServiceList = () => {
   const [serviceList, setServiceList] = useState([])
-  // Fetch Service list
+
   useEffect(() => {
     const fetchService = async () => {
       const data = await fetchData('services')
@@ -15,9 +15,9 @@ const ServiceList = () => {
   }, [])
 
   return (
-    <div className="service-list">
-      <h2>Service List</h2>
-      <ul>
+    <div className="service-list w-3/4 mx-auto">
+      <h2 className="text-lg font-semibold text-gray-800 mb-4">Service List</h2>
+      <ul className="space-y-2">
         {serviceList.map((service) => (
           <Service key={service.id} service={service} />
         ))}

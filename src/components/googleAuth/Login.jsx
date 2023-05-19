@@ -3,6 +3,7 @@ import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, googleProvider } from '../../configs/firebase'
 import AddService from '../../pages/admin/AddService'
 import fetchData from '../../configs/fetchData'
+import { FcGoogle } from 'react-icons/fc'
 
 export const Login = () => {
   // Fetch admin list
@@ -66,28 +67,17 @@ export const Login = () => {
 
   // RENDER
   return (
-    <>
-      {user ? (
-        <div>
-          <p>Hello {user.displayName}</p>
+    <div className="flex flex-col items-center justify-center">
+      {user && (
+        <div className="text-center">
+          <p className="text-2xl mb-4 mt-4">Hello, {user.displayName}</p>
           {/* If user is admin greet */}
           {adminList.find((admin) => admin.uid === user.uid) && (
             // Admin area
             <AddService />
           )}
-          <button onClick={logOut}>Sign Out</button>
-        </div>
-      ) : (
-        <div>
-          {/* if admin list doesn't have any data show */}
-          {adminList.length === 1 && (
-            <div>
-              <p>There is no admin in the database sign in to become admin</p>
-            </div>
-          )}
-          <button onClick={signInWithGoogle}>Sign In With Google</button>
         </div>
       )}
-    </>
+    </div>
   )
 }

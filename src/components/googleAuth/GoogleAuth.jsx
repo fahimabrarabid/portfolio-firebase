@@ -4,6 +4,7 @@ import { auth, googleProvider } from '../../configs/firebase'
 import fetchData from '../../configs/fetchData'
 import { FcGoogle } from 'react-icons/fc'
 import addData from '../../configs/addData'
+import { addGoogleUser } from '../../configs/googleUser'
 
 export const GoogleAuth = () => {
   // Fetch admin list
@@ -42,6 +43,9 @@ export const GoogleAuth = () => {
     try {
       const result = await signInWithPopup(auth, googleProvider)
       setUser(result.user)
+
+      // Store user in db
+      await addGoogleUser(result.user)
 
       // if no admin in the database add the user as admin
       if (adminList.length === 1 && result.user) {
