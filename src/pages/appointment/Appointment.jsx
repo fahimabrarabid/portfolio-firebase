@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { db } from '../../configs/firebase'
-import { collection, getDocs } from 'firebase/firestore'
 import './appointment.css'
 import Calendar from '../../components/googleCalendar/Calendar'
 import Info from '../../configs/data'
@@ -11,11 +9,14 @@ import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker'
 import dayjs from 'dayjs'
 import AnimatedPage from '../../AnimatedPage'
 import fetchData from '../../configs/fetchData'
+import { GoogleAuth } from '../../components/googleAuth/GoogleAuth'
+import IsLogged from '../../configs/IsLogged'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
   const [today, setToday] = React.useState(new Date())
   const [serviceList, setServiceList] = useState([])
+  const isLogged = IsLogged()
 
   // Fetch Service list
   useEffect(() => {
@@ -33,6 +34,8 @@ const Appointment = () => {
     setSelectedService(value)
   }
 
+  console.log('isLogged', isLogged)
+
   return (
     <AnimatedPage>
       <div className="appointment-container">
@@ -43,31 +46,40 @@ const Appointment = () => {
           <Calendar id={Info.calendarID} />
 
           {/* date picker */}
-          <div className="appointment-request flex items-center bg-slate-100 px-5 py-3 rounded-xl">
-            <div className="mb-4">
-              <label htmlFor="service-select" className="block text-gray-700">
-                Select a Service
-              </label>
-              <select id="service-select" className="h-14 shadow-md appearance-none border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500" onChange={(e) => handleSelectChange(e.target.value)} value={selectedService}>
-                <option value="">Select a service</option>
-                {serviceList.map((option) => (
-                  <option key={option.id} value={option.name}>
-                    {option.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="mb-4 ">
-              <label htmlFor="date-select" className="block text-gray-700">
-                Select a Date
-              </label>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <MobileDateTimePicker className="shadow-md" id="date-select" orientation="landscape" value={dayjs(today)} onChange={(newValue) => setToday(newValue)} />
-              </LocalizationProvider>
-            </div>
-            <button className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${selectedService ? 'border-slate-500' : 'border-gray-300 cursor-not-allowed'} hover:border-transparent rounded`} disabled={!selectedService}>
-              Request an Appointment
-            </button>
+          <div className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl">
+            {isLogged ? (
+              <>
+                <div className="mb-4">
+                  <label htmlFor="service-select" className="block text-gray-700">
+                    Select a Service
+                  </label>
+                  <select id="service-select" className="h-14 shadow-md appearance-none border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500" onChange={(e) => handleSelectChange(e.target.value)} value={selectedService}>
+                    <option value="">Select a service</option>
+                    {serviceList.map((option) => (
+                      <option key={option.id} value={option.name}>
+                        {option.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="mb-4 ">
+                  <label htmlFor="date-select" className="block text-gray-700">
+                    Select a Date
+                  </label>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <MobileDateTimePicker className="shadow-md" id="date-select" orientation="landscape" value={dayjs(today)} onChange={(newValue) => setToday(newValue)} />
+                  </LocalizationProvider>
+                </div>
+                <button
+                  className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${selectedService ? 'border-slate-500' : 'border-gray-300 cursor-not-allowed'} hover:border-transparent rounded`}
+                  disabled={!selectedService}
+                >
+                  Request an Appointment
+                </button>
+              </>
+            ) : (
+              <GoogleAuth />
+            )}
           </div>
         </div>
       </div>
