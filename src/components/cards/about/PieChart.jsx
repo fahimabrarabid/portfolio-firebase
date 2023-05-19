@@ -108,7 +108,10 @@ const PieChart = () => {
       <div className="w-full h-72">
         <Pie data={pieChartData} options={options} />
       </div>
-      <p className="text-lg text-center font-semibold mt-4">Total: {counsellingList.length}</p>
+      <div className="flex items-center gap-5 justify-around text-center text-slate-800 font-semibold mt-4">
+        <div className="text-lg">Total: {counsellingList.length} </div>
+        <div className="text-3xl font-semibold border-l-4 pl-5 border-slate-600">{counsellingList.length * 15} Minutes of Volunteer Work </div>
+      </div>
     </div>
   )
 }
