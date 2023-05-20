@@ -21,6 +21,7 @@ const Appointment = () => {
   const [slotList, setSlotList] = useState([])
   const [slots, setSlots] = useState([])
   const [day, setDay] = useState('')
+  const [selectedSlot, setSelectedSlot] = useState(null)
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, 'slots'), (snapshot) => {
@@ -60,9 +61,11 @@ const Appointment = () => {
   useEffect(() => {
     const filteredSlots = slotList.filter((slot) => slot.day === day)
     setSlots(filteredSlots)
+    setSelectedSlot(null)
   }, [day, slotList])
 
   const handleSlotSelect = (selectedSlot) => {
+    setSelectedSlot(selectedSlot)
     console.log('Selected slot:', selectedSlot)
   }
 
@@ -164,11 +167,11 @@ const Appointment = () => {
                   </div>
                   <button
                     className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
-                      selectedService
+                      selectedService && selectedSlot
                         ? 'border-slate-500'
                         : 'border-gray-300 cursor-not-allowed'
                     } hover:border-transparent rounded`}
-                    disabled={!selectedService}
+                    disabled={!selectedService || !selectedSlot}
                   >
                     Request an Appointment
                   </button>
