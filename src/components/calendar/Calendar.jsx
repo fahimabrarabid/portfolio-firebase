@@ -34,7 +34,7 @@ export default function Calendar() {
 
   return (
     <div style={calendarStyles.container}>
-      <h1 style={calendarStyles.header}>Pick a to See Slots</h1>
+      <h1 style={calendarStyles.header}>Pick a Date to See Slots</h1>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div style={calendarStyles.calendar}>
           <DateCalendar onChange={handleDateChange} />
