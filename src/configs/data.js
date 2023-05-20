@@ -85,18 +85,37 @@ const Info = {
       description: '13th Henry Dunant Memorial Moot Court Competition.',
     },
     {
-      title: 'Honourable Mention in Content Creating on ‘Digital Security vs Privacy’',
-      description: '‘Freedom Fellow’ boot camp powered by PrenureLab and FNF Bangladesh.',
+      title:
+        'Honourable Mention in Content Creating on ‘Digital Security vs Privacy’',
+      description:
+        '‘Freedom Fellow’ boot camp powered by PrenureLab and FNF Bangladesh.',
     },
   ],
-  skills: ['Multi Tasking Ability', 'Analytical Skill', 'Critical Thinking', 'Problem-Solving', 'Leadership', 'Team Work', 'Communication', 'Networking', 'Academic Writing', 'MS Office', 'Editing', 'Research'],
+  skills: [
+    'Multi Tasking Ability',
+    'Analytical Skill',
+    'Critical Thinking',
+    'Problem-Solving',
+    'Leadership',
+    'Team Work',
+    'Communication',
+    'Networking',
+    'Academic Writing',
+    'MS Office',
+    'Editing',
+    'Research',
+  ],
   proExperience: [
     {
       company: 'OPEN SOCIETY UNIVERSITY NETWORK (OSUN)',
       position: 'Cyber Law Course Assistant of BRAC University',
       location: 'USA', // optional
       duration: 'Oct 2022 - Jan 2023',
-      details: ['Coordinated the course instructor with reading materials and technical support.', 'Corresponded with international students to facilitate their studies.', 'Supported expanding access to higher education for underserved communities.'],
+      details: [
+        'Coordinated the course instructor with reading materials and technical support.',
+        'Corresponded with international students to facilitate their studies.',
+        'Supported expanding access to higher education for underserved communities.',
+      ],
     },
     {
       company: 'BRAC JAMES P. GRANT SCHOOL OF PUBLIC HEALTH',
@@ -114,30 +133,43 @@ const Info = {
       position: 'Dhaka, Bangladesh',
       location: 'Research Fellow', // optional
       duration: 'Sep 2021- Dec 2021',
-      details: ['Interviewed and facilitated a research titled “A Critical Analysis of Gender-Based Violence on Gender Diverse Population” in  Bangladesh context.', 'Prepared reports for the gender-diverse working group of Rohingya refugees.'],
+      details: [
+        'Interviewed and facilitated a research titled “A Critical Analysis of Gender-Based Violence on Gender Diverse Population” in  Bangladesh context.',
+        'Prepared reports for the gender-diverse working group of Rohingya refugees.',
+      ],
     },
   ],
   volExperience: [
     {
-      company: 'HAND- Hungarian Association of NGOs for Development and Humanitarian Aid',
+      company:
+        'HAND- Hungarian Association of NGOs for Development and Humanitarian Aid',
       position: 'Writer for CEU Think Tank Project',
       location: 'Vienna, Austria', // optional
       duration: 'Mar 2023 - Present',
-      details: ['Researching fund eligibility of small NGOs from European Union', 'Handling the legal needs of the project.', 'Drafting and reviewing contracts and agreements.'],
+      details: [
+        'Researching fund eligibility of small NGOs from European Union',
+        'Handling the legal needs of the project.',
+        'Drafting and reviewing contracts and agreements.',
+      ],
     },
     {
       company: 'Map of Justice',
       position: 'Legal Researcher',
       location: 'Dhaka, Bangladesh', // optional
       duration: 'March 2023- Present',
-      details: ['Facilitating research on various legal aspects including laws on forest protection and police detention.'],
+      details: [
+        'Facilitating research on various legal aspects including laws on forest protection and police detention.',
+      ],
     },
     {
       company: 'NETWORK FOR INTERNATIONAL LAW STUDENTS (NILS) BANGLADESH',
       position: 'Editorial Intern',
       location: 'Dhaka, Bangladesh', // optional
       duration: 'Jan 2022- Apr 2022',
-      details: ['Edited and proofread articles that were published on the NILS website.', 'Wrote social media post captions.'],
+      details: [
+        'Edited and proofread articles that were published on the NILS website.',
+        'Wrote social media post captions.',
+      ],
     },
   ],
   language: [
@@ -154,7 +186,8 @@ const Info = {
   ],
   research: [
     {
-      title: 'A Critical Analysis of Gender-Based Violence on Gender Diverse Population',
+      title:
+        'A Critical Analysis of Gender-Based Violence on Gender Diverse Population',
       // titleLink: 'https://www.ieee.org/',
       description:
         'Co-authored this research paper portrays the types and reasons behind violence against GDP communities with a comparative study of other countries through a legal analysis and in-depth interviews. for Foundation for a Just Society (FJS) project under the supervision of Bandhu Social Welfare Society.',
@@ -189,7 +222,8 @@ const Info = {
     {
       // title: 'Legal Research Methodology', // optional
       // titleLink: 'https://www.osun.org/',
-      description: 'Selected for CEU Summer University to be held at Budapest in July with fully-funded scholarship.',
+      description:
+        'Selected for CEU Summer University to be held at Budapest in July with fully-funded scholarship.',
       // year: '2021', // optional
       // link: 'https://www.osun.org/', // optional
       // linkText: 'Link', // optional
@@ -198,10 +232,12 @@ const Info = {
       description: 'Shadow Youth Parliament organized by UNYSAB and ActionAid.',
     },
     {
-      description: '‘Freedom Fellow’ Bootcamp by PrenureLab and FNF Bangladesh.',
+      description:
+        '‘Freedom Fellow’ Bootcamp by PrenureLab and FNF Bangladesh.',
     },
     {
-      description: '"Leadership for Young Leaders: Coping with a Changing World" organised by the International Academy for Leadership (IAF) Friedrich Naumann Foundation for Freedom.',
+      description:
+        '"Leadership for Young Leaders: Coping with a Changing World" organised by the International Academy for Leadership (IAF) Friedrich Naumann Foundation for Freedom.',
     },
   ],
 }
