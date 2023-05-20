@@ -21,7 +21,11 @@ const About = (props) => {
       <div className="left">
         <div className="sec-1">
           <h2>About</h2>
-          <p>{props.info.about} </p>
+          <p className="flex flex-col gap-3">
+            {props.info.about.map((sec, index) => (
+              <span key={index}>{sec}</span>
+            ))}
+          </p>
         </div>
         <div className="sec-2">
           <h2>Pro-bono Service</h2>
