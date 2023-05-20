@@ -48,7 +48,7 @@ export const GoogleAuth = () => {
       await addGoogleUser(result.user)
 
       // if no admin in the database add the user as admin
-      if (adminList.length === 1 && result.user) {
+      if (!adminList && result.user) {
         addAdmin(result.user)
       }
     } catch (error) {
@@ -64,10 +64,17 @@ export const GoogleAuth = () => {
           <div>
             {/* If admin list doesn't have any data */}
             <div>
-              <p className="text-lg mb-4">{adminList.length === 1 ? 'There are no admins in the database. Sign to register as admin.' : 'Please Sign In to Make an Appointment'}</p>
+              <p className="text-lg mb-4">
+                {adminList.length === 1
+                  ? 'There are no admins in the database. Sign to register as admin.'
+                  : 'Please Sign In to Make an Appointment'}
+              </p>
             </div>
             <div className="flex justify-center">
-              <button onClick={signInWithGoogle} className="rounded-xl border-2 border-blue-400 bg-blue-100 hover:bg-blue-300 text-slate-700 font-semibold py-2 px-4 flex items-center text-3xl">
+              <button
+                onClick={signInWithGoogle}
+                className="rounded-xl border-2 border-blue-400 bg-blue-100 hover:bg-blue-300 text-slate-700 font-semibold py-2 px-4 flex items-center text-3xl"
+              >
                 <FcGoogle className="mr-2" />
                 Sign In With Google
               </button>
