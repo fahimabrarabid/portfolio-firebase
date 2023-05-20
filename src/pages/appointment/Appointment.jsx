@@ -76,7 +76,7 @@ const Appointment = () => {
               <Calendar onDateSelect={handleDateSelect} />
               {selectedDate && <div>Selected Date: {selectedDate}</div>}
             </div>
-            <div className="flex flex-col gap-4 justify-center items-center">{slots.length > 0 && slots.map((slot) => <ButtonGroup onSlotSelect={handleSlotSelect} key={slot.id} start={dayjs(slot.startTime).format('hh:mm A')} end={dayjs(slot.endTime).format('hh:mm A')} date={selectedDate} />)}</div>
+            <div className="flex flex-col gap-4 justify-center items-center">{slots.length > 0 && slots.map((slot) => <ButtonGroup onSlotSelect={handleSlotSelect} key={slot.id} start={slot.startTime} end={slot.endTime} date={selectedDate} />)}</div>
           </div>
           {/* date picker */}
           <div className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl">

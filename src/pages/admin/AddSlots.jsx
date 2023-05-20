@@ -12,13 +12,13 @@ const AddSlots = () => {
   const [selectedDay, setSelectedDay] = useState('')
 
   const handleStartTimeChange = (time) => {
-    setStartTime(dayjs(time).valueOf())
+    setStartTime(dayjs(time).format('hh:mm A'))
     const formattedTime = dayjs(startTime).format('hh:mm A')
     console.log(`Selected Start Time: ${formattedTime}`)
   }
 
   const handleEndTimeChange = (time) => {
-    setEndTime(dayjs(time).valueOf())
+    setEndTime(dayjs(time).format('hh:mm A'))
     const formattedTime = dayjs(endTime).format('hh:mm A')
     console.log(`Selected End Time: ${formattedTime}`)
   }

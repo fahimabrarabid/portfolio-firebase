@@ -19,9 +19,11 @@ const ButtonGroup = ({ start, end, date, onSlotSelect }) => {
     return () => unsubscribe()
   }, [])
 
-  const handleButtonClick = (buttonIndex, timeSlot) => {
+  const handleButtonClick = (buttonIndex) => {
     setSelectedButton(buttonIndex)
-    onSlotSelect(timeSlot)
+    const selectedSlot = timeSlots[buttonIndex]
+    const formattedTime = formatTime(selectedSlot)
+    onSlotSelect(formattedTime)
   }
 
   const convertToMinutes = (time) => {
