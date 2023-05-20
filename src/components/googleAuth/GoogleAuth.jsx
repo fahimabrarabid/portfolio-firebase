@@ -48,7 +48,7 @@ export const GoogleAuth = () => {
       await addGoogleUser(result.user)
 
       // if no admin in the database add the user as admin
-      if (!adminList && result.user) {
+      if (adminList.length === 0 && result.user) {
         addAdmin(result.user)
       }
     } catch (error) {
