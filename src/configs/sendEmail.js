@@ -3,14 +3,7 @@ import dayjs from 'dayjs'
 
 export const sendEmail = (info) => {
   const convertDateToURL = (dateString) => {
-    const [datePart, timePart] = dateString.split(' ')
-    const [dd, mm, yyyy] = datePart.split('-')
-    const [hh, min, A] = timePart.split(':')
-
-    const startTime = dayjs(
-      `${yyyy}-${mm}-${dd} ${hh}:${min}:00 ${A}`,
-      'YYYY-MM-DD hh:mm:ss A'
-    )
+    const startTime = dayjs(dateString, 'DD-MM-YYYY hh:mm A')
     const endTime = startTime.add(15, 'minutes')
 
     const formattedStartDate = startTime.format('YYYYMMDDTHHmm00')
@@ -27,10 +20,10 @@ export const sendEmail = (info) => {
   }
 
   const title = convertTextToURL(
-    `Appointment with ${info.name} for ${info.purpose}}`
+    `Appointment with ${info.name} for ${info.purpose}`
   )
   const desc = convertTextToURL(
-    `Appointment with ${info.name} for ${info.purpose}} at ${info.time} on ${info.date}, ${info.day}`
+    `Appointment with ${info.name} for ${info.purpose} at ${info.time} on ${info.date}, ${info.day}`
   )
   const dates = convertDateToURL(`${info.date} ${info.time}`)
 
