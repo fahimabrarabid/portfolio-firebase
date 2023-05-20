@@ -25,6 +25,8 @@ const Appointment = () => {
   const [slots, setSlots] = useState([])
   const [day, setDay] = useState('')
   const [selectedSlot, setSelectedSlot] = useState(null)
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const [successMessageKey, setSuccessMessageKey] = useState(0)
   const currentUser = getCurrentUser()
 
   useEffect(() => {
@@ -119,8 +121,15 @@ const Appointment = () => {
         purpose: selectedService,
         time: formatTime(selectedSlot),
       }
+
       addData('appointments', obj)
       sendEmail(obj)
+      setShowSuccessMessage(true)
+      setSuccessMessageKey((prevKey) => prevKey + 1)
+
+      setTimeout(() => {
+        setShowSuccessMessage(false)
+      }, 3000)
     }
     setSelectedSlot(null)
   }
@@ -221,6 +230,19 @@ const Appointment = () => {
                 <GoogleAuth />
               )}
             </motion.div>
+            {/* Success message popup */}
+            {showSuccessMessage && (
+              <motion.div
+                key={`success-message-${successMessageKey}`}
+                className="fixed bottom-4 left-4 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-md shadow-md"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <p>Slot booked successfully!</p>
+              </motion.div>
+            )}
           </AnimatePresence>
         </div>
       </div>
