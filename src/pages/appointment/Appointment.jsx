@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './appointment.css'
 import useDocumentTitle from '../../assets/js/useDocumentTitle'
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
-import { MobileDateTimePicker } from '@mui/x-date-pickers/MobileDateTimePicker'
 import dayjs from 'dayjs'
 import AnimatedPage from '../../AnimatedPage'
 import fetchData from '../../configs/fetchData'
@@ -16,6 +13,12 @@ const Appointment = () => {
   useDocumentTitle('Book an Appointment')
   const [today, setToday] = React.useState(new Date())
   const [serviceList, setServiceList] = useState([])
+  const [selectedDate, setSelectedDate] = useState(null)
+
+  const handleDateSelect = (date) => {
+    const formattedDate = dayjs(date).format('DD-MM-YYYY')
+    setSelectedDate(formattedDate)
+  }
   const isLogged = IsLogged()
 
   // Fetch Service list
@@ -41,9 +44,13 @@ const Appointment = () => {
           <h2>My Schedules</h2>
         </div>
         <div className="appointment-content">
-          <ButtonGroup start="09:00 AM" end="06:00 PM" date="03-06-2023" />
-          <Calendar />
-
+          <div className="flex gap-4">
+            <div className="flex flex-col gap-4 justify-center items-center">
+              <Calendar onDateSelect={handleDateSelect} />
+              {selectedDate && <div>Selected Date: {selectedDate}</div>}
+            </div>
+            <ButtonGroup start="09:00 AM" end="06:00 PM" date={selectedDate} />
+          </div>
           {/* date picker */}
           <div className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl">
             {isLogged ? (
@@ -60,14 +67,6 @@ const Appointment = () => {
                       </option>
                     ))}
                   </select>
-                </div>
-                <div className="mb-4 ">
-                  <label htmlFor="date-select" className="block text-gray-700">
-                    Select a Date
-                  </label>
-                  <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <MobileDateTimePicker className="shadow-md" id="date-select" orientation="landscape" value={dayjs(today)} onChange={(newValue) => setToday(newValue)} />
-                  </LocalizationProvider>
                 </div>
                 <button
                   className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${selectedService ? 'border-slate-500' : 'border-gray-300 cursor-not-allowed'} hover:border-transparent rounded`}
