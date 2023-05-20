@@ -12,6 +12,8 @@ import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from '../../configs/firebase'
 import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
+import addData from '../../configs/addData'
+import getCurrentUser from '../../configs/getCurrentUser'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
@@ -22,6 +24,7 @@ const Appointment = () => {
   const [slots, setSlots] = useState([])
   const [day, setDay] = useState('')
   const [selectedSlot, setSelectedSlot] = useState(null)
+  const currentUser = getCurrentUser()
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, 'slots'), (snapshot) => {
@@ -82,8 +85,30 @@ const Appointment = () => {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  const handleSlotSelect = (slot) => {
-    setSelectedSlot(slot)
+  const handleSlotSelect = (time) => {
+    setSelectedSlot(time)
+  }
+
+  const formatTime = (minutes) => {
+    const hours = Math.floor(minutes / 60)
+    const mins = minutes % 60
+    const amPm = hours < 12 ? 'AM' : 'PM'
+    const formattedHours = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours
+    const formattedMinutes = mins < 10 ? `0${mins}` : mins
+    return `${formattedHours}:${formattedMinutes} ${amPm}`
+  }
+
+  const handleAppointmentRequest = async () => {
+    // console.log(selectedDate, day, selectedService, formatTime(selectedSlot))
+    addData('appointments', {
+      date: selectedDate,
+      day: day,
+      email: currentUser.email,
+      name: currentUser.displayName,
+      purpose: selectedService,
+      time: formatTime(selectedSlot),
+    })
+    setSelectedSlot(null)
   }
 
   return (
@@ -173,6 +198,7 @@ const Appointment = () => {
                         : 'border-gray-300 cursor-not-allowed'
                     } hover:border-transparent rounded`}
                     disabled={!selectedService || !selectedSlot}
+                    onClick={handleAppointmentRequest}
                   >
                     Request an Appointment
                   </button>
