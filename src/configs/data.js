@@ -194,7 +194,7 @@ const Info = {
         'A Critical Analysis of Gender-Based Violence on Gender Diverse Population',
       // titleLink: 'https://www.ieee.org/',
       description:
-        'Co-authored this research paper portrays the types and reasons behind violence against GDP communities with a comparative study of other countries through a legal analysis and in-depth interviews. for Foundation for a Just Society (FJS) project under the supervision of Bandhu Social Welfare Society.',
+        'I have co-authored a qualitative research paper on the gender-diverse population of Bangladesh (i.e., transgender groups and others) titled "A Critical Analysis of Gender-Based Violence on Gender Diverse Population" for Bandhu Social Welfare Society(BSWS) under the "Foundation for a Just Society (FJS)"-Love, Diversity and Solidarity project. The paper portrays the types and reasons behind the violence against the GDV population as well as the probable effective recommendations. BSWS is a well-recognised organisation that is working for the well-being of the gender-diverse population. The objective of the FJS project is to build the capacity of the gender-diverse community to strengthen their voice to ensure effective participation in the existing structure, facilitate psychological and mental health counselling and create mass awareness about cultural diversity and sensitivity in relation to their own sexual orientation and gender identity.',
       // year: '2021', // optional
       // link: 'https://www.osun.org/', // optional
       // linkText: 'Link', // optional
