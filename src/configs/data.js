@@ -30,7 +30,7 @@ const Info = {
       degree: 'Bachelor of Laws LL.B. (Hons.)', // optional
       duration: 'Jan 2020- Present', // optional
       status: '10th Semester, Completed 108 out of 135 credits', // optional
-      gpa: 'CGPA-3.69 out of 4.00', // optional
+      // gpa: 'CGPA-3.69 out of 4.00', // optional
     },
     {
       institute: 'CENTRAL EUROPEAN UNIVERSITY',
@@ -49,14 +49,14 @@ const Info = {
       degree: 'Science',
       duration: '2017-2019',
       status: 'Higher Secondary School Certificate',
-      gpa: 'GPA-4.33 out of 5.00',
+      // gpa: 'GPA-4.33 out of 5.00',
     },
     {
       institute: 'GOVT. MOHAMMADPUR MODEL SCHOOL AND COLLEGE',
       degree: 'Science',
       duration: '2015-2017',
       status: 'Secondary School Certificate',
-      gpa: 'GPA-5.00 out of 5.00',
+      // gpa: 'GPA-5.00 out of 5.00',
     },
   ],
   achievements: [
