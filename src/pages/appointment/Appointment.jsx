@@ -8,16 +8,35 @@ import { GoogleAuth } from '../../components/googleAuth/GoogleAuth'
 import IsLogged from '../../configs/IsLogged'
 import Calendar from '../../components/calendar/Calendar'
 import ButtonGroup from './ButtonGroup'
+import { collection, onSnapshot } from 'firebase/firestore'
+import { db } from '../../configs/firebase'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
-  const [today, setToday] = React.useState(new Date())
   const [serviceList, setServiceList] = useState([])
   const [selectedDate, setSelectedDate] = useState(null)
+  const [selectedService, setSelectedService] = useState('')
+  const [slotList, setSlotList] = useState([])
+  const [slots, setSlots] = useState([])
+  const [day, setDay] = useState('')
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, 'slots'), (snapshot) => {
+      const updatedSlots = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }))
+      setSlotList(updatedSlots)
+    })
+
+    return () => unsubscribe()
+  }, [])
 
   const handleDateSelect = (date) => {
     const formattedDate = dayjs(date).format('DD-MM-YYYY')
     setSelectedDate(formattedDate)
+    // log week day
+    setDay(dayjs(date).format('dddd'))
   }
   const isLogged = IsLogged()
 
@@ -31,11 +50,15 @@ const Appointment = () => {
     fetchService()
   }, [])
 
-  const [selectedService, setSelectedService] = useState('')
-
   const handleSelectChange = (value) => {
     setSelectedService(value)
   }
+
+  // filter slotList  by the selected weekday
+  useEffect(() => {
+    const filteredSlots = slotList.filter((slot) => slot.day === day)
+    setSlots(filteredSlots)
+  }, [day, slotList])
 
   return (
     <AnimatedPage>
@@ -44,12 +67,12 @@ const Appointment = () => {
           <h2>My Schedules</h2>
         </div>
         <div className="appointment-content">
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col gap-4 justify-center items-center">
               <Calendar onDateSelect={handleDateSelect} />
               {selectedDate && <div>Selected Date: {selectedDate}</div>}
             </div>
-            <ButtonGroup start="09:00 AM" end="06:00 PM" date={selectedDate} />
+            <div className="flex flex-col gap-4 justify-center items-center">{slots.length > 0 && slots.map((slot) => <ButtonGroup key={slot.id} start={dayjs(slot.startTime).format('hh:mm A')} end={dayjs(slot.endTime).format('hh:mm A')} date={selectedDate} />)}</div>
           </div>
           {/* date picker */}
           <div className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl">
