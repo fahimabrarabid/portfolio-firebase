@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar'
 
-export default function Calendar() {
+export default function Calendar({ onDateSelect }) {
   const calendarStyles = {
     container: {
       display: 'flex',
@@ -28,8 +28,11 @@ export default function Calendar() {
 
   const handleDateChange = (newValue) => {
     const selectedDate = new Date(newValue)
-    const weekDay = selectedDate.toLocaleDateString(undefined, { weekday: 'long' })
-    console.log(`Selected date: ${selectedDate.toDateString()}, Week day: ${weekDay}`)
+    // const weekDay = selectedDate.toLocaleDateString(undefined, { weekday: 'long' })
+    // console.log(`Selected date: ${selectedDate.toDateString()}, Week day: ${weekDay}`)
+
+    // Pass the selected date to the parent component
+    onDateSelect(selectedDate)
   }
 
   return (
