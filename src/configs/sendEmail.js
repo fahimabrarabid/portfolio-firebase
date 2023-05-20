@@ -45,7 +45,7 @@ export const sendEmail = (info) => {
     date: info.date, // date of the appointment
     day: info.day, // week day of the appointment
     time: info.time, // time of the appointment
-    link: `https://calendar.google.com/calendar/r/eventedit?text=${title}&details=${desc}&dates=${dates}&ctz=Asia%2FDhaka`,
+    link: `https://calendar.google.com/calendar/r/eventedit?text=${title}&details=${desc}&dates=${dates}&ctz=Asia%2FDhaka&add=${info.email}`,
   }
 
   emailjs
