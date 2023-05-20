@@ -40,6 +40,7 @@ const Appointment = () => {
     setSelectedDate(formattedDate)
     // log week day
     setDay(dayjs(date).format('dddd'))
+    setSelectedSlot(null)
   }
   const isLogged = IsLogged()
 
@@ -64,11 +65,6 @@ const Appointment = () => {
     setSelectedSlot(null)
   }, [day, slotList])
 
-  const handleSlotSelect = (selectedSlot) => {
-    setSelectedSlot(selectedSlot)
-    console.log('Selected slot:', selectedSlot)
-  }
-
   // check if mobile
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
@@ -85,6 +81,10 @@ const Appointment = () => {
 
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  const handleSlotSelect = (slot) => {
+    setSelectedSlot(slot)
+  }
 
   return (
     <AnimatedPage>
@@ -126,6 +126,7 @@ const Appointment = () => {
                         start={slot.startTime}
                         end={slot.endTime}
                         date={selectedDate}
+                        selectedSlot={selectedSlot}
                       />
                     ))}
                   </motion.div>
