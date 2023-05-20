@@ -90,12 +90,12 @@ const Appointment = () => {
           <h2>My Schedules</h2>
         </div>
         <div className="appointment-content">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex flex-col gap-4">
-              <Calendar onDateSelect={handleDateSelect} />
-            </div>
-            <div className="flex flex-col gap-4 justify-center">
-              <AnimatePresence>
+          <AnimatePresence>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col gap-4">
+                <Calendar onDateSelect={handleDateSelect} />
+              </div>
+              <div className="flex flex-col gap-4 justify-center">
                 {slots.length > 0 && (
                   <motion.div
                     key="slots"
@@ -129,49 +129,57 @@ const Appointment = () => {
                     ))}
                   </motion.div>
                 )}
-              </AnimatePresence>
+              </div>
             </div>
-          </div>
-          {/* date picker */}
-          <div className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl">
-            {isLogged ? (
-              <>
-                <div className="mb-4">
-                  <label
-                    htmlFor="service-select"
-                    className="block text-gray-700"
+            {/* date picker */}
+
+            <motion.div
+              key="component-under-slots"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl"
+            >
+              {isLogged ? (
+                <>
+                  <div className="mb-4">
+                    <label
+                      htmlFor="service-select"
+                      className="block text-gray-700"
+                    >
+                      Select a Service
+                    </label>
+                    <select
+                      id="service-select"
+                      className="h-14 shadow-md appearance-none border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
+                      onChange={(e) => handleSelectChange(e.target.value)}
+                      value={selectedService}
+                    >
+                      <option value="">Select a service</option>
+                      {serviceList.map((option) => (
+                        <option key={option.id} value={option.name}>
+                          {option.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <button
+                    className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
+                      selectedService
+                        ? 'border-slate-500'
+                        : 'border-gray-300 cursor-not-allowed'
+                    } hover:border-transparent rounded`}
+                    disabled={!selectedService}
                   >
-                    Select a Service
-                  </label>
-                  <select
-                    id="service-select"
-                    className="h-14 shadow-md appearance-none border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
-                    onChange={(e) => handleSelectChange(e.target.value)}
-                    value={selectedService}
-                  >
-                    <option value="">Select a service</option>
-                    {serviceList.map((option) => (
-                      <option key={option.id} value={option.name}>
-                        {option.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-                <button
-                  className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
-                    selectedService
-                      ? 'border-slate-500'
-                      : 'border-gray-300 cursor-not-allowed'
-                  } hover:border-transparent rounded`}
-                  disabled={!selectedService}
-                >
-                  Request an Appointment
-                </button>
-              </>
-            ) : (
-              <GoogleAuth />
-            )}
-          </div>
+                    Request an Appointment
+                  </button>
+                </>
+              ) : (
+                <GoogleAuth />
+              )}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </AnimatedPage>
