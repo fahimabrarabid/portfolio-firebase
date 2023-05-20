@@ -71,7 +71,17 @@ const PieChart = () => {
     setPieChartData(pieChartData)
   }, [counsellingList])
 
-  const colors = ['#1C2331', '#324556', '#475D6F', '#5E7384', '#748D9A', '#8AA7B1', '#A0C1C8', '#D6E2E9', '#E8F1F4']
+  const colors = [
+    '#1C2331',
+    '#324556',
+    '#475D6F',
+    '#5E7384',
+    '#748D9A',
+    '#8AA7B1',
+    '#A0C1C8',
+    '#D6E2E9',
+    '#E8F1F4',
+  ]
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -89,7 +99,10 @@ const PieChart = () => {
           label: (context) => {
             const dataset = context.chart.data.datasets[context.datasetIndex]
             const value = dataset.data[context.dataIndex]
-            return `Counselled: ${value}/${counsellingList.length} (${((value / counsellingList.length) * 100).toFixed(2)}%)`
+            return `Counselled: ${value}/${counsellingList.length} (${(
+              (value / counsellingList.length) *
+              100
+            ).toFixed(2)}%)`
           },
         },
       },
@@ -134,7 +147,9 @@ const PieChart = () => {
       </div>
       <div className="flex items-center gap-5 justify-around text-center text-slate-800 font-semibold mt-4">
         <div className="text-lg">Total: {counsellingList.length} </div>
-        <div className="text-xl md:text-2xl lg:text-3xl font-semibold border-l-4 pl-5 border-slate-600">{counsellingList.length * 15} Minutes of Volunteer Work </div>
+        <div className="text-xl md:text-2xl lg:text-3xl font-semibold border-l-4 pl-5 border-slate-600">
+          {counsellingList.length * 15} Minutes of Volunteering Work
+        </div>
       </div>
     </div>
   )
