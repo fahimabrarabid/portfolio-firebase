@@ -154,7 +154,7 @@ const Info = {
     },
     {
       company: 'Map of Justice',
-      position: 'Legal Researcher',
+      position: 'Research Fellow',
       location: 'Dhaka, Bangladesh', // optional
       duration: 'March 2023- Present',
       details: [
