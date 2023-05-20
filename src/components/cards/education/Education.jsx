@@ -9,7 +9,7 @@ const Education = (Info) => {
         <div key={index} className="institute">
           <div className="flex justify-between">
             <h3>{edu.institute}</h3>
-            {edu.duration ? <h5>{edu.duration}</h5> : ''}
+            {edu.duration ? <h5 className="text-right">{edu.duration}</h5> : ''}
           </div>
           {/* 
               if location exist then just render 

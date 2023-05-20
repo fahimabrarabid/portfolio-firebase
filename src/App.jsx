@@ -40,7 +40,7 @@ function App() {
               <Route
                 path="academic"
                 element={
-                  <div className="w-3/4 mx-auto">
+                  <div className="w-11/12 lg:w-3/4 mx-auto">
                     <Academics />
                   </div>
                 }
@@ -48,7 +48,7 @@ function App() {
               <Route
                 path="experiences"
                 element={
-                  <div className="w-3/4 mx-auto">
+                  <div className="w-11/12 lg:w-3/4 mx-auto">
                     <Experiences />
                   </div>
                 }
@@ -56,7 +56,7 @@ function App() {
               <Route
                 path="achievements"
                 element={
-                  <div className="w-3/4 mx-auto">
+                  <div className="w-11/12 lg:w-3/4 mx-auto">
                     <Achievements />
                   </div>
                 }
@@ -64,7 +64,7 @@ function App() {
               <Route
                 path="research"
                 element={
-                  <div className="w-3/4 mx-auto">
+                  <div className="w-11/12 lg:w-3/4 mx-auto">
                     <Research />
                   </div>
                 }
@@ -72,13 +72,24 @@ function App() {
               <Route
                 path="certification"
                 element={
-                  <div className="w-3/4 mx-auto">
+                  <div className="w-11/12 lg:w-3/4 mx-auto">
                     <Certification />
                   </div>
                 }
               />
               <Route path="appointment" element={<Appointment />} />
-              <Route path="admin" element={admin ? <Admin /> : <h1 className="flex justify-center text-center text-3xl m-10">Hi, Hacker!</h1>} />
+              <Route
+                path="admin"
+                element={
+                  admin ? (
+                    <Admin />
+                  ) : (
+                    <h1 className="flex justify-center text-center text-3xl m-10">
+                      Hi, Hacker!
+                    </h1>
+                  )
+                }
+              />
             </Routes>
           </AnimatePresence>
         </>
