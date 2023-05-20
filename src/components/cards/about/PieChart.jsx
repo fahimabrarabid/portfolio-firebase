@@ -7,39 +7,39 @@ import { Pie } from 'react-chartjs-2'
 Chart.register(ArcElement, Tooltip, Legend)
 
 const PieChart = () => {
-  const [counsellingList, setCounsellingList] = useState([])
+  const [appointmentList, setAppointmentList] = useState([])
   const [pieChartData, setPieChartData] = useState(null)
   const [legendPosition, setLegendPosition] = useState('right')
 
-  const getCounsellingList = async () => {
+  const getAppointmentList = async () => {
     try {
-      const data = await getDocs(collection(db, 'counselling'))
+      const data = await getDocs(collection(db, 'appointments'))
       const filteredData = data.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }))
-      setCounsellingList(filteredData.filter((data) => data.name !== ''))
+      setAppointmentList(filteredData.filter((data) => data.name !== ''))
     } catch (error) {
       console.log(error)
     }
   }
 
   useEffect(() => {
-    getCounsellingList()
+    getAppointmentList()
   }, [])
 
   useEffect(() => {
-    if (counsellingList.length === 0) {
-      setPieChartData(null) // Reset pie chart data if counselling list is empty
+    if (appointmentList.length === 0) {
+      setPieChartData(null) // Reset pie chart data if Appointment list is empty
       return
     }
 
     const countMap = {}
-    counsellingList.forEach((counselling) => {
-      if (countMap[counselling.purpose]) {
-        countMap[counselling.purpose] += 1
+    appointmentList.forEach((appointment) => {
+      if (countMap[appointment.purpose]) {
+        countMap[appointment.purpose] += 1
       } else {
-        countMap[counselling.purpose] = 1
+        countMap[appointment.purpose] = 1
       }
     })
 
@@ -59,7 +59,7 @@ const PieChart = () => {
       labels: purposes,
       datasets: [
         {
-          label: 'Counselling Purpose',
+          label: 'Appointment Status',
           data: purposes.map((purpose) => countMap[purpose]),
           backgroundColor: backgroundColors,
           borderColor: borderColors,
@@ -69,7 +69,7 @@ const PieChart = () => {
     }
 
     setPieChartData(pieChartData)
-  }, [counsellingList])
+  }, [appointmentList])
 
   const colors = [
     '#1C2331',
@@ -99,8 +99,8 @@ const PieChart = () => {
           label: (context) => {
             const dataset = context.chart.data.datasets[context.datasetIndex]
             const value = dataset.data[context.dataIndex]
-            return `Counselled: ${value}/${counsellingList.length} (${(
-              (value / counsellingList.length) *
+            return `Counselled: ${value}/${appointmentList.length} (${(
+              (value / appointmentList.length) *
               100
             ).toFixed(2)}%)`
           },
@@ -146,9 +146,9 @@ const PieChart = () => {
         <Pie data={pieChartData} options={options} />
       </div>
       <div className="flex items-center gap-5 justify-around text-center text-slate-800 font-semibold mt-4">
-        <div className="text-lg">Total: {counsellingList.length} </div>
+        <div className="text-lg">Total: {appointmentList.length} </div>
         <div className="text-xl md:text-2xl lg:text-3xl font-semibold border-l-4 pl-5 border-slate-600">
-          {counsellingList.length * 15} Minutes of Volunteering Work
+          {appointmentList.length * 15} Minutes of Volunteering Work
         </div>
       </div>
     </div>
