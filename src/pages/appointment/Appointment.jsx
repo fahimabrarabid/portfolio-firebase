@@ -100,14 +100,25 @@ const Appointment = () => {
 
   const handleAppointmentRequest = async () => {
     // console.log(selectedDate, day, selectedService, formatTime(selectedSlot))
-    addData('appointments', {
-      date: selectedDate,
-      day: day,
-      email: currentUser.email,
-      name: currentUser.displayName,
-      purpose: selectedService,
-      time: formatTime(selectedSlot),
-    })
+
+    const formattedTimeSlot = formatTime(selectedSlot)
+    const dateValidation = dayjs(
+      `${selectedDate} ${formattedTimeSlot}`,
+      'DD-MM-YYYY hh:mm A'
+    ).isBefore(dayjs())
+
+    if (dateValidation) {
+      alert('Please select a valid date and time')
+    } else {
+      addData('appointments', {
+        date: selectedDate,
+        day: day,
+        email: currentUser.email,
+        name: currentUser.displayName,
+        purpose: selectedService,
+        time: formatTime(selectedSlot),
+      })
+    }
     setSelectedSlot(null)
   }
 
