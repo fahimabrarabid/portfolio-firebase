@@ -3,27 +3,31 @@ import classNames from 'classnames'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from '../../configs/firebase'
 
-const ButtonGroup = ({ start, end, date, onSlotSelect }) => {
-  const [selectedButton, setSelectedButton] = useState(null)
+const ButtonGroup = ({ start, end, date, selectedSlot, onSlotSelect }) => {
   const [appointmentList, setAppointmentList] = useState([])
 
   useEffect(() => {
-    const unsubscribe = onSnapshot(collection(db, 'appointments'), (snapshot) => {
-      const updatedAppointmentList = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }))
-      setAppointmentList(updatedAppointmentList)
-    })
+    const unsubscribe = onSnapshot(
+      collection(db, 'appointments'),
+      (snapshot) => {
+        const updatedAppointmentList = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setAppointmentList(updatedAppointmentList)
+      }
+    )
 
     return () => unsubscribe()
   }, [])
 
-  const handleButtonClick = (buttonIndex) => {
-    setSelectedButton(buttonIndex)
-    const selectedSlot = timeSlots[buttonIndex]
-    const formattedTime = formatTime(selectedSlot)
-    onSlotSelect(formattedTime)
+  const handleButtonClick = (buttonIndex, timeSlot) => {
+    if (selectedSlot === timeSlot) {
+      // Unselect the slot if it is already selected
+      onSlotSelect(null) // Pass null to indicate unselection
+    } else {
+      onSlotSelect(timeSlot)
+    }
   }
 
   const convertToMinutes = (time) => {
@@ -84,8 +88,8 @@ const ButtonGroup = ({ start, end, date, onSlotSelect }) => {
             <button
               key={index}
               className={classNames('px-4 py-2 m-1 border', {
-                'border-blue-500': selectedButton === index,
-                'border-gray-300': selectedButton !== index,
+                'border-blue-500': selectedSlot === timeSlot,
+                'border-gray-300': selectedSlot !== timeSlot,
                 'bg-gray-300': isTimeSlotDisabled(timeSlot, date),
                 'cursor-not-allowed': isTimeSlotDisabled(timeSlot, date),
               })}

@@ -12,6 +12,8 @@ import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from '../../configs/firebase'
 import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
+import addData from '../../configs/addData'
+import getCurrentUser from '../../configs/getCurrentUser'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
@@ -22,6 +24,7 @@ const Appointment = () => {
   const [slots, setSlots] = useState([])
   const [day, setDay] = useState('')
   const [selectedSlot, setSelectedSlot] = useState(null)
+  const currentUser = getCurrentUser()
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, 'slots'), (snapshot) => {
@@ -40,6 +43,7 @@ const Appointment = () => {
     setSelectedDate(formattedDate)
     // log week day
     setDay(dayjs(date).format('dddd'))
+    setSelectedSlot(null)
   }
   const isLogged = IsLogged()
 
@@ -64,11 +68,6 @@ const Appointment = () => {
     setSelectedSlot(null)
   }, [day, slotList])
 
-  const handleSlotSelect = (selectedSlot) => {
-    setSelectedSlot(selectedSlot)
-    console.log('Selected slot:', selectedSlot)
-  }
-
   // check if mobile
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
@@ -85,6 +84,43 @@ const Appointment = () => {
 
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  const handleSlotSelect = (time) => {
+    setSelectedSlot(time)
+  }
+
+  const formatTime = (minutes) => {
+    const hours = Math.floor(minutes / 60)
+    const mins = minutes % 60
+    const amPm = hours < 12 ? 'AM' : 'PM'
+    const formattedHours = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours
+    const formattedMinutes = mins < 10 ? `0${mins}` : mins
+    return `${formattedHours}:${formattedMinutes} ${amPm}`
+  }
+
+  const handleAppointmentRequest = async () => {
+    // console.log(selectedDate, day, selectedService, formatTime(selectedSlot))
+
+    const formattedTimeSlot = formatTime(selectedSlot)
+    const dateValidation = dayjs(
+      `${selectedDate} ${formattedTimeSlot}`,
+      'DD-MM-YYYY hh:mm A'
+    ).isBefore(dayjs())
+
+    if (dateValidation) {
+      alert('Please select a valid date and time')
+    } else {
+      addData('appointments', {
+        date: selectedDate,
+        day: day,
+        email: currentUser.email,
+        name: currentUser.displayName,
+        purpose: selectedService,
+        time: formatTime(selectedSlot),
+      })
+    }
+    setSelectedSlot(null)
+  }
 
   return (
     <AnimatedPage>
@@ -126,6 +162,7 @@ const Appointment = () => {
                         start={slot.startTime}
                         end={slot.endTime}
                         date={selectedDate}
+                        selectedSlot={selectedSlot}
                       />
                     ))}
                   </motion.div>
@@ -166,12 +203,13 @@ const Appointment = () => {
                     </select>
                   </div>
                   <button
-                    className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
+                    className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600  text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
                       selectedService && selectedSlot
-                        ? 'border-slate-500'
-                        : 'border-gray-300 cursor-not-allowed'
+                        ? 'border-slate-500 hover:bg-slate-700'
+                        : 'border-gray-300 bg-gray-500 cursor-not-allowed'
                     } hover:border-transparent rounded`}
                     disabled={!selectedService || !selectedSlot}
+                    onClick={handleAppointmentRequest}
                   >
                     Request an Appointment
                   </button>
