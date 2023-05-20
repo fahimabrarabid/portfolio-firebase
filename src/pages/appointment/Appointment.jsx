@@ -192,10 +192,10 @@ const Appointment = () => {
                     </select>
                   </div>
                   <button
-                    className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600 hover:bg-slate-700 text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
+                    className={`shadow-md rounded-xl mt-2 h-14 bg-slate-600  text-slate-200 font-semibold hover:text-white py-2 px-4 border ${
                       selectedService && selectedSlot
-                        ? 'border-slate-500'
-                        : 'border-gray-300 cursor-not-allowed'
+                        ? 'border-slate-500 hover:bg-slate-700'
+                        : 'border-gray-300 bg-gray-500 cursor-not-allowed'
                     } hover:border-transparent rounded`}
                     disabled={!selectedService || !selectedSlot}
                     onClick={handleAppointmentRequest}
