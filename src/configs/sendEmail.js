@@ -1,4 +1,5 @@
 import emailjs from 'emailjs-com'
+import dayjs from 'dayjs'
 
 export const sendEmail = (info) => {
   const convertDateToURL = (dateString) => {
@@ -6,21 +7,16 @@ export const sendEmail = (info) => {
     const [dd, mm, yyyy] = datePart.split('-')
     const [hh, min, A] = timePart.split(':')
 
-    const formattedDate = `${yyyy}${mm}${dd}`
-    const formattedTime = `${hh}${min}00`
+    const startTime = dayjs(
+      `${yyyy}-${mm}-${dd} ${hh}:${min}:00 ${A}`,
+      'YYYY-MM-DD hh:mm:ss A'
+    )
+    const endTime = startTime.add(15, 'minutes')
 
-    const convertedDateTimeStart = `${formattedDate}T${formattedTime}`
-    const convertedDateTimeEnd = new Date(convertedDateTimeStart)
-    convertedDateTimeEnd.setMinutes(convertedDateTimeEnd.getMinutes() + 15)
-    const formattedDateEnd = convertedDateTimeEnd
-      .toISOString()
-      .slice(0, 10)
-      .replace(/-/g, '')
-    const formattedTimeEnd = convertedDateTimeEnd
-      .toISOString()
-      .slice(11, 16)
-      .replace(/:/g, '')
-    const convertedDateTime = `${formattedDate}T${formattedTime}%2F${formattedDateEnd}T${formattedTimeEnd}&ctz`
+    const formattedStartDate = startTime.format('YYYYMMDDTHHmm00')
+    const formattedEndDate = endTime.format('YYYYMMDDTHHmm00')
+
+    const convertedDateTime = `${formattedStartDate}%2F${formattedEndDate}`
 
     return convertedDateTime
   }
