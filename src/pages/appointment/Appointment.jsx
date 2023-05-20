@@ -14,6 +14,7 @@ import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
 import addData from '../../configs/addData'
 import getCurrentUser from '../../configs/getCurrentUser'
+import { sendEmail } from '../../configs/sendEmail'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
@@ -110,14 +111,16 @@ const Appointment = () => {
     if (dateValidation) {
       alert('Please select a valid date and time')
     } else {
-      addData('appointments', {
+      const obj = {
         date: selectedDate,
         day: day,
         email: currentUser.email,
         name: currentUser.displayName,
         purpose: selectedService,
         time: formatTime(selectedSlot),
-      })
+      }
+      addData('appointments', obj)
+      sendEmail(obj)
     }
     setSelectedSlot(null)
   }
