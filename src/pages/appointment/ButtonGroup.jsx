@@ -73,26 +73,31 @@ const ButtonGroup = ({ start, end, date, onSlotSelect }) => {
   }
 
   return (
-    <div className="flex flex-wrap gap-1">
-      {timeSlots.map((timeSlot, index) => {
-        const buttonWidth = `65px`
-        return (
-          <button
-            key={index}
-            className={classNames('px-4 py-2 m-1 border', {
-              'border-blue-500': selectedButton === index,
-              'border-gray-300': selectedButton !== index,
-              'bg-gray-300': isTimeSlotDisabled(timeSlot, date),
-              'cursor-not-allowed': isTimeSlotDisabled(timeSlot, date),
-            })}
-            onClick={() => handleButtonClick(index, timeSlot)}
-            disabled={isTimeSlotDisabled(timeSlot, date)}
-            style={{ width: buttonWidth }}
-          >
-            {formatTime(timeSlot)}
-          </button>
-        )
-      })}
+    <div className="flex flex-col gap-1">
+      <p>
+        {start} - {end}
+      </p>
+      <div className="flex flex-wrap gap-1">
+        {timeSlots.map((timeSlot, index) => {
+          const buttonWidth = `65px`
+          return (
+            <button
+              key={index}
+              className={classNames('px-4 py-2 m-1 border', {
+                'border-blue-500': selectedButton === index,
+                'border-gray-300': selectedButton !== index,
+                'bg-gray-300': isTimeSlotDisabled(timeSlot, date),
+                'cursor-not-allowed': isTimeSlotDisabled(timeSlot, date),
+              })}
+              onClick={() => handleButtonClick(index, timeSlot)}
+              disabled={isTimeSlotDisabled(timeSlot, date)}
+              style={{ width: buttonWidth }}
+            >
+              {formatTime(timeSlot)}
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }
