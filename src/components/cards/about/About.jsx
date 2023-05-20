@@ -34,8 +34,11 @@ const About = (props) => {
       </div>
       <div className="right">
         <PieChart />
-        <Link className="mr-10 mb-1 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full shadow-lg" to="/appointment">
-          Book an Appointment
+        <Link
+          className="mr-10 mb-1 bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-full shadow-lg"
+          to="/appointment"
+        >
+          BOOK AN APPOINTMENT!
         </Link>
       </div>
     </div>
