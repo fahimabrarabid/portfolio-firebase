@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './appointment.css'
-import Info from '../../configs/data'
 import useDocumentTitle from '../../assets/js/useDocumentTitle'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
@@ -11,6 +10,7 @@ import fetchData from '../../configs/fetchData'
 import { GoogleAuth } from '../../components/googleAuth/GoogleAuth'
 import IsLogged from '../../configs/IsLogged'
 import Calendar from '../../components/calendar/Calendar'
+import ButtonGroup from './ButtonGroup'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
@@ -41,6 +41,7 @@ const Appointment = () => {
           <h2>My Schedules</h2>
         </div>
         <div className="appointment-content">
+          <ButtonGroup start="09:00 AM" end="06:00 PM" date="03-06-2023" />
           <Calendar />
 
           {/* date picker */}
