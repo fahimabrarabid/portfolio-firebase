@@ -90,6 +90,10 @@ const Info = {
       description:
         '‘Freedom Fellow’ boot camp powered by PrenureLab and FNF Bangladesh.',
     },
+    {
+      title: 'Summer University Scholarship',
+      description: 'Central European University',
+    },
   ],
   skills: [
     'Multi Tasking Ability',
