@@ -1,10 +1,13 @@
 import emailjs from 'emailjs-com'
 
-export const sendEmail = (recipient, subject, message) => {
+export const sendEmail = (info) => {
   const templateParams = {
-    from_name: 'Your Name',
-    to_name: recipient,
-    message: message,
+    name: info.name, // name of the appointment requester
+    email: info.email, // email of the appointment requester
+    purpose: info.purpose, // purpose of the appointment
+    date: info.date, // date of the appointment
+    day: info.day, // week day of the appointment
+    time: info.time, // time of the appointment
   }
 
   emailjs

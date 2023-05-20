@@ -111,15 +111,16 @@ const Appointment = () => {
     if (dateValidation) {
       alert('Please select a valid date and time')
     } else {
-      addData('appointments', {
+      const obj = {
         date: selectedDate,
         day: day,
         email: currentUser.email,
         name: currentUser.displayName,
         purpose: selectedService,
         time: formatTime(selectedSlot),
-      })
-      sendEmail('ehsan18t@gmail.com', 'Hello', 'This is the email content.')
+      }
+      addData('appointments', obj)
+      sendEmail(obj)
     }
     setSelectedSlot(null)
   }
