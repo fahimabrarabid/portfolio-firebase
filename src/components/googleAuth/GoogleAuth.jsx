@@ -65,7 +65,7 @@ export const GoogleAuth = () => {
             {/* If admin list doesn't have any data */}
             <div>
               <p className="text-lg mb-4">
-                {adminList.length === 1
+                {adminList.length === 0
                   ? 'There are no admins in the database. Sign to register as admin.'
                   : 'Please Sign In to Make an Appointment'}
               </p>
