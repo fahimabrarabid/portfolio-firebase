@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { db } from '../../configs/firebase'
 
-const ButtonGroup = ({ start, end, date }) => {
+const ButtonGroup = ({ start, end, date, onSlotSelect }) => {
   const [selectedButton, setSelectedButton] = useState(null)
   const [appointmentList, setAppointmentList] = useState([])
 
@@ -19,8 +19,9 @@ const ButtonGroup = ({ start, end, date }) => {
     return () => unsubscribe()
   }, [])
 
-  const handleButtonClick = (buttonIndex) => {
+  const handleButtonClick = (buttonIndex, timeSlot) => {
     setSelectedButton(buttonIndex)
+    onSlotSelect(timeSlot)
   }
 
   const convertToMinutes = (time) => {
@@ -82,7 +83,7 @@ const ButtonGroup = ({ start, end, date }) => {
               'bg-gray-300': isTimeSlotDisabled(timeSlot, date),
               'cursor-not-allowed': isTimeSlotDisabled(timeSlot, date),
             })}
-            onClick={() => handleButtonClick(index)}
+            onClick={() => handleButtonClick(index, timeSlot)}
             disabled={isTimeSlotDisabled(timeSlot, date)}
             style={{ width: buttonWidth }}
           >
