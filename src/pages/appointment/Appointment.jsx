@@ -104,9 +104,7 @@ const Appointment = () => {
                         ? { y: -100, opacity: 0 }
                         : { x: -100, opacity: 0 }
                     }
-                    animate={
-                      isMobile ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }
-                    }
+                    animate={{ y: 0, x: 0, opacity: 1 }}
                     exit={
                       isMobile
                         ? { y: -100, opacity: 0 }
