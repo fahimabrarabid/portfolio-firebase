@@ -8,13 +8,14 @@ import { GoogleAuth } from '../../components/googleAuth/GoogleAuth'
 import IsLogged from '../../configs/IsLogged'
 import Calendar from '../../components/calendar/Calendar'
 import ButtonGroup from './ButtonGroup'
-import { collection, onSnapshot } from 'firebase/firestore'
+import { collection, onSnapshot, deleteDoc } from 'firebase/firestore'
 import { db } from '../../configs/firebase'
 import { motion } from 'framer-motion'
 import { AnimatePresence } from 'framer-motion'
 import addData from '../../configs/addData'
 import getCurrentUser from '../../configs/getCurrentUser'
 import { sendEmail } from '../../configs/sendEmail'
+import FloatingMessage from './FloatingMessage'
 
 const Appointment = () => {
   useDocumentTitle('Book an Appointment')
@@ -27,6 +28,7 @@ const Appointment = () => {
   const [selectedSlot, setSelectedSlot] = useState(null)
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [successMessageKey, setSuccessMessageKey] = useState(0)
+  const [failedMessage, setFailedMessage] = useState(0)
   const currentUser = getCurrentUser()
 
   useEffect(() => {
@@ -122,16 +124,28 @@ const Appointment = () => {
         time: formatTime(selectedSlot),
       }
 
-      addData('appointments', obj)
-      sendEmail(obj)
-      setShowSuccessMessage(true)
-      setSuccessMessageKey((prevKey) => prevKey + 1)
+      const docRef = await addData('appointments', obj)
+      const emailSent = await sendEmail(obj)
+      if (emailSent) {
+        setShowSuccessMessage(true)
+        setSuccessMessageKey((prevKey) => prevKey + 1)
 
-      setTimeout(() => {
-        setShowSuccessMessage(false)
-      }, 3000)
+        setTimeout(() => {
+          setShowSuccessMessage(false)
+        }, 3000)
+      } else {
+        // delete appointment from db
+        if (docRef) await deleteDoc(docRef)
+        // show failed message
+        setFailedMessage(true)
+        setSuccessMessageKey((prevKey) => prevKey + 1)
+
+        setTimeout(() => {
+          setFailedMessage(false)
+        }, 3000)
+      }
+      setSelectedSlot(null)
     }
-    setSelectedSlot(null)
   }
 
   return (
@@ -232,16 +246,21 @@ const Appointment = () => {
             </motion.div>
             {/* Success message popup */}
             {showSuccessMessage && (
-              <motion.div
-                key={`success-message-${successMessageKey}`}
-                className="fixed bottom-4 left-4 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-md shadow-md"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <p>Slot booked successfully!</p>
-              </motion.div>
+              <FloatingMessage
+                key={`success-${successMessageKey}`} // Update the key with a unique value
+                id={`success-${successMessageKey}`}
+                color="green-500"
+                message="Slot booked successfully!"
+              />
+            )}
+            {/* Failed message popup */}
+            {failedMessage && (
+              <FloatingMessage
+                key={`failed-${successMessageKey}`} // Update the key with a unique value
+                id={`failed-${successMessageKey}`}
+                color="red-500"
+                message="Slot booking failed!"
+              />
             )}
           </AnimatePresence>
         </div>
