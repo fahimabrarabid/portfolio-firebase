@@ -14,8 +14,19 @@ const NavItem = (props) => {
   return (
     <li>
       <NavLink onClick={props.onClick} to={props.to}>
-        <span className={`${border} md:flex md:items-center text-gray-700 md:text-gray-200 hover:text-gray-500 md:hover:text-gray-400 text-center font-semibold`}>{props.text}</span>
-        {isActiveLink() && <motion.div className="h-1 hidden md:block md:bg-slate-300" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}></motion.div>}
+        <span
+          className={`${border} md:flex md:items-center text-gray-700 md:text-gray-200 hover:text-gray-500 md:hover:text-gray-400 text-center font-semibold`}
+        >
+          {props.text}
+        </span>
+        {isActiveLink() && (
+          <motion.div
+            className="h-1 hidden md:block md:bg-slate-300"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
+          ></motion.div>
+        )}
       </NavLink>
     </li>
   )

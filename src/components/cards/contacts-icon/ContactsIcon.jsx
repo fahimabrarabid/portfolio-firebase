@@ -1,6 +1,12 @@
 import React from 'react'
 import './contactsicon.css'
-import { CiLinkedin, CiFacebook, CiMail, CiPhone, CiLogout } from 'react-icons/ci'
+import {
+  CiLinkedin,
+  CiFacebook,
+  CiMail,
+  CiPhone,
+  CiLogout,
+} from 'react-icons/ci'
 import { VscGithub } from 'react-icons/vsc'
 import IsLogged from '../../../configs/IsLogged'
 import { RiLogoutCircleRLine } from 'react-icons/ri'
@@ -36,7 +42,10 @@ const ContactsIcon = (props) => {
       )}
 
       {props.contact.facebook ? (
-        <a target="_blank" href={'https://facebook.com/' + props.contact.facebook}>
+        <a
+          target="_blank"
+          href={'https://facebook.com/' + props.contact.facebook}
+        >
           <CiFacebook size="1.8em" />
         </a>
       ) : (
@@ -52,14 +61,23 @@ const ContactsIcon = (props) => {
       )}
 
       {props.contact.linkedin ? (
-        <a target="_blank" href={'https://www.linkedin.com/in/' + props.contact.linkedin}>
+        <a
+          target="_blank"
+          href={'https://www.linkedin.com/in/' + props.contact.linkedin}
+        >
           <CiLinkedin size="1.8em" />
         </a>
       ) : (
         ''
       )}
 
-      {isLogged && <RiLogoutCircleRLine onClick={handleSignOut} className="icon" size="1.65em" />}
+      {isLogged && (
+        <RiLogoutCircleRLine
+          onClick={handleSignOut}
+          className="icon"
+          size="1.65em"
+        />
+      )}
     </div>
   )
 }

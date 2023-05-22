@@ -29,7 +29,10 @@ const Contact = (props) => {
       )}
 
       {props.contact.facebook ? (
-        <a target="_blank" href={'https://facebook.com/' + props.contact.facebook}>
+        <a
+          target="_blank"
+          href={'https://facebook.com/' + props.contact.facebook}
+        >
           <Facebook className="svg-icon" /> {Info.profile.name}
         </a>
       ) : (
@@ -45,7 +48,10 @@ const Contact = (props) => {
       )}
 
       {props.contact.linkedin ? (
-        <a target="_blank" href={'https://www.linkedin.com/in/' + props.contact.linkedin}>
+        <a
+          target="_blank"
+          href={'https://www.linkedin.com/in/' + props.contact.linkedin}
+        >
           <Linkedin className="svg-icon" /> @{props.contact.linkedin}
         </a>
       ) : (
