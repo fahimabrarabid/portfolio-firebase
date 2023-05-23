@@ -203,7 +203,7 @@ const Appointment = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="appointment-request flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl"
+              className="appointment-request mb-4 flex flex-col md:flex-row items-center bg-slate-100 px-5 py-3 rounded-xl"
             >
               {isLogged ? (
                 <>
@@ -216,7 +216,7 @@ const Appointment = () => {
                     </label>
                     <select
                       id="service-select"
-                      className="h-14 shadow-md appearance-none border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500"
+                      className="h-14 shadow-md appearance-none border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-blue-500 w-full sm:w-auto"
                       onChange={(e) => handleSelectChange(e.target.value)}
                       value={selectedService}
                     >
