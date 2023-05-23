@@ -19,7 +19,7 @@ const About = (props) => {
   return (
     <div className="about">
       <div className="left">
-        <div className="sec-1">
+        <div className="sec-1 mt-5 md:mt-0">
           <h2>About</h2>
           <p className="flex flex-col gap-3">
             {props.info.about.map((sec, index) => (
