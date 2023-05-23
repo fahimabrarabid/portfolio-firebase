@@ -22,13 +22,13 @@ const AddSlots = () => {
   const handleStartTimeChange = (time) => {
     setStartTime(dayjs(time).format('hh:mm A'))
     const formattedTime = dayjs(startTime).format('hh:mm A')
-    console.log(`Selected Start Time: ${formattedTime}`)
+    // console.log(`Selected Start Time: ${formattedTime}`)
   }
 
   const handleEndTimeChange = (time) => {
     setEndTime(dayjs(time).format('hh:mm A'))
     const formattedTime = dayjs(endTime).format('hh:mm A')
-    console.log(`Selected End Time: ${formattedTime}`)
+    // console.log(`Selected End Time: ${formattedTime}`)
   }
 
   const addSlot = async () => {

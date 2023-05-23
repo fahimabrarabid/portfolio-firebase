@@ -45,7 +45,7 @@ const UserList = () => {
         const adminDocRef = doc(db, 'admin', docSnapshot.id)
         await deleteDoc(adminDocRef)
       })
-      console.log(`Admin with UID ${uid} deleted successfully.`)
+      // console.log(`Admin with UID ${uid} deleted successfully.`)
       setAdminList((prevAdminList) => prevAdminList.filter((admin) => admin.uid !== uid))
     } catch (error) {
       console.error(`Error deleting admin with UID ${uid}:`, error)

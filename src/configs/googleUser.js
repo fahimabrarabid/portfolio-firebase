@@ -14,7 +14,7 @@ const addGoogleUser = async (user) => {
         displayName: user.displayName,
         email: user.email,
       })
-      console.log('Google user added successfully')
+      // console.log('Google user added successfully')
     } else {
       console.log('User already exists')
     }
