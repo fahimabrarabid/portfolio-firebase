@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import fetchData from '../../../configs/fetchData'
+import fetchData from '@/configs/fetchData'
 import './about.css'
 import { Link } from 'react-router-dom'
 import PieChart from './PieChart'

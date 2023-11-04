@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import addData from '../../configs/addData'
+import addData from '@/configs/addData'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { MobileTimePicker } from '@mui/x-date-pickers/MobileTimePicker'

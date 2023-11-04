@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import './navbar.css'
 import { RiMenu4Line } from 'react-icons/ri'
-import Info from '../../configs/data'
-import ContactsIcon from '../cards/contacts-icon/ContactsIcon'
+import Info from '@/configs/data'
+import ContactsIcon from '@/components/cards/contacts-icon/ContactsIcon'
 import NavItem from './NavItem'
-import IsAdmin from '../../configs/IsAdmin'
+import IsAdmin from '@/configs/IsAdmin'
 
 const Navbar = () => {
   const isAdmin = IsAdmin()

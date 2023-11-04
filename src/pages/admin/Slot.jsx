@@ -1,5 +1,5 @@
 import React from 'react'
-import { db } from '../../configs/firebase'
+import { db } from '@/configs/firebase'
 import { deleteDoc, doc } from 'firebase/firestore'
 import dayjs from 'dayjs'
 
@@ -14,7 +14,10 @@ const Slot = (props) => {
       <p className="text-gray-800">{props.slot.day}</p>
       <p className="text-gray-800">{props.slot.startTime}</p>
       <p className="text-gray-800">{props.slot.endTime}</p>
-      <button onClick={() => deleteSlot(props.slot.id)} className="px-4 py-2 bg-red-500 hover:bg-red-700 text-white font-semibold rounded">
+      <button
+        onClick={() => deleteSlot(props.slot.id)}
+        className="px-4 py-2 bg-red-500 hover:bg-red-700 text-white font-semibold rounded"
+      >
         Delete
       </button>
     </div>

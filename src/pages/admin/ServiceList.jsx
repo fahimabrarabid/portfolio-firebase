@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import fetchData from '../../configs/fetchData'
+import fetchData from '@/configs/fetchData'
 import Service from './Service'
 import { collection, onSnapshot } from 'firebase/firestore'
-import { db } from '../../configs/firebase'
+import { db } from '@/configs/firebase'
 
 const ServiceList = () => {
   const [serviceList, setServiceList] = useState([])

@@ -6,7 +6,7 @@ import Github from '../../icons/Github'
 import Telephone from '../../icons/Telephone'
 import Location from '../../icons/Location'
 import Facebook from '../../icons/Facebook'
-import Info from '../../../configs/data'
+import Info from '@/configs/data'
 
 const Contact = (props) => {
   return (

@@ -8,10 +8,10 @@ import {
   CiLogout,
 } from 'react-icons/ci'
 import { VscGithub } from 'react-icons/vsc'
-import IsLogged from '../../../configs/IsLogged'
+import IsLogged from '@/configs/IsLogged'
 import { RiLogoutCircleRLine } from 'react-icons/ri'
 import { signOut } from 'firebase/auth'
-import { auth } from '../../../configs/firebase'
+import { auth } from '@/configs/firebase'
 
 const ContactsIcon = (props) => {
   const isLogged = IsLogged()

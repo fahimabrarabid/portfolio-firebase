@@ -1,17 +1,18 @@
-import Navbar from './components/navbar/Navbar'
-import Academics from './pages/academics/Academics'
-import Achievements from './pages/achievements/Achievements'
-import Experiences from './pages/experiences/Experiences'
-import Home from './pages/home/Home'
-import { Route, Routes, useLocation } from 'react-router-dom'
-import Research from './pages/research/Research'
-import Certification from './pages/certification/Certification'
-import Appointment from './pages/appointment/Appointment'
-import { AnimatePresence } from 'framer-motion'
-import Loading from './components/loading/Loading'
 import { useEffect, useState } from 'react'
-import Admin from './pages/admin/Admin'
-import IsAdmin from './configs/IsAdmin'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import {
+  Home,
+  Appointment,
+  Academics,
+  Achievements,
+  Experiences,
+  Research,
+  Certification,
+  Admin,
+} from '@/pages'
+import { Navbar, Loading } from '@/components'
+import { IsAdmin } from '@/configs'
 
 function App() {
   const admin = IsAdmin()

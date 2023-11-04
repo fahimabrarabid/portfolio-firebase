@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { db } from '../../../configs/firebase'
+import { db } from '@/configs/firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import Chart, { ArcElement, Tooltip, Legend } from 'chart.js/auto'
 import { Pie } from 'react-chartjs-2'

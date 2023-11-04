@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import { collection, onSnapshot } from 'firebase/firestore'
-import { db } from '../../configs/firebase'
+import { db } from '@/configs/firebase'
 
 const ButtonGroup = ({ start, end, date, selectedSlot, onSlotSelect }) => {
   const [appointmentList, setAppointmentList] = useState([])

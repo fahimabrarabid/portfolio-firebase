@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Slot from './Slot'
 import { collection, onSnapshot } from 'firebase/firestore'
-import { db } from '../../configs/firebase'
+import { db } from '@/configs/firebase'
 
 const SlotList = () => {
   const [slotList, setSlotList] = useState([])

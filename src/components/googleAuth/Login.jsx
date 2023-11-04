@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { signInWithPopup, signOut } from 'firebase/auth'
-import { auth, googleProvider } from '../../configs/firebase'
+import { auth, googleProvider } from '@/configs/firebase'
 import AddService from '../../pages/admin/AddService'
-import fetchData from '../../configs/fetchData'
+import fetchData from '@/configs/fetchData'
 import { FcGoogle } from 'react-icons/fc'
 
 export const Login = () => {

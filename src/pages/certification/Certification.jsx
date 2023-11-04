@@ -1,9 +1,9 @@
 import React from 'react'
 import './certification.css'
-import useDocumentTitle from '../../assets/js/useDocumentTitle'
-import Info from '../../configs/data'
-import SimpleSquareCard from '../../components/cards/simpleSquareCard/SimpleSquareCard'
-import AnimatedPage from '../../AnimatedPage'
+import useDocumentTitle from '@/assets/js/useDocumentTitle'
+import Info from '@/configs/data'
+import SimpleSquareCard from '@/components/cards/simpleSquareCard/SimpleSquareCard'
+import AnimatedPage from '@/AnimatedPage'
 import { Tabs, Tab } from '@nextui-org/react'
 
 const Certification = () => {

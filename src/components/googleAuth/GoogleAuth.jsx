@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { signInWithPopup } from 'firebase/auth'
-import { auth, googleProvider } from '../../configs/firebase'
-import fetchData from '../../configs/fetchData'
+import { auth, googleProvider } from '@/configs/firebase'
+import fetchData from '@/configs/fetchData'
 import { FcGoogle } from 'react-icons/fc'
-import addData from '../../configs/addData'
-import { addGoogleUser } from '../../configs/googleUser'
+import addData from '@/configs/addData'
+import { addGoogleUser } from '@/configs/googleUser'
 
 export const GoogleAuth = () => {
   // Fetch admin list

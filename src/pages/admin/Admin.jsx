@@ -1,4 +1,4 @@
-import { Login } from '../../components/googleAuth/Login'
+import { Login } from '@/components/googleAuth/Login'
 import AddSlots from './AddSlots'
 import ServiceList from './ServiceList'
 import SlotList from './SlotList'
