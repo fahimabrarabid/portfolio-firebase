@@ -1,0 +1,1 @@
+{"depcheck": {"ignoreMatches": ["autoprefixer", "postcss", "tailwindcss", "@types/react-dom", "eslint-plugin-react-refresh"]}}
