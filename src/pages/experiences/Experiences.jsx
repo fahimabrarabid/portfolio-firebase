@@ -7,7 +7,6 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
-import PropTypes from 'prop-types'
 import AnimatedPage from '../../AnimatedPage'
 
 function TabPanel(props) {
@@ -22,12 +21,6 @@ function TabPanel(props) {
       )}
     </div>
   )
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
 }
 
 function a11yProps(index) {
