@@ -5,7 +5,12 @@ const ProfilePicture = (props) => {
   return (
     <div className="profile-picture-container">
       <div className="profile-picture">
-        <img className="picture" src={props.picture} alt="profile picture" />
+        <img
+          className="picture"
+          loading="lazy"
+          src={props.picture}
+          alt="profile picture"
+        />
       </div>
     </div>
   )
