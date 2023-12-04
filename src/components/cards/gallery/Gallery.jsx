@@ -15,9 +15,11 @@ const Gallery = (props) => {
           <small className="text-default-500">{place}</small>
         </div>
         <h4 className="font-bold text-large text-justify">{title}</h4>
-        <small className="text-default-500 font-semibold text-justify">
-          {provider}
-        </small>
+        {provider && (
+          <small className="text-default-500 font-semibold text-justify">
+            {provider}
+          </small>
+        )}
       </CardHeader>
       <CardBody className="w-full py-2 items-center justify-center">
         <img
