@@ -83,7 +83,7 @@ function App() {
               <Route
                 path="gallery"
                 element={
-                  <div className="w-11/12 lg:w-3/4 mx-auto">
+                  <div className="mx-auto">
                     <Gallery />
                   </div>
                 }
