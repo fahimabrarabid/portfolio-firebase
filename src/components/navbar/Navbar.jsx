@@ -46,11 +46,8 @@ const Navbar = () => {
                 to="/achievements"
                 text="Achievements"
               />
-              <NavItem
-                onClick={closeMenu}
-                to="/research"
-                text="Research & Publications"
-              />
+              <NavItem onClick={closeMenu} to="/research" text="Research" />
+              <NavItem onClick={closeMenu} to="/gallery" text="Gallery" />
               <NavItem
                 onClick={closeMenu}
                 to="/certification"
