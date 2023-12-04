@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full">
-      <nav className="flex justify-between items-center w-full mx-auto relative z-[1]">
+      <nav className="flex z-[9999] justify-between items-center w-full mx-auto relative">
         <div className="flex items-center md:hidden mt-4 relative z-10 ml-4 w-1/12">
           <RiMenu4Line
             className="text-3xl cursor-pointer md:hidden text-slate-600"
