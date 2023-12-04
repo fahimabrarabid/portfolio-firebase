@@ -10,6 +10,7 @@ import {
   Research,
   Certification,
   Admin,
+  Gallery,
 } from '@/pages'
 import { Navbar, Loading } from '@/components'
 import { IsAdmin } from '@/configs'
@@ -75,6 +76,15 @@ function App() {
                 element={
                   <div className="w-11/12 lg:w-3/4 mx-auto">
                     <Certification />
+                  </div>
+                }
+              />
+
+              <Route
+                path="gallery"
+                element={
+                  <div className="mx-auto">
+                    <Gallery />
                   </div>
                 }
               />
