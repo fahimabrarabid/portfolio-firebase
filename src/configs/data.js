@@ -246,6 +246,48 @@ const Info = {
         '"Leadership for Young Leaders: Coping with a Changing World" organised by the International Academy for Leadership (IAF) Friedrich Naumann Foundation for Freedom.',
     },
   ],
+  gallery: [
+    {
+      title: 'Special Recognition Award',
+      type: 'Award',
+      category: 'For outstanding achievement in the field of research',
+      provider: 'BRAC University',
+      place:
+        'Fresher Orientation Program of Fall 2023 semester at Golf Garden, Army Golf Club, Dhaka',
+      date: '03/10/2023',
+      guest:
+        'Tom Miscioscia, Country Director of British Council Bangladesh (Chief Guest) ; Dave Dowland , Registrar, BRAC University.',
+      image: '/gallery/Special Recognition Award.jpg',
+    },
+    {
+      title: 'Best Researcher',
+      type: 'Award',
+      category:
+        "For essay titled '𝐓𝐡𝐞 𝐂𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐞𝐬 𝐭𝐨 𝐏𝐫𝐨𝐬𝐞𝐜𝐮𝐭𝐞 𝐆𝐞𝐧𝐨𝐜𝐢𝐝𝐞 𝐰𝐢𝐭𝐡 𝐌𝐮𝐜𝐡 𝐃𝐞𝐥𝐚𝐲: 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡 𝐢𝐧 𝐂𝐨𝐧𝐭𝐞𝐱𝐭'.",
+      provider:
+        "'12th Certificate Course on Genocide and Justice', organized by Center for the Study of Genocide and Justice - CSGJ of Liberation War Museum - মুক্তিযুদ্ধ জাদুঘর",
+      place: 'Liberation War Museum - মুক্তিযুদ্ধ জাদুঘর, Dhaka.',
+      date: '09/09/2023',
+      guest:
+        'Mr. Justice Obaidul Hassan, Chief Justice, Judge, Supreme Court of Bangladesh',
+      image: '/gallery/Best Researcher.jpg',
+    },
+    {
+      title: 'Facilitator',
+      type: 'Even Management',
+      category:
+        'Adda: The House of Thinkers ; youth’s thought on the concept of Human Rights in Bangladesh',
+      place:
+        'Fresher Orientation Program of Fall 2023 semester at Golf Garden, Army Golf Club, Dhaka',
+      date: '03/10/2023',
+      guest: [
+        'Quazi Omar Foysal, Lecturer, AIUB',
+        'Amena Jahan Urmy, Lecturer, Department of Law, BUP',
+        'Humaira Anjum Oishe, Erasmus Mundus LLM Scholar, International Law of Global Security Peace and Development',
+      ],
+      image: '/gallery/The House of Thinkers.jpg',
+    },
+  ],
 }
 
 export default Info
