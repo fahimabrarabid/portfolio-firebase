@@ -564,6 +564,27 @@ const Info = {
       image:
         '/gallery/Professional Experience/International Scholarship Office, BRAC University/image.jpg',
     },
+    {
+      title: 'Education',
+      type: 'Education',
+      bigTitle: 'BRAC University',
+      guest: [],
+      image: '/gallery/Education/BRACU/image.jpg',
+    },
+    {
+      title: 'Education',
+      type: 'Education',
+      bigTitle: 'CE University',
+      guest: [],
+      image: '/gallery/Education/CEU/image.jpeg',
+    },
+    {
+      title: 'Education',
+      type: 'Education',
+      bigTitle: 'CEU Summer University',
+      guest: [],
+      image: '/gallery/Education/CEU Summer University/image.jpg',
+    },
   ],
 }
 
