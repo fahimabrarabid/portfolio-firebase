@@ -79,15 +79,7 @@ function App() {
                   </div>
                 }
               />
-
-              <Route
-                path="gallery"
-                element={
-                  <div className="mx-auto">
-                    <Gallery />
-                  </div>
-                }
-              />
+              <Route path="gallery" element={<Gallery />} />
               <Route path="appointment" element={<Appointment />} />
               <Route
                 path="admin"
