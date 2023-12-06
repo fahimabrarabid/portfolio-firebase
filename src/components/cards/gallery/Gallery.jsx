@@ -26,6 +26,7 @@ const Gallery = (props) => {
           alt="Card background"
           className="rounded-xl w-full h-full object-cover"
           src={image}
+          loading="lazy"
         />
       </CardBody>
     </Card>
