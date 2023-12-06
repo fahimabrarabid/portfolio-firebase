@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, CardHeader, CardBody } from '@nextui-org/react'
 
 import { ImgSpacer } from '@/components'
 
 const Gallery = (props) => {
   const { title, bigTitle, provider, place, date, guest, image } = props.props
+  const [isLoaded, setIsLoaded] = useState(false)
 
   return (
     <Card className="py-4">
@@ -24,11 +25,13 @@ const Gallery = (props) => {
         )}
       </CardHeader>
       <CardBody className="w-full py-2 items-center justify-center">
+        {isLoaded ? null : <ImgSpacer />}
         <img
-          alt={<ImgSpacer />}
+          alt="Card background"
           className="rounded-xl w-full h-full object-cover"
           src={image}
           loading="lazy"
+          onLoad={() => setIsLoaded(true)}
         />
       </CardBody>
     </Card>
