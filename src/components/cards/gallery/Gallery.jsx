@@ -12,10 +12,12 @@ const Gallery = (props) => {
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <p className="text-tiny uppercase font-bold text-justify">{bigTitle}</p>
         <div>
-          <small className="text-default-600 p-1 bg-gray-200/90 rounded text-justify">
-            {date}
-          </small>{' '}
-          <small className="text-default-500">{place}</small>
+          {date && (
+            <small className="text-default-600 p-1 bg-gray-200/90 rounded text-justify">
+              {date}{' '}
+            </small>
+          )}
+          {place && <small className="text-default-500">{place}</small>}
         </div>
         <h4 className="font-bold text-large text-justify">{title}</h4>
         {provider && (
