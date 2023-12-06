@@ -9,7 +9,7 @@ const Gallery = () => {
   useDocumentTitle('Gallery')
 
   return (
-    <div className="w-full h-full pt-10 px-3 grid gap-3 grid-auto-cols">
+    <div className="w-full h-full py-8 px-3 grid gap-3 grid-auto-cols">
       {Info.gallery.map((item, index) => (
         <G key={index} props={item}></G>
       ))}
