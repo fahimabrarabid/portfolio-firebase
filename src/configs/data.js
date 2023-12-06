@@ -341,6 +341,213 @@ const Info = {
       guest: [],
       image: '/gallery/Businesspedia.jpg',
     },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Participated as a Student Fellow along with one of the Law School Faculties',
+      place: 'Hotel Amari, Dhaka',
+      provider:
+        "by Bandhu Social Welfare Society at the Launching of USAID's Shomota Project",
+      date: '30/05/2023',
+      guest: [],
+      image: '/gallery/Participation/Event 1/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Participated as a Chief speaker on the session on Mooting by Legal Digest',
+      place: 'Online Session',
+      provider: 'by Legal Digest',
+      date: 'January 2023',
+      guest: [],
+      image: '/gallery/Participation/Event 2/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Session on International Refugee Law beyond States Parties to the UN Refugee Convention',
+      place: 'BRAC Centre Inn, Dhaka',
+      provider:
+        'organized by Center for Peace and Justice, Brac University and Faculty of Law at University of Oslo',
+      date: '29/11/2022',
+      guest: [
+        'Oslo University’s Faculty of Law, Professor of International Migration Law Maja Janmyr and Postdoctoral Fellow Dr. M Sanjeeb Hossain',
+      ],
+      image: '/gallery/Participation/Event 3/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Attended Law Career Festival at the Faculty of Law, University of Dhaka',
+      place: 'Faculty of law, Premise, DU',
+      date: '05/11/2022',
+      guest: [
+        'Justice Hasan Foez Siddique, Chief Justice of Bangladesh',
+        'Prof Dr. Md. Akhtaruzzaman, VC, DU',
+        'Dr. Borhan Uddin Khan, Professor, Department of Law, DU',
+        'Ahsanul Karim, Senior Advocate, Supreme Court of Bangladesh.',
+      ],
+      image: '/gallery/Participation/Event 4/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle: 'UPR and Bangladesh: Dialogue with Youths',
+      place: 'ASK Head office, Dhaka',
+      provider: 'organized by Ain o Salish Kendra (ASK)',
+      date: '23/20/2022',
+      guest: [],
+      image: '/gallery/Participation/Event 5/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Represent BRAC University Law Society (BULS) in the Policy Café on Women Safety in Public Places (WSPP) campaign',
+      place: 'Bangabandhu International Conference Center (BICC)',
+      provider:
+        'organized by Centre for Research and Information (CRI) #YoungBangla project in collaboration with UNDP Bangladesh',
+      date: '08/08/2022',
+      guest: [
+        'Anisul Huq MP, Minister, Ministry of Law, Justice and Parliamentary Affairs, and Atiqul Islam, Mayor of Dhaka North City Corporation (DNCC) and other distinguished speakers.',
+      ],
+      image: '/gallery/Participation/Event 6/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Lecture series on "Nation Building and the Constitution: A comparative Analysis of Bangladesh and Indian Experience"',
+      place: 'BILIA Auditorium',
+      provider:
+        'by Bangladesh Institute of Law and International Affairs (BILIA)',
+      date: '26/11/2021',
+      guest: [
+        'The Chief Guest and the Education Minister of Bangladesh, Dr. Dipu Moni',
+        'High Commissioner of India to Bangladesh, Vikram Doraiswami',
+        'Director of BILIA, Professor Dr. Mizanur Rahman',
+        "One of the Heroic Writers of the Constitution of the People's Republic of Bangladesh, Barrister Amirul Islam",
+        'Barrister Tania Amir and Honorable Judges of the Supreme Court of Bangladesh',
+      ],
+      image: '/gallery/Participation/Event 8/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle: 'Freedom Fellow Residential Bootcamp',
+      place: 'Cox’s Bazar',
+      provider: 'by Preneur Lab',
+      date: '07/11/2021 - 17/11/2022',
+      guest: [],
+      image: '/gallery/Participation/Event 9/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Independent Investigation Mechanism for Myanmar (IIMM) Seminar',
+      place: 'BRAC University',
+      date: '09/05/2022',
+      guest: [
+        'Nicholas Koumijan, Assistant Secretary General ans Head of IIMM',
+        'Dave Dowland, Registrar, BRAC University',
+      ],
+      image: '/gallery/Participation/Event 13/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Participated in the 4th Jessup Workshop titled, ‘May It Please the Court: Unveiling The Art of Jessup Mooting',
+      place: 'Nabab Nawab Ali Chowdhury Senate Bhaban, University of Dhaka',
+      date: '28/09/2023 - 29/09/2023',
+      guest: [],
+      image: '/gallery/Participation/Event 17/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle: 'Presented paper in the Conference on Aviation and Space Law',
+      place:
+        'Bangabandhu Sheikh Mujibur Rahman Aviation and Aerospace University',
+      date: '23/09/2023',
+      guest: [
+        'Mr. A M Amin Uddin, Attorney General for Bangladesh; Air Vice Marshal ASK Fakhrul Islam, OSP, GUP, Vice Chancellor, BSMRAAU; Dr. Masrur Salekin PhD , Additional District and Sessions Judge; Mostafa Hosain, Assistant Professor, School of Law, BRAC University.',
+      ],
+      image: '/gallery/Participation/Event 18/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'Participated as a 𝙊𝙎𝙐𝙉 𝙎𝙘𝙝𝙤𝙡𝙖𝙧 with the enthusiastic students of BRAC University at the 𝙊𝙎𝙐𝙉 𝙎𝙏𝙐𝘿𝙔 𝙈𝙊𝘽𝙄𝙇𝙄𝙏𝙔 𝙄𝙉𝙁𝙊 𝙎𝙀𝙎𝙎𝙄𝙊𝙉 (𝙎𝙋𝙍𝙄𝙉𝙂-2024)',
+      place: 'BRAC University',
+      date: '18/09/2023',
+      guest: [
+        'Ms. Ismat Shereen, Head of International and Scholarship Office; Samia Huq, PhD, Professor (ESS) and Dean, School of General Education; Fahmida Rahman, Senior Lecturer & Program Coordinator, School of General Education, BRAC University.',
+      ],
+      image: '/gallery/Participation/Event 19/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        "'12th Certificate Course on Genocide and Justice', organized by Center for the Study of Genocide and Justice - CSGJ of Liberation War Museum - মুক্তিযুদ্ধ জাদুঘর",
+      place: 'Liberation War Museum - মুক্তিযুদ্ধ জাদুঘর',
+      date: '18/08/2023- 09/09/2023',
+      guest: [
+        'Prof. Dr. Md. Mashiur Rahman, Vice- Chancellor, National University of Bangladesh',
+        'Chief Justice Obaidul Hassan',
+        'Dr. Daniel Feierstein, Director , Centre of Genocide Studies, National University of Tres de Fehrem, Argentina',
+        'Mofidul Hoque, Director, Center for the study of genocide and Justice & Trustee, Liberation War Museum',
+        'Dr. Samina Luthfa, Associate Professor, Department of Sociology, University of Dhaka',
+        'Emraan Azad, Associate Professor in Law, Bangladesh University of Professionals',
+        'Sheikh Hafizur Rahman Karzon, Professor, Department of law, University of Law',
+        'Fowzul Azim, Former Senior District and Session Judge, Bangladesh Judicial Service',
+        'Dr. Meghna Guhathakurta, Executive Director, Research Initiatives, Bangladesh',
+        'Asif Munier, Former Programme Officer, International Organization for Migration',
+        'Kawser Ahmed, Member, National Human Rights Commission & Advocate, Supreme Court of Bangladesh',
+        'Quazi Omar Foysal, Senior Lecturer, American International University of Bangladesh',
+        'Dr. M. Sanjeeb Hossain, Research Director, Centre for Peace and Justice, BRAC University',
+        'Shaoli Dasgupta, Legal Counsel, BRAC',
+        'Dr. Tawheed Reza Noor, Visiting Scholar, Binglanations University, State University of New York, USA',
+        'Mohammad Mizanur Rahman, Commissioner, Refugee Relief and Regulation Commission',
+      ],
+      image: '/gallery/Participation/Event 20/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        "Participated in a 2 day long Certificate Course on 'Intellectual Property for Innovation, Creativity and Branding’ organized by the Center for Learning Intellectual Property (CLIP) and the School of Law, BRAC University.",
+      place: 'BRAC University',
+      date: '04/04/2023 - 05/04/2023',
+      guest: [
+        'Dr. Muhammaed Atiqur Rahman, Senior Lecturer, School of Law, BRAC University',
+        'Mohammad Ataul Karim, DPhil in IP Law Researcher, University of Oxford, Founder and Executive Director CLIP',
+        'Mahua Zahur, Director, CLIP',
+        'Md. Belal Hossen, Assistant Director, Department of Patent, Design & Trademarks, Ministry of Industries, Bangladesh',
+        'Nuran Choudhury, Legal Advisor, US Embassy, Dhaka, Advocate, Supreme Court of Bangladesh',
+      ],
+      image: '/gallery/Participation/Event 21/image (1).jpg',
+    },
+    {
+      title: 'Participant',
+      type: 'Participation',
+      bigTitle:
+        'As Guest in D’Learned Adda: Legal  Service and Technology event by Tuhin and Partners',
+      place: 'Linkedin Live',
+      date: '09/09/2023',
+      guest: [
+        'Barrister Zeenia Hossain, Advocate, Supreme Court of Bangladesh',
+        'Osman Gani Tuhin, Advocate, Supreme Court of Bangladesh, Founder , Tuhin and Partners',
+      ],
+      image: '/gallery/Participation/Event 22/image (1).jpg',
+    },
   ],
 }
 
