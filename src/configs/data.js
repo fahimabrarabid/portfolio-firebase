@@ -277,8 +277,7 @@ const Info = {
       type: 'Even Management',
       category:
         'Adda: The House of Thinkers ; youth’s thought on the concept of Human Rights in Bangladesh',
-      place:
-        'Fresher Orientation Program of Fall 2023 semester at Golf Garden, Army Golf Club, Dhaka',
+      place: 'Online Session: Map of Justice',
       date: '03/10/2023',
       guest: [
         'Quazi Omar Foysal, Lecturer, AIUB',
@@ -286,6 +285,61 @@ const Info = {
         'Humaira Anjum Oishe, Erasmus Mundus LLM Scholar, International Law of Global Security Peace and Development',
       ],
       image: '/gallery/The House of Thinkers.jpg',
+    },
+    {
+      title: 'Volunteer',
+      type: 'Even Management',
+      category:
+        'Dialogue on "Digital Laws and Freedom of Expression - Human Rights 75"',
+      provider:
+        'organized by The UN Resident Coordinator Office (UNRC) with the support of BRAC University',
+      place: 'N/A',
+      date: '21/05/2023',
+      guest: [
+        'The Chief guest of this program was Anisul Huq, Honorable Minister for Law, Justice, and Parliamentary Affairs. Pro-Vice Chancellor of BRAC University, Professor Syed Mahfuzul Aziz, PhD, welcomed guests with his speech and The UN resident coordinator in Bangladesh Gwyn Lewis chaired the dialogue. The esteemed panel consisted of Dr. Kaberi Gayen, Professor at the Department of Mass Communication and Journalism, University of Dhaka, Monjurul Ahsan Bulbul, Senior Journalist, and Ahsan Adelur Rahman, MP.',
+      ],
+      image: '/gallery/Digital Laws and Freedom of Expression.jpg',
+    },
+    {
+      title: 'Host & Organizer',
+      type: 'Even Management',
+      category: 'Law Career: Know your Pathways',
+      place: 'BRAC University',
+      provider: 'by BRAC University Law Society (BULS)',
+      date: '20/08/2022',
+      guest: [
+        "Jubaida Rowshan Ara, Senior Judicial Magistrate and Assistant Director (Prosecution) of Anti-Corruption Commission; Meher Nigar, a development practitioner with 12 years of professional expertise, member of Commonwealth Youth Gender Equality Network, member of SDG Youth Forum in Bangladesh, also the member of Academic NUSA International for Association of Social Sciences and Humanities; Muhsina Farhat, legal researcher and PhD candidate at the University of Warwick's School of Law, and Md. Tayeb-Ul-Islam Showrov, Advocate of the Supreme Court of Bangladesh, Associate at ERGO Legal Counsel",
+      ],
+      image: '/gallery/Law Career.jpg',
+    },
+    {
+      title: 'Volunteer',
+      type: 'Even Management',
+      category: 'Law Alumni Association of BRAC University Gala Night 2022',
+      place: 'BRAC University',
+      date: '10/12/2022',
+      guest: [],
+      image: '/gallery/Law Alumni Association.jpg',
+    },
+    {
+      title: 'Organizer',
+      type: 'Even Management',
+      category: 'Spring Incipio 2022 by Brac University Law Society.',
+      place: 'BRAC University',
+      provider: 'by Brac University Law Society',
+      date: '28/03/2022',
+      guest: [],
+      image: '/gallery/Spring Incipio.jpg',
+    },
+    {
+      title: 'Host & Organizer',
+      type: 'Even Management',
+      category: '“Businesspedia”, a seminar on Business Branding and promotion',
+      place: 'BRAC University',
+      provider: 'by BRAC University Entrepreneurship Development Forum',
+      date: '23/11/2022',
+      guest: [],
+      image: '/gallery/Businesspedia.jpg',
     },
   ],
 }
