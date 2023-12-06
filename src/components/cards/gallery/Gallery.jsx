@@ -27,7 +27,6 @@ const Gallery = (props) => {
       <CardBody className="w-full py-2 items-center justify-center">
         {isLoaded ? null : <ImgSpacer />}
         <img
-          alt="Card background"
           className="rounded-xl w-full h-full object-cover"
           src={image}
           loading="lazy"
