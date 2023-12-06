@@ -548,6 +548,22 @@ const Info = {
       ],
       image: '/gallery/Participation/Event 22/image (1).jpg',
     },
+    {
+      title: 'Professional Experience',
+      type: 'Professional Experience',
+      bigTitle: 'Bandhu Social Welfare Society',
+      guest: [],
+      image:
+        '/gallery/Professional Experience/Bandhu Social Welfare Society/image.jpg',
+    },
+    {
+      title: 'Professional Experience',
+      type: 'Professional Experience',
+      bigTitle: 'International Scholarship Office, BRAC University',
+      guest: [],
+      image:
+        '/gallery/Professional Experience/International Scholarship Office, BRAC University/image.jpg',
+    },
   ],
 }
 
