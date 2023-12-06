@@ -2,12 +2,12 @@ import React from 'react'
 import { Card, CardHeader, CardBody } from '@nextui-org/react'
 
 const Gallery = (props) => {
-  const { title, category, provider, place, date, guest, image } = props.props
+  const { title, bigTitle, provider, place, date, guest, image } = props.props
 
   return (
     <Card className="py-4">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-        <p className="text-tiny uppercase font-bold text-justify">{category}</p>
+        <p className="text-tiny uppercase font-bold text-justify">{bigTitle}</p>
         <div>
           <small className="text-default-600 p-1 bg-gray-200/90 rounded text-justify">
             {date}

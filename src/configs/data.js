@@ -250,7 +250,7 @@ const Info = {
     {
       title: 'Special Recognition Award',
       type: 'Award',
-      category: 'For outstanding achievement in the field of research',
+      bigTitle: 'For outstanding achievement in the field of research',
       provider: 'BRAC University',
       place:
         'Fresher Orientation Program of Fall 2023 semester at Golf Garden, Army Golf Club, Dhaka',
@@ -262,7 +262,7 @@ const Info = {
     {
       title: 'Best Researcher',
       type: 'Award',
-      category:
+      bigTitle:
         "For essay titled '𝐓𝐡𝐞 𝐂𝐡𝐚𝐥𝐥𝐞𝐧𝐠𝐞𝐬 𝐭𝐨 𝐏𝐫𝐨𝐬𝐞𝐜𝐮𝐭𝐞 𝐆𝐞𝐧𝐨𝐜𝐢𝐝𝐞 𝐰𝐢𝐭𝐡 𝐌𝐮𝐜𝐡 𝐃𝐞𝐥𝐚𝐲: 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡 𝐢𝐧 𝐂𝐨𝐧𝐭𝐞𝐱𝐭'.",
       provider:
         "'12th Certificate Course on Genocide and Justice', organized by Center for the Study of Genocide and Justice - CSGJ of Liberation War Museum - মুক্তিযুদ্ধ জাদুঘর",
@@ -275,7 +275,7 @@ const Info = {
     {
       title: 'Facilitator',
       type: 'Even Management',
-      category:
+      bigTitle:
         'Adda: The House of Thinkers ; youth’s thought on the concept of Human Rights in Bangladesh',
       place: 'Online Session: Map of Justice',
       date: '03/10/2023',
@@ -289,7 +289,7 @@ const Info = {
     {
       title: 'Volunteer',
       type: 'Even Management',
-      category:
+      bigTitle:
         'Dialogue on "Digital Laws and Freedom of Expression - Human Rights 75"',
       provider:
         'organized by The UN Resident Coordinator Office (UNRC) with the support of BRAC University',
@@ -303,7 +303,7 @@ const Info = {
     {
       title: 'Host & Organizer',
       type: 'Even Management',
-      category: 'Law Career: Know your Pathways',
+      bigTitle: 'Law Career: Know your Pathways',
       place: 'BRAC University',
       provider: 'by BRAC University Law Society (BULS)',
       date: '20/08/2022',
@@ -315,7 +315,7 @@ const Info = {
     {
       title: 'Volunteer',
       type: 'Even Management',
-      category: 'Law Alumni Association of BRAC University Gala Night 2022',
+      bigTitle: 'Law Alumni Association of BRAC University Gala Night 2022',
       place: 'BRAC University',
       date: '10/12/2022',
       guest: [],
@@ -324,7 +324,7 @@ const Info = {
     {
       title: 'Organizer',
       type: 'Even Management',
-      category: 'Spring Incipio 2022 by Brac University Law Society.',
+      bigTitle: 'Spring Incipio 2022 by Brac University Law Society.',
       place: 'BRAC University',
       provider: 'by Brac University Law Society',
       date: '28/03/2022',
@@ -334,7 +334,7 @@ const Info = {
     {
       title: 'Host & Organizer',
       type: 'Even Management',
-      category: '“Businesspedia”, a seminar on Business Branding and promotion',
+      bigTitle: '“Businesspedia”, a seminar on Business Branding and promotion',
       place: 'BRAC University',
       provider: 'by BRAC University Entrepreneurship Development Forum',
       date: '23/11/2022',
