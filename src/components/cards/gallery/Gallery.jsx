@@ -28,10 +28,11 @@ const Gallery = (props) => {
         )}
       </CardHeader>
       <CardBody className="w-full py-2 items-center justify-center transition duration-300 ease-in-out">
-        {isLoaded ? null : <ImgSpacer />}
+        {!isLoaded && <ImgSpacer />}
+
         <img
-          style={isLoaded ? null : hideImg}
-          className="rounded-xl w-full h-full object-cover transition duration-300 ease-in-out"
+          style={{ display: isLoaded ? 'block' : 'none' }}
+          className={className}
           src={image}
           loading="lazy"
           onLoad={() => setIsLoaded(true)}
