@@ -6,6 +6,7 @@ import { ImgSpacer } from '@/components'
 const Gallery = (props) => {
   const { title, bigTitle, provider, place, date, guest, image } = props.props
   const [isLoaded, setIsLoaded] = useState(false)
+  const hideImg = { display: 'none' }
 
   return (
     <Card className="py-4">
@@ -29,6 +30,7 @@ const Gallery = (props) => {
       <CardBody className="w-full py-2 items-center justify-center transition duration-300 ease-in-out">
         {isLoaded ? null : <ImgSpacer />}
         <img
+          style={isLoaded ? null : hideImg}
           className="rounded-xl w-full h-full object-cover transition duration-300 ease-in-out"
           src={image}
           loading="lazy"
