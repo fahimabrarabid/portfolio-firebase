@@ -73,16 +73,33 @@ const Info = {
   ],
   achievements: [
     {
-      title: 'Study Abroad Fully-Funded Scholarship',
+      title: 'Special Recognition Award',
       // titleLink: 'https://www.osun.org/',
-      description: 'Open Society University Network.',
+      description: ' BRAC University.',
       // year: '2021', // optional
       // link: 'https://www.osun.org/', // optional
       // linkText: 'Link', // optional
     },
     {
-      title: 'BRAC Scholarship',
+      title: 'Best Researcher Award',
+      description:
+        'Center for the Study of Genocide and Justice, Liberation War Museum Bangladesh.',
+    },
+    {
+      title: 'Study Abroad Fully-Funded Scholarship',
+      description: 'Open Society University Network.',
+    },
+    {
+      title: 'Research Fellowship',
+      description: 'Bandhu Social Welfare Society.',
+    },
+    {
+      title: 'BRAC Scholarship (Merit based)',
       description: 'BRAC University.',
+    },
+    {
+      title: 'CEU Summer University Scholarship',
+      description: 'Central European University, Hungary.',
     },
     {
       title: 'Top 15 Manifesto',
@@ -90,7 +107,7 @@ const Info = {
     },
     {
       title: 'Semi-Finalist',
-      description: '3rd Intra BULS Moot Court Competition',
+      description: '3rd Intra BULS Moot Court Competition.',
     },
     {
       title: 'Quarter Finalist',
@@ -101,10 +118,6 @@ const Info = {
         'Honourable Mention in Content Creating on ‘Digital Security vs Privacy’',
       description:
         '‘Freedom Fellow’ boot camp powered by PrenureLab and FNF Bangladesh.',
-    },
-    {
-      title: 'Summer University Scholarship',
-      description: 'Central European University',
     },
   ],
   skills: [
