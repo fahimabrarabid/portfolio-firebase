@@ -38,6 +38,38 @@ const Info = {
         'Conducted 2 humanitarian projects with <b>Amnesty</b> International and the Hungarian Association of NGOs for Development and Humanitarian Aid (<b>HAND</b>).',
       ],
     },
+    {
+      title:
+        'BRAC University, <span className="font-semibold">School of Law</span>',
+      subtitle: 'Bachelor of Laws LL.B. (Hons.)',
+      location: 'Dhaka, Bangladesh', // optional
+      duration: 'Jan 2020 - Present', // optional
+      details: [
+        'Recipient of <b>BRAC Scholarship</b> and stand among the top 2% of students in my class.',
+        'Medalist of <b>Special Recognition Award</b> - the highest honour in Extracurricular activities for Outstanding Achievements in the Field of Research.',
+        'Maintained a Satisfactory CGPA of <b>3.69/4.00</b>, along with excellent grades in Human Rights, Environmental Law, International Law, Evidence, Cyber Law etc.',
+        'Engaged in <b>Research</b> Activities and Participated in <b>Moot</b> Court Competitions.',
+        'Played <b>administrative & leadership</b> role in 3 University clubs including the law club.',
+      ],
+    },
+    {
+      title:
+        'Dhaka City College, <span className="font-semibold">Science</span>',
+      subtitle: 'Higher Secondary School Certificate',
+      location: 'Dhaka, Bangladesh', // optional
+      duration: 'Jun 2017 - May 2019', // optional
+    },
+    {
+      title:
+        'Govt. Mohammadpur Model School and College, <span className="font-semibold">Science</span>',
+      subtitle: 'Secondary School Certificate',
+      location: 'Dhaka, Bangladesh', // optional
+      duration: 'Jan 2015 - Mar 2017', // optional
+      details: [
+        'Participated in national level Science Festivals.',
+        'Represented the school football team in local tournaments.',
+      ],
+    },
   ],
   achievements: [
     {
