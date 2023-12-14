@@ -13,7 +13,7 @@ const Experiences = () => {
   return (
     <AnimatedPage>
       <div className="experiences-container">
-        <h2>Experience</h2>
+        <h2>Experiences</h2>
         <Tabs
           aria-label="Options"
           color="primary"
@@ -37,7 +37,7 @@ const Experiences = () => {
               }
             >
               <AnimatedPage>
-                <Experience experience={experiences[key]} />
+                <Experience experiences={experiences[key]} />
               </AnimatedPage>
             </Tab>
           ))}
