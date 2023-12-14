@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, CardHeader, CardBody } from '@nextui-org/react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import { ImgSpacer } from '@/components'
 
@@ -26,9 +27,9 @@ const Gallery = (props) => {
         )}
       </CardHeader>
       <CardBody className="w-full py-2 items-center justify-center transition duration-300 ease-in-out">
-        <img
-          alt={<ImgSpacer />}
+        <LazyLoadImage
           className="rounded-xl w-full h-full object-cover transition duration-300 ease-in-out"
+          alt={<ImgSpacer />}
           src={image}
           loading="lazy"
         />
