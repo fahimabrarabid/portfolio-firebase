@@ -27,38 +27,16 @@ const Info = {
   },
   education: [
     {
-      institute: 'BRAC UNIVERSITY School of Law',
-      location: 'Dhaka, Bangladesh', // optional
-      degree: 'Bachelor of Laws LL.B. (Hons.)', // optional
-      duration: 'Jan 2020- Present', // optional
-      status: '10th Semester, Completed 108 out of 135 credits', // optional
-      // gpa: 'CGPA-3.69 out of 4.00', // optional
-    },
-    {
-      institute: 'CENTRAL EUROPEAN UNIVERSITY',
-      location: 'Vienna, Austria',
-      duration: 'Jan 2023- March 2023',
-      status: 'OSUN Undergraduate Exchange Program (8 US and 16 ECTS credits)',
-    },
-    {
-      institute: 'AMERICAN UNIVERSITY OF CENTRAL ASIA (OSUN Online Course)',
-      location: 'Bishkek, Kyrgyzstan',
-      duration: 'Jun 2022- Dec 2022',
-      status: 'Public International Law (6 US credits)',
-    },
-    {
-      institute: 'DHAKA CITY COLLEGE',
-      degree: 'Science',
-      duration: '2017-2019',
-      status: 'Higher Secondary School Certificate',
-      // gpa: 'GPA-4.33 out of 5.00',
-    },
-    {
-      institute: 'GOVT. MOHAMMADPUR MODEL SCHOOL AND COLLEGE',
-      degree: 'Science',
-      duration: '2015-2017',
-      status: 'Secondary School Certificate',
-      // gpa: 'GPA-5.00 out of 5.00',
+      title: 'Central European University',
+      subtitle: 'Undergraduate Exchange Program (8 US & 16 ECTS credits)',
+      location: 'Vienna, Austria', // optional
+      duration: 'Jan 2023 - Mar 2023', // optional
+      details: [
+        '<b>Fully funded scholarship</b> recipient (worth $12,000).',
+        'Achieved a High-Performance GPA of <b>3.83/4.00</b>, along with the highest grades in Environmental Politics and Policies, Issues in Civic Engagement, and Research Design (3 out of 4 courses).',
+        'Engaged in CEU Think Tank Project with a multi-diverse team.',
+        'Conducted 2 humanitarian projects with <b>Amnesty</b> International and the Hungarian Association of NGOs for Development and Humanitarian Aid (<b>HAND</b>).',
+      ],
     },
   ],
   achievements: [

@@ -2,7 +2,7 @@ import React from 'react'
 import './academics.css'
 import useDocumentTitle from '@/assets/js/useDocumentTitle'
 import Info from '@/configs/data'
-import Education from '@/components/cards/education/Education'
+import Experience from '@/components/cards/experience/Experience'
 import AnimatedPage from '@/AnimatedPage'
 
 const Academics = () => {
@@ -11,7 +11,8 @@ const Academics = () => {
   return (
     <AnimatedPage>
       <div className="container">
-        <Education education={Info.education} />
+        <h2>Academic Background</h2>
+        <Experience experiences={Info.education} />
       </div>
     </AnimatedPage>
   )
