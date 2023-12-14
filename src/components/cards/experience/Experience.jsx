@@ -9,11 +9,12 @@ const Experience = (Info) => {
 
       {Info.experience.map((exp, index) => (
         <div key={index} className="job">
+          <h3>{exp.company}</h3>
           <div className="flex justify-between">
-            <h3>{exp.company}</h3>
+            {exp.position ? <h4>{exp.position}</h4> : ''}
             {exp.duration ? <h5 className="text-right">{exp.duration}</h5> : ''}
           </div>
-          {exp.position ? <h4>{exp.position}</h4> : ''}
+
           {exp.location ? <h5>{exp.location}</h5> : ''}
           <ul>
             {exp.details

@@ -7,7 +7,7 @@
 }
 
 .job h3 {
-  @apply text-gray-700 font-bold;
+  @apply text-gray-700 font-bold text-justify;
 }
 
 .job p {
@@ -23,5 +23,5 @@
 }
 
 .job li {
-  @apply text-sm text-gray-700 list-disc list-inside;
+  @apply text-sm text-gray-700 list-disc list-inside text-justify;
 }
