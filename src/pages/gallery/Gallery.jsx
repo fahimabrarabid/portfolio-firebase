@@ -3,14 +3,12 @@ import { Gallery as G } from '@/components'
 import useDocumentTitle from '@/assets/js/useDocumentTitle'
 import Info from '@/configs/data'
 
-import './gallery.css'
-
 const Gallery = () => {
   useDocumentTitle('Gallery')
 
   return (
     <div className="w-full h-full py-8 px-3 flex justify-center">
-      <div className="grid gap-3 grid-auto-cols">
+      <div className="grid gap-3 grid-auto-cols-350px">
         {Info.gallery.map((item, index) => (
           <G key={index} props={item}></G>
         ))}

@@ -13,3 +13,8 @@ h2 {
   @apply text-xl font-bold text-gray-700 uppercase;
   @apply border-b-[3px] pb-[2px] border-gray-500 mb-3;
 }
+
+.grid-auto-cols-350px {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+}
