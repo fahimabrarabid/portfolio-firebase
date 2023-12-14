@@ -1,9 +1,9 @@
 .ssc-container {
-  @apply flex flex-wrap justify-center;
+  @apply grid gap-3 grid-auto-cols-350px;
 }
 
 .ssc {
-  @apply w-full md:w-1/3 lg:w-1/4 ring-1 p-2 m-2 ring-slate-400 rounded-lg shadow-md;
+  @apply w-full ring-1 p-2 m-2 ring-slate-400 rounded-lg shadow-md;
 }
 
 .ssc h3 {
