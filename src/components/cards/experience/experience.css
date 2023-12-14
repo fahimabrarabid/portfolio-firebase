@@ -30,3 +30,7 @@
 .job li {
   @apply text-sm text-gray-700 list-disc list-inside text-justify;
 }
+
+.job li b {
+  @apply font-semibold;
+}
