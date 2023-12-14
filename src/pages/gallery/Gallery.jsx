@@ -8,7 +8,7 @@ const Gallery = () => {
 
   return (
     <div className="w-full h-full py-8 px-3 flex justify-center">
-      <div className="grid gap-3 grid-auto-cols-350px">
+      <div className="grid gap-3 grid-cols-[repeat(auto-fill,minmax(350px,1fr))] justify-items-center">
         {Info.gallery.map((item, index) => (
           <G key={index} props={item}></G>
         ))}

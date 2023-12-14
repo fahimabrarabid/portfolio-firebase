@@ -1,5 +1,5 @@
 .ssc-container {
-  @apply grid gap-3 grid-auto-cols-350px;
+  @apply grid gap-3 grid-cols-[repeat(auto-fill,minmax(350px,1fr))] justify-items-center;
 }
 
 .ssc {
@@ -8,6 +8,14 @@
 
 .ssc h3 {
   @apply text-gray-700 font-semibold;
+}
+
+.ssc a {
+  @apply text-blue-600 hover:border-b-2 border-dashed border-blue-400 transition-all duration-100 ease-in-out;
+}
+
+.ssc b {
+  @apply font-semibold;
 }
 
 .ssc p {

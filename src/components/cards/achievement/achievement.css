@@ -1,5 +1,5 @@
 .achievement-container {
-  @apply grid gap-3 grid-auto-cols-350px;
+  @apply grid gap-3 grid-cols-[repeat(auto-fill,minmax(350px,1fr))] justify-items-center;
 }
 
 .achievement {
