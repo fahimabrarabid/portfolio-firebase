@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, Image } from '@nextui-org/react'
+import { Card, CardHeader, CardBody } from '@nextui-org/react'
 
 import { ImgSpacer } from '@/components'
 
@@ -26,7 +26,7 @@ const Gallery = (props) => {
         )}
       </CardHeader>
       <CardBody className="w-full py-2 items-center justify-center transition duration-300 ease-in-out">
-        <Image
+        <img
           alt={<ImgSpacer />}
           className="rounded-xl w-full h-full object-cover transition duration-300 ease-in-out"
           src={image}
