@@ -20,13 +20,19 @@ const logTypes = {
 }
 
 const logger = {}
+let condition = false
+
+if (typeof process !== 'undefined') {
+  condition =
+    process.env.NODE_ENV !== 'production' &&
+    process.env.NEXT_PUBLIC_ENV !== 'production'
+} else {
+  condition = import.meta.env.VITE_ENV !== 'production'
+}
 
 Object.keys(logTypes).forEach((type) => {
   logger[type] = (message, messageColor = 'inherit', dateColor = 'skyblue') => {
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      process.env.NEXT_PUBLIC_ENV !== 'production'
-    ) {
+    if (condition) {
       const timestamp = new Date().toISOString()
       if (typeof message === 'string') {
         console.log(
