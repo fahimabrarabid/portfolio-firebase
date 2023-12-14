@@ -301,25 +301,49 @@ const Info = {
   language: [
     {
       name: 'English',
-      details: '', // optional
+      details: 'Fluent in speaking and writing.', // optional
     },
-  ],
-  hobby: [
     {
-      name: 'English',
-      details: '', // optional
+      name: 'Bangla',
+      details: 'Native speaker and fluent in writing.', // optional
+    },
+    {
+      name: 'Hindi',
+      details: 'Fluent in speaking.', // optional
     },
   ],
+  hobby: [],
   research: [
     {
       title:
-        'A Critical Analysis of Gender-Based Violence on Gender Diverse Population',
-      // titleLink: 'https://www.ieee.org/',
+        'Beyond the Camp: Is Education a Luxury? A Call for Rohingya Refugee Education and Global Justice',
       description:
-        'I have co-authored a qualitative research paper on the gender-diverse population of Bangladesh (i.e., transgender groups and others) titled "A Critical Analysis of Gender-Based Violence on Gender Diverse Population" for Bandhu Social Welfare Society(BSWS) under the "Foundation for a Just Society (FJS)"-Love, Diversity and Solidarity project. The paper portrays the types and reasons behind the violence against the GDV population as well as the probable effective recommendations. BSWS is a well-recognised organisation that is working for the well-being of the gender-diverse population. The objective of the FJS project is to build the capacity of the gender-diverse community to strengthen their voice to ensure effective participation in the existing structure, facilitate psychological and mental health counselling and create mass awareness about cultural diversity and sensitivity in relation to their own sexual orientation and gender identity.',
+        '<a target="_blank" href="https://opensocietyuniversitynetwork.org/civic-engagement/students/global-commons/">Global Commons</a>, <a target="_blank" href="https://www.osunglobalcommons.org/global-justice-fall-23/">Global Justice</a> Category.',
+      link: 'https://www.osunglobalcommons.org/beyond-the-camp-is-education-a-luxury-a-call-for-rohingya-refugee-education-and-global-justice/',
+      linkText: 'Read here',
       // year: '2021', // optional
-      // link: 'https://www.osun.org/', // optional
-      // linkText: 'Link', // optional
+    },
+    {
+      title:
+        'Empowering Reproductive Health: Navigating Digital Frontiers in Bangladesh',
+      description:
+        '<a target="_blank" href="https://opensocietyuniversitynetwork.org/civic-engagement/students/global-commons/">Global Commons</a>, <a target="_blank" href="https://www.osunglobalcommons.org/global-public-health-fall-23/">Global Public Health</a> Category.',
+      link: 'https://www.osunglobalcommons.org/empowering-reproductive-health-navigating-fahim/',
+      linkText: 'Read here',
+    },
+    {
+      title:
+        'Forest Laws and Human Health in Bangladesh: Dove-tailing Social Science  with Natural Science',
+      description:
+        '<a target="_blank" href="https://www.mapofjustice.org/">Map of Justice</a>',
+      link: 'https://www.mapofjustice.org/post/forest-laws-and-human-health-in-bangladesh-dove-tailing-social-science-with-natural-science',
+      linkText: 'Read here',
+    },
+    {
+      title:
+        'A Critical Analysis of Gender-Based Violence on Gender Diverse Population',
+      description:
+        'Published by Bandhu Social Welfare Society at their archive.',
     },
   ],
   certification: [
