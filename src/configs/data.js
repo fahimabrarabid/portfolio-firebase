@@ -114,9 +114,9 @@ const Info = {
   experiences: {
     research: [
       {
-        company:
+        title:
           'Assistant of <a target="_blank" href="https://solicitors.lawsociety.org.uk/person/379979/fazle-elahi">Mr. Fazle Elahi (Solicitor, Court of England and Wales)</a>',
-        position: 'Immigration Research Associate',
+        subtitle: 'Immigration Research Associate',
         location: 'London, United Kingdom (Remote)', // optional
         duration: 'Aug 2023 - Present',
         details: [
@@ -126,8 +126,8 @@ const Info = {
         ],
       },
       {
-        company: 'Map of Justice',
-        position: 'Legal Researcher',
+        title: 'Map of Justice',
+        subtitle: 'Legal Researcher',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Mar 2023 - Present',
         details: [
@@ -137,9 +137,9 @@ const Info = {
         ],
       },
       {
-        company:
+        title:
           'CEU Think Tank Project with Hungarian Association of NGOs for Development and Humanitarian Aid',
-        position: 'Writer',
+        subtitle: 'Writer',
         location: 'Budapest, Hungary (Hybrid)', // optional
         duration: 'Mar 2023 - Jun 2023',
         details: [
@@ -148,8 +148,8 @@ const Info = {
         ],
       },
       {
-        company: 'BRAC James P Grant School of Public Health',
-        position: 'Field Research Assistant (Qualitative)',
+        title: 'BRAC James P Grant School of Public Health',
+        subtitle: 'Field Research Assistant (Qualitative)',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Jun 2023',
         details: [
@@ -158,8 +158,8 @@ const Info = {
         ],
       },
       {
-        company: 'BRAC James P Grant School of Public Health',
-        position: 'Field Research Assistant (Qualitative)',
+        title: 'BRAC James P Grant School of Public Health',
+        subtitle: 'Field Research Assistant (Qualitative)',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Oct 2022 - Nov 2022',
         details: [
@@ -169,8 +169,8 @@ const Info = {
         ],
       },
       {
-        company: 'Bandhu Social Welfare Society',
-        position: 'Research Fellow',
+        title: 'Bandhu Social Welfare Society',
+        subtitle: 'Research Fellow',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Sep 2021 - Dec 2021',
         details: [
@@ -182,8 +182,8 @@ const Info = {
     ],
     teaching: [
       {
-        company: 'Open Society University Network (OSUN)',
-        position: 'Cyber Law Course Assistant of BRAC University',
+        title: 'Open Society University Network (OSUN)',
+        subtitle: 'Cyber Law Course Assistant of BRAC University',
         location: 'New York, USA (Work Station Dhaka)', // optional
         duration: 'Oct 2022 - Jan 2023',
         details: [
@@ -195,8 +195,8 @@ const Info = {
     ],
     internship: [
       {
-        company: 'International and Scholarship Office, BRAC University',
-        position: 'Summer Intern',
+        title: 'International and Scholarship Office, BRAC University',
+        subtitle: 'Summer Intern',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Jul 2023 - Sep 2023',
         details: [
@@ -205,8 +205,8 @@ const Info = {
         ],
       },
       {
-        company: 'Network for International Law Students (NILS)',
-        position: 'Editorial Intern',
+        title: 'Network for International Law Students (NILS)',
+        subtitle: 'Editorial Intern',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Jan 2022 - April 2022',
         details: [
@@ -217,9 +217,9 @@ const Info = {
     ],
     volunteering: [
       {
-        company:
+        title:
           'Voluntary Consultation at <a target="_blank" href="http://fahimabrarabid.com/">fahimabrarabid.com</a>',
-        position: 'Pro bono Consultant',
+        subtitle: 'Pro bono Consultant',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Aug 2023 - Present',
         details: [
@@ -231,8 +231,8 @@ const Info = {
         ],
       },
       {
-        company: 'Amnesty International (Austria)',
-        position: 'Project Members',
+        title: 'Amnesty International (Austria)',
+        subtitle: 'Project Members',
         location: 'Vienna, Austria', // optional
         duration: 'Feb 2023 - Mar 2023',
         details: [
@@ -240,8 +240,8 @@ const Info = {
         ],
       },
       {
-        company: 'Youth Generation',
-        position: 'Co-founder',
+        title: 'Youth Generation',
+        subtitle: 'Co-founder',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'May 2017 - Jun 2021',
         details: [
@@ -251,8 +251,8 @@ const Info = {
     ],
     leadership: [
       {
-        company: 'Brac University Law Society',
-        position: 'Secretary, Event Management',
+        title: 'Brac University Law Society',
+        subtitle: 'Secretary, Event Management',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'May 2021 - Feb 2023',
         details: [
@@ -262,8 +262,8 @@ const Info = {
         ],
       },
       {
-        company: 'Brac University Entrepreneurship Development Forum',
-        position: 'Assistant Director, Event Management',
+        title: 'Brac University Entrepreneurship Development Forum',
+        subtitle: 'Assistant Director, Event Management',
         location: 'Dhaka, Bangladesh', // optional
         duration: 'Oct 2020 - Dec 2022',
         details: [
