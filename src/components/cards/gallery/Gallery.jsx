@@ -13,10 +13,10 @@ const Gallery = (props) => {
         <p className="text-tiny uppercase font-bold text-justify">{bigTitle}</p>
         <div>
           {date && (
-            <small className="text-default-600 p-1 bg-gray-200/90 rounded text-justify">
-              {date}{' '}
+            <small className="text-default-600 p-1 py-0.5 bg-gray-200/90 rounded text-justify">
+              {date}
             </small>
-          )}
+          )}{' '}
           {place && <small className="text-default-500">{place}</small>}
         </div>
         <h4 className="font-bold text-large text-justify">{title}</h4>
