@@ -1,4 +1,5 @@
 import React from 'react'
+import parse from 'html-react-parser'
 import './simnple-square-card.css'
 
 const SimpleSquareCard = (props) => {
@@ -9,16 +10,8 @@ const SimpleSquareCard = (props) => {
         {props.data.map((d, index) => (
           <div key={index} className="ssc">
             <div>
-              {d.titleLink ? (
-                <a href={d.titleLink} target="_blank">
-                  {d.title ? <h3>{d.title}</h3> : ''}
-                </a>
-              ) : d.title ? (
-                <h3>{d.title}</h3>
-              ) : (
-                ''
-              )}
-              <p>{d.description}</p>
+              {d.title ? <h3>{parse(d.title)}</h3> : ''}
+              <p>{parse(d.description)}</p>
             </div>
             <div className="ssc-bottom">
               {d.year ? <h4>{d.year}</h4> : ''}
