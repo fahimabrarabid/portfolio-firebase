@@ -1,4 +1,5 @@
 import React from 'react'
+import parse from 'html-react-parser'
 import './experience.css'
 
 const Experience = (Info) => {
@@ -16,7 +17,7 @@ const Experience = (Info) => {
           {exp.location ? <h5>{exp.location}</h5> : ''}
           <ul>
             {exp.details
-              ? exp.details.map((detail, i) => <li key={i}>{detail}</li>)
+              ? exp.details.map((detail, i) => <li key={i}>{parse(detail)}</li>)
               : ''}
           </ul>
         </div>
