@@ -1,6 +1,6 @@
 import React from 'react'
 import parse from 'html-react-parser'
-import './simnple-square-card.css'
+import './simple-square-card.css'
 
 const SimpleSquareCard = (props) => {
   return (
