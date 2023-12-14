@@ -9,7 +9,7 @@ const SimpleSquareCard = (props) => {
       <div className="ssc-container">
         {props.data.map((d, index) => (
           <div key={index} className="ssc">
-            <div>
+            <div className="ssc-main">
               {d.title ? <h3>{parse(d.title)}</h3> : ''}
               <p>{parse(d.description)}</p>
             </div>
