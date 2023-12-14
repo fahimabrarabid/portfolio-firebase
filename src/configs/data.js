@@ -111,73 +111,111 @@ const Info = {
     'Editing',
     'Research',
   ],
-  proExperience: [
-    {
-      company: 'OPEN SOCIETY UNIVERSITY NETWORK (OSUN)',
-      position: 'Cyber Law Course Assistant of BRAC University',
-      location: 'USA', // optional
-      duration: 'Oct 2022 - Jan 2023',
-      details: [
-        'Coordinated the course instructor with reading materials and technical support.',
-        'Corresponded with international students to facilitate their studies.',
-        'Supported expanding access to higher education for underserved communities.',
-      ],
-    },
-    {
-      company: 'BRAC JAMES P. GRANT SCHOOL OF PUBLIC HEALTH',
-      position: 'Field Research Assistant',
-      location: 'BRAC University', // optional
-      duration: 'Oct 2022- Nov 2023',
-      details: [
-        'Assisted the Empowering Readymade Garments Worker (ERMG) project launched by BRAC Urban Development Program (UDP).',
-        'Interviewed and collected data for the quantitative and qualitative research survey.',
-        'Contributed to ensuring easy access to the legal, economic and social assistance for deprived garment workers.',
-      ],
-    },
-    {
-      company: 'BANDHU SOCIAL WELFARE SOCIETY',
-      position: 'Dhaka, Bangladesh',
-      location: 'Research Fellow', // optional
-      duration: 'Sep 2021- Dec 2021',
-      details: [
-        'Interviewed and facilitated a research titled “A Critical Analysis of Gender-Based Violence on Gender Diverse Population” in  Bangladesh context.',
-        'Prepared reports for the gender-diverse working group of Rohingya refugees.',
-      ],
-    },
-  ],
-  volExperience: [
-    {
-      company:
-        'HAND- Hungarian Association of NGOs for Development and Humanitarian Aid',
-      position: 'Writer for CEU Think Tank Project',
-      location: 'Vienna, Austria', // optional
-      duration: 'Mar 2023 - Present',
-      details: [
-        'Researching fund eligibility of small NGOs from European Union',
-        'Handling the legal needs of the project.',
-        'Drafting and reviewing contracts and agreements.',
-      ],
-    },
-    {
-      company: 'Map of Justice',
-      position: 'Research Fellow',
-      location: 'Dhaka, Bangladesh', // optional
-      duration: 'March 2023- Present',
-      details: [
-        'Facilitating research on various legal aspects including laws on forest protection and police detention.',
-      ],
-    },
-    {
-      company: 'NETWORK FOR INTERNATIONAL LAW STUDENTS (NILS) BANGLADESH',
-      position: 'Editorial Intern',
-      location: 'Dhaka, Bangladesh', // optional
-      duration: 'Jan 2022- Apr 2022',
-      details: [
-        'Edited and proofread articles that were published on the NILS website.',
-        'Wrote social media post captions.',
-      ],
-    },
-  ],
+  experiences: {
+    research: [
+      {
+        company:
+          'Assistant of <a target="_blank" href="https://solicitors.lawsociety.org.uk/person/379979/fazle-elahi">Mr. Fazle Elahi (Solicitor, Court of England and Wales)</a>',
+        position: 'Immigration Research Associate',
+        location: 'London, United Kingdom (Remote)', // optional
+        duration: 'Aug 2023 - Present',
+        details: [
+          'Preparing <b>Skilled Worker Visa</b> applications for individuals entering the UK.',
+          'Drafting <b>Sponsorship Licenses</b> and registering UK-based companies.',
+          'Assisting in writing <b>Pre Action Protocol</b> and <b>Administrative Review</b>.',
+        ],
+      },
+      {
+        company: 'Map of Justice',
+        position: 'Legal Researcher',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Mar 2023 - Present',
+        details: [
+          'Operating research activities on the less explored <b>socio-legal issues</b> such as laws on forest protection, public nuisance and police detention.',
+          '<b>Anchoring</b> legal webinars with key stakeholders, experts and scholars.',
+          'Contributing to promoting <b>social awareness</b> with a view to establish a just society.',
+        ],
+      },
+      {
+        company:
+          'CEU Think Tank Project with Hungarian Association of NGOs for Development and Humanitarian Aid',
+        position: 'Writer',
+        location: 'Budapest, Hungary (Hybrid)', // optional
+        duration: 'Mar 2023 - Jun 2023',
+        details: [
+          'Conducted research for <b>fund eligibility</b> of small NGOs from the European Union.',
+          'Dealt with <b>EU NGO Policy</b> and legal aspects of the project.',
+        ],
+      },
+      {
+        company: 'BRAC James P Grant School of Public Health',
+        position: 'Field Research Assistant (Qualitative)',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Jun 2023',
+        details: [
+          'Conducted a research project launched by the COVID-19 Learning, Evidence and Research (CLEAR) Program on <b>Digital Sexual Reproductive Health Rights</b> (SRHR).',
+          'Assisted in recommending new policies through the findings of interviewing key stakeholders and analyzing existing policies.',
+        ],
+      },
+      {
+        company: 'BRAC James P Grant School of Public Health',
+        position: 'Field Research Assistant (Qualitative)',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Oct 2022 - Nov 2022',
+        details: [
+          'Assisted the <b>Empowering Readymade Garments Worker</b> (ERMG) project launched by the BRAC Urban Development Program (UDP).',
+          'Collected data for the quantitative research survey through KII, FGD and IDIs.',
+          'Contributed to ensuring easy access to <b>legal, economic</b> and <b>social assistance</b> for deprived garment workers.',
+        ],
+      },
+      {
+        company: 'Bandhu Social Welfare Society',
+        position: 'Research Fellow',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Sep 2021 - Dec 2021',
+        details: [
+          'Facilitated qualitative research regarding <b>Gender-Based Violence</b> on Gender Diverse Populations in Bangladesh.',
+          'Interviewed people from <b>backward communities</b> and proposed effective policy implications from relevant international case study findings',
+          'Prepared reports for the gender-diverse working group of Rohingya refugees.',
+        ],
+      },
+    ],
+    teaching: [
+      {
+        company: 'Open Society University Network (OSUN)',
+        position: 'Cyber Law Course Assistant of BRAC University',
+        location: 'New York, USA (Work Station Dhaka)', // optional
+        duration: 'Oct 2022 - Jan 2023',
+        details: [
+          'Coordinated with the course instructor <a target="_blank" href="https://www.bracu.ac.bd/about/people/md-saimum-reza-talukder">Md. Saimum Reza Talukder</a> (Senior Lecturer, School of Law, BRAC University) with reading materials and technical support.',
+          'Maintained <b>communication</b> with international students to facilitate their studies.',
+          'Supported expanding <b>access to higher education</b> for underserved students.',
+        ],
+      },
+    ],
+    internship: [
+      {
+        company: 'International and Scholarship Office, BRAC University',
+        position: 'Summer Intern',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Jul 2023 - Sep 2023',
+        details: [
+          'Promoted the OSUN Study Abroad program at BRAC University by showcasing BRAC University as a desired destination to other OSUN campus students',
+          'Planned and conducted relevant and engaging indoor and outdoor activities for the exchange students, establishing <b>cross-cultural communication</b>.',
+        ],
+      },
+      {
+        company: 'Network for International Law Students (NILS)',
+        position: 'Editorial Intern',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Jan 2022 - April 2022',
+        details: [
+          '<b>Edited</b> and <b>proofread</b> articles that were published on the NILS website.',
+          'Generated social media post captions on contemporary legal topics.',
+        ],
+      },
+    ],
+  },
   language: [
     {
       name: 'English',
