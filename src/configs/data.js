@@ -215,6 +215,65 @@ const Info = {
         ],
       },
     ],
+    volunteering: [
+      {
+        company:
+          'Voluntary Consultation at <a target="_blank" href="http://fahimabrarabid.com/">fahimabrarabid.com</a>',
+        position: 'Pro bono Consultant',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Aug 2023 - Present',
+        details: [
+          'Completed <b>50+ consultations</b> counting <b>800+ minutes</b> of voluntary work.',
+          'Consulting Higher Education opportunities and Academic guidance for law students.',
+          'Assisting in writing University Admission applications and Scholarship applications.',
+          'Guiding in solving critical academic problems.',
+          '3 of my mentees secured admission and scholarships for higher studies in Bangladesh, Austria and Australia.',
+        ],
+      },
+      {
+        company: 'Amnesty International (Austria)',
+        position: 'Project Members',
+        location: 'Vienna, Austria', // optional
+        duration: 'Feb 2023 - Mar 2023',
+        details: [
+          'Assisted in developing Amnesty’s signature project <b>Protect the Protest</b> as part of the research partnership of my coursework <b>Issues in Civic Engagement</b>.',
+        ],
+      },
+      {
+        company: 'Youth Generation',
+        position: 'Co-founder',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'May 2017 - Jun 2021',
+        details: [
+          'Through this <b>student-led</b> initiative, I have cooperated with my friends to <b>raise monthly funds</b> to organize workplace opportunities for approximately 50 people, particularly during the COVID-19 pandemic, demonstrating strong leadership and <b>community engagement</b> skills in Mohammadpur, Dhaka.',
+        ],
+      },
+    ],
+    leadership: [
+      {
+        company: 'Brac University Law Society',
+        position: 'Secretary, Event Management',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'May 2021 - Feb 2023',
+        details: [
+          'Operated various activities for the development of law students of Brac University, including arranging and hosting legal events, followed by competitions and court visits.',
+          'Made posters and wrote captions for conducting the social media activities of the club in addition to promoting the club on my campus.',
+          'Maintained connection with different communities of the legal arena, including students from different universities, legal practitioners and judges.',
+        ],
+      },
+      {
+        company: 'Brac University Entrepreneurship Development Forum',
+        position: 'Assistant Director, Event Management',
+        location: 'Dhaka, Bangladesh', // optional
+        duration: 'Oct 2020 - Dec 2022',
+        details: [
+          'Organized entrepreneurial events on a regular basis.',
+          'Led around 30 members every semester and assisted them with their overall soft skill growth.',
+          'Assisted in arranging and participating in entrepreneurial competitions.',
+          'Promoted the brands/startups of the student entrepreneurs of BRAC University.',
+        ],
+      },
+    ],
   },
   language: [
     {
