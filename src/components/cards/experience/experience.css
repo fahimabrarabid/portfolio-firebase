@@ -10,6 +10,11 @@
   @apply text-gray-700 font-bold text-justify;
 }
 
+.job h3 a,
+.job li a {
+  @apply text-blue-600 hover:border-b-2 border-dashed border-blue-400 transition-all duration-100 ease-in-out;
+}
+
 .job p {
   @apply text-sm text-gray-700;
 }
