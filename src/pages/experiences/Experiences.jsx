@@ -7,6 +7,7 @@ import AnimatedPage from '@/AnimatedPage'
 import { Tabs, Tab } from '@nextui-org/react'
 
 const Experiences = () => {
+  const experiences = Info.experiences
   useDocumentTitle('Experiences')
 
   return (
@@ -26,30 +27,20 @@ const Experiences = () => {
               'group-data-[selected=true]:text-blue-500/80 font-semibold uppercase',
           }}
         >
-          <Tab
-            key="photos"
-            title={
-              <div className="flex items-center space-x-2">
-                <span>Professional</span>
-              </div>
-            }
-          >
-            <AnimatedPage>
-              <Experience experience={Info.proExperience} />
-            </AnimatedPage>
-          </Tab>
-          <Tab
-            key="music"
-            title={
-              <div className="flex items-center space-x-2">
-                <span>Volunteering</span>
-              </div>
-            }
-          >
-            <AnimatedPage>
-              <Experience experience={Info.volExperience} />
-            </AnimatedPage>
-          </Tab>
+          {Object.keys(experiences).map((key) => (
+            <Tab
+              key={key}
+              title={
+                <div className="flex items-center space-x-2">
+                  <span className="uppercase">{key}</span>
+                </div>
+              }
+            >
+              <AnimatedPage>
+                <Experience experience={experiences[key]} />
+              </AnimatedPage>
+            </Tab>
+          ))}
         </Tabs>
       </div>
     </AnimatedPage>
